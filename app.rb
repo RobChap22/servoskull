@@ -64,7 +64,7 @@ Special: An Escher gang may either (1) remove a single existing Lasting Injury f
   elsif a_question.match?(/wastes/i)
     "This Territory grants the following Boons:\n
 Special: If challenged in the Occupation phase, the gang may choose the Territory at stake in the battle, even though it would normally be chosen by the challenger. If challenged in the Takeover phase for a Territory the gang already controls, make an Intelligence check for the gang Leader. If the check is passed, the player of the gang may choose to play the Ambush scenario instead of rolling. They are automatically the attacker."
-  elsif a_question.match?(/OUT-HIVE SMUGGLING ROUTES/i)
+  elsif a_question.match?(/OUT( |-)HIVE SMUGGLING ROUTES/i)
     "RACKET BOONS\n
 Income: The gang earns D6x10 credits when they collect Income.\n
 ENHANCED BOONS
@@ -109,7 +109,10 @@ Special: Any gang in the campaign may pay the gang controlling this Racket to re
   elsif a_question.match?(/ROGUE DOC SHOP/i)
     "This Territory grants the following Boon:\nRecruit: The gang may recruit a Rogue Doc Hanger-on for free."
   elsif a_question.match?(/settlement/i)
-    "This Territory grants the following Boons:\nIncome: The gang earns D6x10 credits from this Territory when collecting income.\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nRecruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
+    "This Territory grants the following Boons:\n
+Income: The gang earns D6x10 credits from this Territory when collecting income.\n
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
+Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
   elsif a_question.match?(/slag furnace/i)
     "This Territory grants the following Boon:\nIncome: The gang-earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Goliath gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\nRecruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
   elsif a_question.match?(/tech bazaar/i)
@@ -118,7 +121,7 @@ Special: Any gang in the campaign may pay the gang controlling this Racket to re
     "This Territory grants the following Boon:\nIncome: The gang earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boon:\nSpecial: Whilst it controls this Territory, an Orlock gang has Priority in the first round of any battle. Any gang in the campaign may pay the Orlock gang 20 credits to gain the same benefit in a single battle against another gang."
   elsif a_question.match?(/tunnels/i)
     "This Territory grants the following Boon:\nSpecial: Whist it controls this Territory, the gang may choose to have up to three fighters deploy via tunnels ahead of any battle. These fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are placed to one side. During the deployment phase, the player sets up two 2’’ wide tunnel entrance markers on any table edge on the ground surface of the battlefield. During the Priority phase of each turn, roll a D6. On a 4+, the group of fighters arrive on the battlefield. That turn they may be activated as a single group, and must move onto the battlefield from one of the tunnel entrance. If the battle ends before the fighters arrive, they take no part in the battle.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: An Orlock gang may choose to deploy up to six fighters via tunnels using the method detailed above. The fighters in each group must be specified before the battle."
-  elsif a_question.match?(/narco-distribution/i)
+  elsif a_question.match?(/narco( |-)distribution/i)
     "Linked Rackets: Out-Hive Smuggling Routes, Ghast Prospecting.\nRACKET BOONS\nIncome: The gang earns D6x10 credits when they collect Income.\nSpecial: Whilst it controls this Racket, the gang treats Chem-synth, Medicae Kit, Stimm-slug Stash, and any weapon with the Gas or Toxin trait as Common.\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
   elsif a_question.match?(/blaze/i)
     "After an attack with the Blaze trait has been resolved, roll
