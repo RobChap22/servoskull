@@ -17,6 +17,20 @@ def bot_answer_to(a_question, user_name)
   # If you want to add Bob to group chat, uncomment the next line
   # return '' unless a_question.downcase.include?('bob') # Only answer to messages with 'bob'
 
+  if a_question.match?(/collapsed dome/i)
+    "This Territory grants the following Boon:
+Income: When collecting income from this Territory, the controlling player may choose to roll between 2D6x10 and
+6D6x10. However, if a double is rolled, then no income is generated and a random fighter from the gang suffers a
+Lasting Injury."
+  elsif a_question.match?(/corpse farm/i)
+    "This Territory grants the following Boon:
+Income: When collecting income, the gang gains D6x10 credits for every fighter on either side that was deleted from
+their roster during the Update Roster step of the preceding battle.
+ENHANCED BOON
+This Territory grants Cawdor gangs the following Boons:
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.
+Income: When collecting income, the gang gains 2D6x10 credits for every fighter on either side that was deleted from
+their roster during the Update Roster step of the preceding battle."
   if a_question.match?(/ROGUE DOC SHOP/i)
     "This Territory grants the following Boon:\nRecruit: The gang may recruit a Rogue Doc Hanger-on for free."
   elsif a_question.match?(/settlement/i)
@@ -31,15 +45,6 @@ def bot_answer_to(a_question, user_name)
     "This Territory grants the following Boon:\nSpecial: Whist it controls this Territory, the gang may choose to have up to three fighters deploy via tunnels ahead of any battle. These fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are placed to one side. During the deployment phase, the player sets up two 2’’ wide tunnel entrance markers on any table edge on the ground surface of the battlefield. During the Priority phase of each turn, roll a D6. On a 4+, the group of fighters arrive on the battlefield. That turn they may be activated as a single group, and must move onto the battlefield from one of the tunnel entrance. If the battle ends before the fighters arrive, they take no part in the battle.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: An Orlock gang may choose to deploy up to six fighters via tunnels using the method detailed above. The fighters in each group must be specified before the battle."
   elsif a_question.match?(/narco-distribution/i)
     "Linked Rackets: Out-Hive Smuggling Routes, Ghast Prospecting.\nRACKET BOONS\nIncome: The gang earns D6x10 credits when they collect Income.\nSpecial: Whilst it controls this Racket, the gang treats Chem-synth, Medicae Kit, Stimm-slug Stash, and any weapon with the Gas or Toxin trait as Common.\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
-  elsif a_question.match?(/corpse farm/i)
-    "This Territory grants the following Boon:
-    Income: When collecting income, the gang gains D6x10 credits for every fighter on either side that was deleted from
-    their roster during the Update Roster step of the preceding battle.
-    ENHANCED BOON
-    This Territory grants Cawdor gangs the following Boons:
-    Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.
-    Income: When collecting income, the gang gains 2D6x10 credits for every fighter on either side that was deleted from
-    their roster during the Update Roster step of the preceding battle."
   elsif a_question.match?(/blaze/i)
     "After an attack with the Blaze trait has been resolved, roll
     a D6 if the target was hit but not taken Out Of Action. On
