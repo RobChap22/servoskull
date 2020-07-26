@@ -31,7 +31,7 @@ This Territory grants Cawdor gangs the following Boons:
 Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.
 Income: When collecting income, the gang gains 2D6x10 credits for every fighter on either side that was deleted from
 their roster during the Update Roster step of the preceding battle."
-  if a_question.match?(/ROGUE DOC SHOP/i)
+  elsif a_question.match?(/ROGUE DOC SHOP/i)
     "This Territory grants the following Boon:\nRecruit: The gang may recruit a Rogue Doc Hanger-on for free."
   elsif a_question.match?(/settlement/i)
     "This Territory grants the following Boons:\nIncome: The gang earns D6x10 credits from this Territory when collecting income.\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nRecruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
