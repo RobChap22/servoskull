@@ -24,13 +24,11 @@ Income: When collecting income from this Territory, the controlling player may c
 Lasting Injury."
   elsif a_question.match?(/corpse farm/i)
     "This Territory grants the following Boon:
-Income: When collecting income, the gang gains D6x10 credits for every fighter on either side that was deleted from
-their roster during the Update Roster step of the preceding battle.
+Income: When collecting income, the gang gains D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle.
 ENHANCED BOON
 This Territory grants Cawdor gangs the following Boons:
 Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.
-Income: When collecting income, the gang gains 2D6x10 credits for every fighter on either side that was deleted from
-their roster during the Update Roster step of the preceding battle."
+Income: When collecting income, the gang gains 2D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle."
   elsif a_question.match?(/ROGUE DOC SHOP/i)
     "This Territory grants the following Boon:\nRecruit: The gang may recruit a Rogue Doc Hanger-on for free."
   elsif a_question.match?(/settlement/i)
