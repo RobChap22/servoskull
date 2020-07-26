@@ -79,6 +79,8 @@ with the Gas or Toxin trait as Common.\n
 ENHANCED BOONS\n
 Income: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\n
 Income: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
   else
     "++INVALID INPUT++"
   end
