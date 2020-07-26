@@ -6,10 +6,6 @@ require 'uri'
 require 'tempfile'
 require 'line/bot'
 
-require_relative 'ibm_watson'
-require_relative 'weather_api'
-require_relative 'tokyo_events_api'
-
 def client
   @client ||= Line::Bot::Client.new do |config|
     config.channel_secret = ENV['LINE_CHANNEL_SECRET']
@@ -22,41 +18,69 @@ def bot_answer_to(a_question, user_name)
   # return '' unless a_question.downcase.include?('bob') # Only answer to messages with 'bob'
 
   if a_question.match?(/ROGUE DOC SHOP/i)
-    "TERRITORY BOON\n
-This Territory grants the following Boon:\n
+    "This Territory grants the following Boon:\n
 Recruit: The gang may recruit a Rogue Doc Hanger-on for free."
-  elsif a_question.match?(/(Hi|Hey|Bonjour|Hi there|Hey there|Hello).*/i)
-    "Hello #{user_name}, how are you doing today?"
-  elsif a_question.match?(/([\p{Hiragana}\p{Katakana}\p{Han}]+)/)
-    bot_jp_answer_to(a_question, user_name)
-  elsif a_question.match?(/how\s+.*are\s+.*you.*/i)
-    "I am fine, #{user_name}"
-  elsif a_question.include?('weather in')
-    fetch_weather(a_question)[:report]
-  elsif a_question.match?(/event+.*in\s+.*tokyo.*/i)
-    fetch_tokyo_events
-  elsif a_question.match?(/.*le wagon.*/i)
-    "Wait #{user_name}... did you mean Le Wagon Tokyo!? These guys are just great!"
-  elsif a_question.end_with?('?')
-    "Good question, #{user_name}!"
-  elsif a_question == a_question.upcase
-    "Whoa chill out, broseph... 😅🤙"
+  elsif a_question.match?(/settlement/i)
+    "This Territory grants the following Boons:\n
+Income: The gang earns D6x10 credits from this Territory when collecting income.\n
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
+Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a
+single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their
+House List for free."
+  elsif a_question.match?(/slag furnace/i)
+    "This Territory grants the following Boon:\n
+Income: The gang-earns D6x5 credits from this Territory when collecting income.\n
+ENHANCED BOON\n
+This Territory grants Goliath gangs the following Boons:\n
+Reputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\n
+Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a
+single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their
+House List for free."
+  elsif a_question.match?(/tech bazaar/i)
+    "This Territory grants the following Boons:\n
+Income: The gang earns D6x10 credits from this Territory when collecting income.\n
+Equipment: Select one Leader or Champion to make a Haggle post-battle action. Roll 2D6: The gang may immediately
+choose one item from the Rare Trade chart with a Rare value equal to the result of the dice roll and add it to their
+Stash for half of its usual value, rounded down. If the roll is lower than 7, pick a Common Weapon or Piece of
+equipment to add to the gang's Stash for half of its usual value, rounded down. If the roll is 3 or lower, then the fighter
+proves to be very poor at haggling and no equipment is gained. If the fighter selected has Exotic Furs, add +1 to the
+result of the 2D6 dice roll.\n
+ENHANCED BOON\n
+This Territory grants Van Saar gangs the following Boons:\n
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
+Income: The gang earns D6x10 credits from this Territory when collecting income. If the gang also controls an
+Archaeotech Device, this is increased to 2D6x10."
+  elsif a_question.match?(/toll crossing/i)
+    "This Territory grants the following Boon:\n
+Income: The gang earns D6x5 credits from this Territory when collecting income.\n
+ENHANCED BOON\n
+This Territory grants Orlock gangs the following Boon:\n
+Special: Whilst it controls this Territory, an Orlock gang has Priority in the first round of any battle. Any gang in the
+campaign may pay the Orlock gang 20 credits to gain the same benefit in a single battle against another gang."
+  elsif a_question.match?(/tunnels/i)
+    "This Territory grants the following Boon:\n
+Special: Whist it controls this Territory, the gang may choose to have up to three fighters deploy via tunnels ahead of
+any battle. These fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are
+placed to one side. During the deployment phase, the player sets up two 2’’ wide tunnel entrance markers on any
+table edge on the ground surface of the battlefield. During the Priority phase of each turn, roll a D6. On a 4+, the group
+of fighters arrive on the battlefield. That turn they may be activated as a single group, and must move onto the
+battlefield from one of the tunnel entrance. If the battle ends before the fighters arrive, they take no part in the battle.\n
+ENHANCED BOON\n
+This Territory grants Orlock gangs the following Boons:\n
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
+Special: An Orlock gang may choose to deploy up to six fighters via tunnels using the method detailed above. The
+fighters in each group must be specified before the battle."
+  elsif a_question.match?(/narco-distribution/i)
+    "Linked Rackets: Out-Hive Smuggling Routes, Ghast Prospecting.\n
+RACKET BOONS\n
+Income: The gang earns D6x10 credits when they collect Income.\n
+Special: Whilst it controls this Racket, the gang treats Chem-synth, Medicae Kit, Stimm-slug Stash, and any weapon
+with the Gas or Toxin trait as Common.\n
+ENHANCED BOONS\n
+Income: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\n
+Income: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
   else
-    ["I couldn't agree more.", 'Great to hear that.', 'Interesting.'].sample
-  end
-end
-
-def bot_jp_answer_to(a_question, user_name)
-  if a_question.match?(/(おはよう|こんにちは|こんばんは|ヤッホー|ハロー).*/)
-    "こんにちは#{user_name}さん！お元気ですか?"
-  elsif a_question.match?(/.*元気.*(？|\?｜か)/)
-    "私は元気です、#{user_name}さん"
-  elsif a_question.match?(/.*(le wagon|ワゴン|バゴン).*/i)
-    "#{user_name}さん... もしかして京都のLE WAGONプログラミング学校の話ですかね？ 素敵な画っこと思います！"
-  elsif a_question.end_with?('?','？')
-    "いい質問ですね、#{user_name}さん！"
-  else
-    ['そうですね！', '確かに！', '間違い無いですね！'].sample
+    "++INVALID INPUT++"
   end
 end
 
