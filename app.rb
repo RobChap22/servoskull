@@ -16,7 +16,7 @@ end
 def bot_answer_to(a_question, user_name)
   # If you want to add Bob to group chat, uncomment the next line
   # return '' unless a_question.downcase.include?('bob') # Only answer to messages with 'bob'
-
+# TERRITORIES
   if a_question.match?(/collapsed dome/i)
     "This Territory grants the following Boon:\n
 Income: When collecting income from this Territory, the controlling player may choose to roll between 2D6x10 and 6D6x10. However, if a double is rolled, then no income is generated and a random fighter from the gang suffers a Lasting Injury."
@@ -64,6 +64,7 @@ Special: An Escher gang may either (1) remove a single existing Lasting Injury f
   elsif a_question.match?(/wastes/i)
     "This Territory grants the following Boons:\n
 Special: If challenged in the Occupation phase, the gang may choose the Territory at stake in the battle, even though it would normally be chosen by the challenger. If challenged in the Takeover phase for a Territory the gang already controls, make an Intelligence check for the gang Leader. If the check is passed, the player of the gang may choose to play the Ambush scenario instead of rolling. They are automatically the attacker."
+# RACKETS
   elsif a_question.match?(/OUT( |-)HIVE SMUGGLING ROUTES/i)
     "RACKET BOONS\n
 Income: The gang earns D6x10 credits when they collect Income.\n
@@ -123,7 +124,7 @@ Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 o
     "This Territory grants the following Boon:\nSpecial: Whist it controls this Territory, the gang may choose to have up to three fighters deploy via tunnels ahead of any battle. These fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are placed to one side. During the deployment phase, the player sets up two 2’’ wide tunnel entrance markers on any table edge on the ground surface of the battlefield. During the Priority phase of each turn, roll a D6. On a 4+, the group of fighters arrive on the battlefield. That turn they may be activated as a single group, and must move onto the battlefield from one of the tunnel entrance. If the battle ends before the fighters arrive, they take no part in the battle.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: An Orlock gang may choose to deploy up to six fighters via tunnels using the method detailed above. The fighters in each group must be specified before the battle."
   elsif a_question.match?(/narco( |-)distribution/i)
     "Linked Rackets: Out-Hive Smuggling Routes, Ghast Prospecting.\nRACKET BOONS\nIncome: The gang earns D6x10 credits when they collect Income.\nSpecial: Whilst it controls this Racket, the gang treats Chem-synth, Medicae Kit, Stimm-slug Stash, and any weapon with the Gas or Toxin trait as Common.\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
-# weapon keywords from here
+# WEAPON KEYWORDS
   elsif a_question.match?(/(assault|energy) shield/i)
     "An assault/energy shield grants a +2 armour save modifier (to a maximum of 2+) against melee attacks that originate from within the fighter’s vision arc (the 90° arc to their front), and a +1 armour save modifier against ranged attacks that originate from within the fighter’s vision arc; check this before the fighter is placed Prone and is Pinned. If it is not clear whether the attacker is within the target’s front arc, use a Vision Arc template to check – if the centre of the attacker’s base is within the arc, the assault/energy shield can be used. Against attacks with the Blast trait, use the centre of the Blast marker in place of the attacker. If the target does not have a facing (for example, if they are Prone), the assault/energy shield cannot be used"
   elsif a_question.match?(/BACKSTAB/i)
