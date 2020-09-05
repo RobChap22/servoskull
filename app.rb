@@ -17,118 +17,8 @@ def bot_answer_to(a_question, user_name)
   # If you want to add Bob to group chat, uncomment the next line
   # return '' unless a_question.downcase.include?('bob') # Only answer to messages with 'bob'
 
-  # TERRITORIES
-  if a_question.match?(/collapsed dome/i)
-    "This Territory grants the following Boon:\n
-Income: When collecting income from this Territory, the controlling player may choose to roll between 2D6x10 and 6D6x10. However, if a double is rolled, then no income is generated and a random fighter from the gang suffers a Lasting Injury."
-  elsif a_question.match?(/corpse farm/i)
-    "This Territory grants the following Boon:\n
-Income: When collecting income, the gang gains D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle.\n
-ENHANCED BOON
-This Territory grants Cawdor gangs the following Boons:\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
-Income: When collecting income, the gang gains 2D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle."
-  elsif a_question.match?(/fighting pit/i)
-    "This Territory grants the following Boon:\n
-Recruit: Whilst it controls this Territory, the gang may recruit two Hive Scum Hired Guns for free, including their equipment, prior to every battle.\n
-ENHANCED BOON
-This Territory grants Goliath gangs the following Boon:\n
-Reputation: Whilst it controls this Territory, the gang adds +2 to Its Reputation."
-  elsif a_question.match?(/gambling den/i)
-    "This Territory grants the following Boons:\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
-Income: The player chooses a suit of cards. The player then draws a card from the shuffled deck of playing cards that includes both Jokers. If they draw a card from the suit they chose, they earn income to the value of the card (Jack 11, Queen 12, King 13, Ace 14) x10 credits. If they draw a card from a suit of the same color, then the Income is the value of the card x5 credits. If it is any other suit they gain no income from the Territory. If, however, they draw a Joker, they must pay all of the income they earn in that post-battle sequence to a random gang taking part in the campaign, as determined by the Arbitrator.\n
-ENHANCED BOON
-This Territory grants Delaque gangs the following Boons:\n
-Reputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\n
-Special: The Delaque player that controls this Territory may nominate a single enemy fighter at the start of the battle. The Delaque have called in the fighter’s debt marker, and in return for keeping all of their limbs intact, the fighter agrees to take no part in the coming battle. The nominated fighter misses the battle."
-  elsif a_question.match?(/generatorium/i)
-    "This Territory grants the following Boon:\n
-Special: If their gang controls this Territory, a player may choose to stall the generators, temporarily cutting the power to the area in which a battle is taking place and plunging it into darkness. The player may declare they will do this at the beginning of any Priority phase, before the roll for Priority.
-For the remainder of the battle, the Pitch Black rules (see page 328) are in effect. However, at the start of each End phase, there is a chance that the generators will automatically restart and the light flood back. At the start of each End phase, before making any Bottle tests, the player that controls this Territory rolls a D6. If the result is a 5 or more, the generators restart and the Pitch Black rules immediately cease to be in effect. If the roll is a 1-4, the generators stay silent.\n
-ENHANCED BOON
-This Territory grants Van Saar gangs the following Boon:\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation."
-  elsif a_question.match?(/smelting works/i)
-    "This Territory grants the following Boon:\n
-Income: the gang earns D6x5 credits from this Territory when Collecting income.\n
-ENHANCED BOON
-This Territory grants Goliath gangs the following Boon:\n
-Income: The gang earns D6x5 credits from this Territory when collecting income. If the gang also controls a Slag Furnace, this is increased to D6x10 credits."
-  elsif a_question.match?(/stinger mould sprawl/i)
-    "This Territory grants the following Boon:\n
-Special: During the post-battle sequence, the gang controlling this Territory may re-roll a Single Lasting Injury roll on a fighter. Note that a Memorable Death result may not be re-rolled.\n
-ENHANCED BOON
-This Territory grants Escher gangs the following Boons:\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
-Special: An Escher gang may either (1) remove a single existing Lasting Injury from a fighter, or (2) re-roll a single Lasting Injury roll on a fighter, including a Memorable Death result."
-  elsif a_question.match?(/wastes/i)
-    "This Territory grants the following Boons:\n
-Special: If challenged in the Occupation phase, the gang may choose the Territory at stake in the battle, even though it would normally be chosen by the challenger. If challenged in the Takeover phase for a Territory the gang already controls, make an Intelligence check for the gang Leader. If the check is passed, the player of the gang may choose to play the Ambush scenario instead of rolling. They are automatically the attacker."
-
-  # RACKETS
-  elsif a_question.match?(/OUT( |-)HIVE SMUGGLING ROUTES/i)
-    "RACKET BOONS\n
-Income: The gang earns D6x10 credits when they collect Income.\n
-ENHANCED BOONS
-Linked Rackets: Ghast Prospecting, The Cold Trade.\n
-Income: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\n
-Income: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
-  elsif a_question.match?(/LIFE COIN EXCHANGE /i)
-    "RACKET BOONS\n
-Recruit: Whilst it controls this Racket, the gang may recruit two Hive Scum or one Bounty Hunter Hired Gun for free, including their equipment, prior to every battle.\n
-ENHANCED BOONS
-Linked Rackets: Whisper Brokers, Corpse Guild Bond.\n
-Income: If the gang also controls one of the Linked Rackets, the gang earns D6x10 credits when they collect Income.\n
-Special: If the gang also controls both of the Linked Rackets, all of its members gain the Fearsome skill."
-  elsif a_question.match?(/GAMBLING EMPIRE/i)
-    "RACKET BOONS\n
-Income: The player of the gang that controls this Racket chooses a suit of cards and then draws a card from a shuffled deck of playing cards. If they draw a card from the suit they chose, they earn income equal to the value of the card (Jack 11, Queen 12, King 13) x 10 credits. If they draw a card from a suit of the same colour, they earn income equal to the value of the card x 5 credits. If it is any other suit, they gain no income.\n
-ENHANCED BOONS
-Linked Rackets: Blood Pits, Whisper Brokers.\n
-Income: If the gang also controls one of the Linked Rackets, the gang’s player may nominate a single enemy fighter (but not a Leader or Champion) at the start of the battle. The gang has called in the fighter’s debts. The nominated fighter misses the battle."
-  elsif a_question.match?(/SETTLEMENT PROTECTION/i)
-    "RACKET BOONS\n
-Recruit: Whilst it controls this Racket, the gang gains one Hanger-on of the controlling player’s choice for free.\n
-Income: Whilst it controls this Racket, the gang gains D6x10 credits when they collect Income.\n
-ENHANCED BOONS
-Linked Rackets: Guild Bond (any), Bullet Cutting.\n
-Income: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\n
-Income: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income."
-  elsif a_question.match?(/WYRD TRADE/i)
-    "RACKET BOONS\n
-Equipment: Whilst it controls this Racket, the gang treats Ghast as a Common item.\n
-ENHANCED BOONS
-Linked Rackets: Peddlers of Forbidden Lore, Whisper Brokers.\n
-Income: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\n
-Income: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income"
-  elsif a_question.match?(/RESURRECTION GAME/i)
-    "RACKET BOONS\n
-Special: Whilst it controls this Racket, the gang may ignore one Critical Injury or Memorable Death result on the Lasting Injury table per battle. When these results are rolled, the fighter simply goes Into Recovery.\n
-ENHANCED BOONS
-Linked Rackets: Corpse Guild Bond, Peddlers of Forbidden Lore.\n
-Income: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\n
-Special: Any gang in the campaign may pay the gang controlling this Racket to return a dead fighter from the grave. This costs the original value of the fighter (including equipment) +100 credits. Roll 2D6. On a roll of 7-12 the fighter is resurrected and gains the Fearsome skill. On a roll of 3-6 the fighter is resurrected but suffers a permanent loss of 1 Toughness and gains the Fearsome skill if they don’t have it already. On a roll of 2, the resurrection fails."
-  elsif a_question.match?(/ROGUE DOC SHOP/i)
-    "This Territory grants the following Boon:\nRecruit: The gang may recruit a Rogue Doc Hanger-on for free."
-  elsif a_question.match?(/settlement/i)
-    "This Territory grants the following Boons:\n
-Income: The gang earns D6x10 credits from this Territory when collecting income.\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
-Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
-  elsif a_question.match?(/slag furnace/i)
-    "This Territory grants the following Boon:\nIncome: The gang-earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Goliath gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\nRecruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
-  elsif a_question.match?(/tech bazaar/i)
-    "This Territory grants the following Boons:\nIncome: The gang earns D6x10 credits from this Territory when collecting income.\nEquipment: Select one Leader or Champion to make a Haggle post-battle action. Roll 2D6: The gang may immediately choose one item from the Rare Trade chart with a Rare value equal to the result of the dice roll and add it to their Stash for half of its usual value, rounded down. If the roll is lower than 7, pick a Common Weapon or Piece of equipment to add to the gang's Stash for half of its usual value, rounded down. If the roll is 3 or lower, then the fighter proves to be very poor at haggling and no equipment is gained. If the fighter selected has Exotic Furs, add +1 to the result of the 2D6 dice roll.\nENHANCED BOON\nThis Territory grants Van Saar gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nIncome: The gang earns D6x10 credits from this Territory when collecting income. If the gang also controls an Archaeotech Device, this is increased to 2D6x10."
-  elsif a_question.match?(/toll crossing/i)
-    "This Territory grants the following Boon:\nIncome: The gang earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boon:\nSpecial: Whilst it controls this Territory, an Orlock gang has Priority in the first round of any battle. Any gang in the campaign may pay the Orlock gang 20 credits to gain the same benefit in a single battle against another gang."
-  elsif a_question.match?(/tunnels/i)
-    "This Territory grants the following Boon:\nSpecial: Whist it controls this Territory, the gang may choose to have up to three fighters deploy via tunnels ahead of any battle. These fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are placed to one side. During the deployment phase, the player sets up two 2’’ wide tunnel entrance markers on any table edge on the ground surface of the battlefield. During the Priority phase of each turn, roll a D6. On a 4+, the group of fighters arrive on the battlefield. That turn they may be activated as a single group, and must move onto the battlefield from one of the tunnel entrance. If the battle ends before the fighters arrive, they take no part in the battle.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: An Orlock gang may choose to deploy up to six fighters via tunnels using the method detailed above. The fighters in each group must be specified before the battle."
-  elsif a_question.match?(/narco( |-)distribution/i)
-    "Linked Rackets: Out-Hive Smuggling Routes, Ghast Prospecting.\nRACKET BOONS\nIncome: The gang earns D6x10 credits when they collect Income.\nSpecial: Whilst it controls this Racket, the gang treats Chem-synth, Medicae Kit, Stimm-slug Stash, and any weapon with the Gas or Toxin trait as Common.\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
-
   # WEAPON KEYWORDS
-  elsif a_question.match?(/(assault|energy) shield/i)
+  if a_question.match?(/(assault|energy) shield/i)
     "An assault/energy shield grants a +2 armour save modifier (to a maximum of 2+) against melee attacks that originate from within the fighter’s vision arc (the 90° arc to their front), and a +1 armour save modifier against ranged attacks that originate from within the fighter’s vision arc; check this before the fighter is placed Prone and is Pinned. If it is not clear whether the attacker is within the target’s front arc, use a Vision Arc template to check – if the centre of the attacker’s base is within the arc, the assault/energy shield can be used. Against attacks with the Blast trait, use the centre of the Blast marker in place of the attacker. If the target does not have a facing (for example, if they are Prone), the assault/energy shield cannot be used"
   elsif a_question.match?(/BACKSTAB/i)
     "If the attacker is not within the target’s vision arc, add 1 to the attack’s Strength."
@@ -362,30 +252,147 @@ Run and Gun (Double) – The fighter may move up to double their Movement charac
     "If the hit roll for a ranged attack made by this fighter is a natural 6 (when using a weapon that does not have the Blast Trait), the shot hits an exposed area and no armour save can be made."
   elsif a_question.match?(/TRICK( |-|)SHOT/i)
     "When this fighter makes ranged attacks, they do not suffer a penalty for the target being Engaged or in partial cover. In addition, if the target is in full cover, they reduce the penalty to their hit roll to -1 rather than -2."
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
+  # PALATINE DRILL
+  elsif a_question.match?(/GOT YOUR (SIX|6)/i)
+    "Once per round if this fighter is Standing and Active, as soon as a visible enemy fighter declares a Charge (Double) action but before it is carried out, this fighter may interrupt the enemy fighter’s Activation to perform a Shoot (Basic) action, targeting the enemy fighter whose action they have interrupted. If the enemy is Pinned or Seriously Injured as a result, their activation ends immediately, and their action(s) are not made."
+  elsif a_question.match?(/HELMAWR(\W|)S JUSTICE/i)
+    "When this fighter performs a Coup de Grace, they may roll twice on the Lasting Injury table and choose which result to apply."
+  elsif a_question.match?(/NON(-|)VERBAL COMMUNICATION/i)
+    "If this fighter is Standing and Active, they can attempt to make the following action:\n
+Comms (Double): Pick a friendly fighter within 6\". That fighter can immediately make a Cool check. If the check is passed, their vision arc is extended to 360° until the End phase of this round."
+  elsif a_question.match?(/RESTRAINT PROTOCOLS/i)
+    "Rather than perform a Coup de Grace, this fighter may instead perform a Restrain (Simple) action:\n
+Restrain (Simple): This fighter is adept at shackling their opponents, even in the heat of battle. Each time this fighter performs this action, make a note that they have restrained an enemy fighter. During the Wrap-up, add 1 to the dice roll to determine if an enemy fighter has been Captured for each enemy fighter that has been restrained."
+  elsif a_question.match?(/TEAM( |)WORK/i)
+    "When a fighter with this skill is activated, they may make a group activation as if they were a Champion. If this fighter is a Champion, they may activate two additional Ready fighters within 3\" of them at the start of their Activation, rather than the usual one. If this fighter is a Leader, they may activate three additional Ready fighters within 3\" of them at the start of their Activation, rather than the usual two."
+  elsif a_question.match?(/THREAT RESPONSE/i)
+    "If an enemy fighter ends their movement within 6\" of this fighter after performing a Charge (Double) action, and if this fighter is Standing and Active and has a Ready marker on them, this fighter may immediately activate and perform a Charge (Double) action, moving towards the charging enemy fighter. If at the end of this movement this fighter has Engaged the enemy fighter, they may immediately perform a Fight (Basic) action as normal for a fighter performing a Charge (Double) action. This activation interrupts the enemy fighter’s action, being performed after movement but before attacks. This fighter then loses their Ready marker."
+  # SAVAGERY
+  elsif a_question.match?(/AVATAR OF BLOOD/i)
+    "For every unsaved wound this fighter inflicts on an enemy fighter with a weapon with the Melee trait, they may immediately discard one Flesh Wound they have previously suffered."
+  elsif a_question.match?(/BLOOD(| )LUST/i)
+    "After performing a Coup de Grace, this fighter may consolidate as well, moving up to 2\" in any direction."
+  elsif a_question.match?(/CRIMSON HAZE/i)
+    "If this fighter is Engaged with one or more enemy fighters, they automatically pass any Nerve tests they are required to take."
+  elsif a_question.match?(/FRENZY/i)
+    "When this fighter makes a Charge (Double) action, they gain an additional D3 Attacks. However, their hit rolls suffer a -1 modifier."
+  elsif a_question.match?(/KILLING BLOW/i)
+    "Before rolling to hit for the fighter’s close combat attacks, the controlling player can opt instead to make a single Killing Blow attack. This attack cannot be made with a weapon that has the Sidearm trait. If the attack hits, the attack’s Strength and Damage are doubled and no Armour Save roll can be made."
+  elsif a_question.match?(/SLAUGHTERBORN/i)
+    "For every unsaved wound this fighter inflicts on an enemy fighter with a weapon with the Melee trait, increase their Movement by 1\" for the duration of the battle"
+
+
+  # TERRITORIES
+  elsif a_question.match?(/collapsed dome/i)
+    "This Territory grants the following Boon:\n
+Income: When collecting income from this Territory, the controlling player may choose to roll between 2D6x10 and 6D6x10. However, if a double is rolled, then no income is generated and a random fighter from the gang suffers a Lasting Injury."
+  elsif a_question.match?(/corpse farm/i)
+    "This Territory grants the following Boon:\n
+Income: When collecting income, the gang gains D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle.\n
+ENHANCED BOON
+This Territory grants Cawdor gangs the following Boons:\n
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
+Income: When collecting income, the gang gains 2D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle."
+  elsif a_question.match?(/fighting pit/i)
+    "This Territory grants the following Boon:\n
+Recruit: Whilst it controls this Territory, the gang may recruit two Hive Scum Hired Guns for free, including their equipment, prior to every battle.\n
+ENHANCED BOON
+This Territory grants Goliath gangs the following Boon:\n
+Reputation: Whilst it controls this Territory, the gang adds +2 to Its Reputation."
+  elsif a_question.match?(/gambling den/i)
+    "This Territory grants the following Boons:\n
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
+Income: The player chooses a suit of cards. The player then draws a card from the shuffled deck of playing cards that includes both Jokers. If they draw a card from the suit they chose, they earn income to the value of the card (Jack 11, Queen 12, King 13, Ace 14) x10 credits. If they draw a card from a suit of the same color, then the Income is the value of the card x5 credits. If it is any other suit they gain no income from the Territory. If, however, they draw a Joker, they must pay all of the income they earn in that post-battle sequence to a random gang taking part in the campaign, as determined by the Arbitrator.\n
+ENHANCED BOON
+This Territory grants Delaque gangs the following Boons:\n
+Reputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\n
+Special: The Delaque player that controls this Territory may nominate a single enemy fighter at the start of the battle. The Delaque have called in the fighter’s debt marker, and in return for keeping all of their limbs intact, the fighter agrees to take no part in the coming battle. The nominated fighter misses the battle."
+  elsif a_question.match?(/generatorium/i)
+    "This Territory grants the following Boon:\n
+Special: If their gang controls this Territory, a player may choose to stall the generators, temporarily cutting the power to the area in which a battle is taking place and plunging it into darkness. The player may declare they will do this at the beginning of any Priority phase, before the roll for Priority.
+For the remainder of the battle, the Pitch Black rules (see page 328) are in effect. However, at the start of each End phase, there is a chance that the generators will automatically restart and the light flood back. At the start of each End phase, before making any Bottle tests, the player that controls this Territory rolls a D6. If the result is a 5 or more, the generators restart and the Pitch Black rules immediately cease to be in effect. If the roll is a 1-4, the generators stay silent.\n
+ENHANCED BOON
+This Territory grants Van Saar gangs the following Boon:\n
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation."
+  elsif a_question.match?(/smelting works/i)
+    "This Territory grants the following Boon:\n
+Income: the gang earns D6x5 credits from this Territory when Collecting income.\n
+ENHANCED BOON
+This Territory grants Goliath gangs the following Boon:\n
+Income: The gang earns D6x5 credits from this Territory when collecting income. If the gang also controls a Slag Furnace, this is increased to D6x10 credits."
+  elsif a_question.match?(/stinger mould sprawl/i)
+    "This Territory grants the following Boon:\n
+Special: During the post-battle sequence, the gang controlling this Territory may re-roll a Single Lasting Injury roll on a fighter. Note that a Memorable Death result may not be re-rolled.\n
+ENHANCED BOON
+This Territory grants Escher gangs the following Boons:\n
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
+Special: An Escher gang may either (1) remove a single existing Lasting Injury from a fighter, or (2) re-roll a single Lasting Injury roll on a fighter, including a Memorable Death result."
+  elsif a_question.match?(/wastes/i)
+    "This Territory grants the following Boons:\n
+Special: If challenged in the Occupation phase, the gang may choose the Territory at stake in the battle, even though it would normally be chosen by the challenger. If challenged in the Takeover phase for a Territory the gang already controls, make an Intelligence check for the gang Leader. If the check is passed, the player of the gang may choose to play the Ambush scenario instead of rolling. They are automatically the attacker."
+
+  # RACKETS
+  elsif a_question.match?(/OUT( |-)HIVE SMUGGLING ROUTES/i)
+    "RACKET BOONS\n
+Income: The gang earns D6x10 credits when they collect Income.\n
+ENHANCED BOONS
+Linked Rackets: Ghast Prospecting, The Cold Trade.\n
+Income: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\n
+Income: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
+  elsif a_question.match?(/LIFE COIN EXCHANGE /i)
+    "RACKET BOONS\n
+Recruit: Whilst it controls this Racket, the gang may recruit two Hive Scum or one Bounty Hunter Hired Gun for free, including their equipment, prior to every battle.\n
+ENHANCED BOONS
+Linked Rackets: Whisper Brokers, Corpse Guild Bond.\n
+Income: If the gang also controls one of the Linked Rackets, the gang earns D6x10 credits when they collect Income.\n
+Special: If the gang also controls both of the Linked Rackets, all of its members gain the Fearsome skill."
+  elsif a_question.match?(/GAMBLING EMPIRE/i)
+    "RACKET BOONS\n
+Income: The player of the gang that controls this Racket chooses a suit of cards and then draws a card from a shuffled deck of playing cards. If they draw a card from the suit they chose, they earn income equal to the value of the card (Jack 11, Queen 12, King 13) x 10 credits. If they draw a card from a suit of the same colour, they earn income equal to the value of the card x 5 credits. If it is any other suit, they gain no income.\n
+ENHANCED BOONS
+Linked Rackets: Blood Pits, Whisper Brokers.\n
+Income: If the gang also controls one of the Linked Rackets, the gang’s player may nominate a single enemy fighter (but not a Leader or Champion) at the start of the battle. The gang has called in the fighter’s debts. The nominated fighter misses the battle."
+  elsif a_question.match?(/SETTLEMENT PROTECTION/i)
+    "RACKET BOONS\n
+Recruit: Whilst it controls this Racket, the gang gains one Hanger-on of the controlling player’s choice for free.\n
+Income: Whilst it controls this Racket, the gang gains D6x10 credits when they collect Income.\n
+ENHANCED BOONS
+Linked Rackets: Guild Bond (any), Bullet Cutting.\n
+Income: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\n
+Income: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income."
+  elsif a_question.match?(/WYRD TRADE/i)
+    "RACKET BOONS\n
+Equipment: Whilst it controls this Racket, the gang treats Ghast as a Common item.\n
+ENHANCED BOONS
+Linked Rackets: Peddlers of Forbidden Lore, Whisper Brokers.\n
+Income: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\n
+Income: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income"
+  elsif a_question.match?(/RESURRECTION GAME/i)
+    "RACKET BOONS\n
+Special: Whilst it controls this Racket, the gang may ignore one Critical Injury or Memorable Death result on the Lasting Injury table per battle. When these results are rolled, the fighter simply goes Into Recovery.\n
+ENHANCED BOONS
+Linked Rackets: Corpse Guild Bond, Peddlers of Forbidden Lore.\n
+Income: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\n
+Special: Any gang in the campaign may pay the gang controlling this Racket to return a dead fighter from the grave. This costs the original value of the fighter (including equipment) +100 credits. Roll 2D6. On a roll of 7-12 the fighter is resurrected and gains the Fearsome skill. On a roll of 3-6 the fighter is resurrected but suffers a permanent loss of 1 Toughness and gains the Fearsome skill if they don’t have it already. On a roll of 2, the resurrection fails."
+  elsif a_question.match?(/ROGUE DOC SHOP/i)
+    "This Territory grants the following Boon:\nRecruit: The gang may recruit a Rogue Doc Hanger-on for free."
+  elsif a_question.match?(/settlement/i)
+    "This Territory grants the following Boons:\n
+Income: The gang earns D6x10 credits from this Territory when collecting income.\n
+Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
+Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
+  elsif a_question.match?(/slag furnace/i)
+    "This Territory grants the following Boon:\nIncome: The gang-earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Goliath gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\nRecruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
+  elsif a_question.match?(/tech bazaar/i)
+    "This Territory grants the following Boons:\nIncome: The gang earns D6x10 credits from this Territory when collecting income.\nEquipment: Select one Leader or Champion to make a Haggle post-battle action. Roll 2D6: The gang may immediately choose one item from the Rare Trade chart with a Rare value equal to the result of the dice roll and add it to their Stash for half of its usual value, rounded down. If the roll is lower than 7, pick a Common Weapon or Piece of equipment to add to the gang's Stash for half of its usual value, rounded down. If the roll is 3 or lower, then the fighter proves to be very poor at haggling and no equipment is gained. If the fighter selected has Exotic Furs, add +1 to the result of the 2D6 dice roll.\nENHANCED BOON\nThis Territory grants Van Saar gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nIncome: The gang earns D6x10 credits from this Territory when collecting income. If the gang also controls an Archaeotech Device, this is increased to 2D6x10."
+  elsif a_question.match?(/toll crossing/i)
+    "This Territory grants the following Boon:\nIncome: The gang earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boon:\nSpecial: Whilst it controls this Territory, an Orlock gang has Priority in the first round of any battle. Any gang in the campaign may pay the Orlock gang 20 credits to gain the same benefit in a single battle against another gang."
+  elsif a_question.match?(/tunnels/i)
+    "This Territory grants the following Boon:\nSpecial: Whist it controls this Territory, the gang may choose to have up to three fighters deploy via tunnels ahead of any battle. These fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are placed to one side. During the deployment phase, the player sets up two 2’’ wide tunnel entrance markers on any table edge on the ground surface of the battlefield. During the Priority phase of each turn, roll a D6. On a 4+, the group of fighters arrive on the battlefield. That turn they may be activated as a single group, and must move onto the battlefield from one of the tunnel entrance. If the battle ends before the fighters arrive, they take no part in the battle.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: An Orlock gang may choose to deploy up to six fighters via tunnels using the method detailed above. The fighters in each group must be specified before the battle."
+  elsif a_question.match?(/narco( |-)distribution/i)
+    "Linked Rackets: Out-Hive Smuggling Routes, Ghast Prospecting.\nRACKET BOONS\nIncome: The gang earns D6x10 credits when they collect Income.\nSpecial: Whilst it controls this Racket, the gang treats Chem-synth, Medicae Kit, Stimm-slug Stash, and any weapon with the Gas or Toxin trait as Common.\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
+
+
   elsif a_question.match?(/pham/i)
     "++DONT YOU MEAN JONATHAN++"
   elsif a_question.match?(/pham/i)
