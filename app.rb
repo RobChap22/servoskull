@@ -348,6 +348,76 @@ Order (Double) – Pick a friendly fighter within 6\". That fighter can immediat
     "When this fighter makes a Trade action in the post-battle sequence, add 1 to the result of the dice roll to determine the availability of Rare items on offer at the Trading Post on this visit. Additionally, the cost of one item may be reduced by 20 credits on this visit. Note that this means one item, not one type of item. A single power sword may be purchased for 30 credits, but a second power sword will still cost 50 credits."
   elsif a_question.match?(/SAVVY SCAVENGER/i)
     "During the Damnation phase of an Uprising Campaign, while this fighter makes a Scavenge action, add 1 or 2 to the result of the dice roll on the Scavenging Table."
+  # SHOOTING
+  elsif a_question.match?(/FAST SHOT/i)
+    "This fighter treats the Shoot action as (Simple) rather than (Basic), as long as they do not attack with a weapon that has the Unwieldy trait (note that even if a skill or wargear item allows a fighter to ignore one aspect of the Unwieldy trait, Unwieldy weapons retain the Trait)."
+  elsif a_question.match?(/GUNFIGHTER/i)
+    "If the fighter uses the Twin Guns Blazing rule to attack with two weapons with the Sidearm trait, they do not suffer the -1 penalty to their hit rolls and can, if they wish, target a different enemy model with each weapon with the Sidearm trait."
+  elsif a_question.match?(/HIP(|-| )SHOOTING/i)
+    "If the fighter is Standing and Active, they can make thefollowing action:\n
+Run and Gun (Double) – The fighter may move up to double their Movement characteristic and then make an attack with a ranged weapons. The hit roll suffers an additional -1 modifier, and Unwieldy weapons can never be used in conjunction with this skill."
+  elsif a_question.match?(/MARKSMAN/i)
+    "The fighter is not affected by the rules for Target Priority. In addition, if the hit roll for an attack made by the fighter with a ranged weapon (that does not have the Blast trait) is a natural 6, they score a critical hit, and the weapon’s Damage is doubled (if they are firing a weapon with the Rapid Fire trait, only the Damage of the first hit is doubled)."
+  elsif a_question.match?(/PRECISION SHOT/i)
+    "If the hit roll for a ranged attack made by this fighter is a natural 6 (when using a weapon that does not have the Blast Trait), the shot hits an exposed area and no armour save can be made."
+  elsif a_question.match?(/TRICK( |-|)SHOT/i)
+    "When this fighter makes ranged attacks, they do not suffer a penalty for the target being Engaged or in partial cover. In addition, if the target is in full cover, they reduce the penalty to their hit roll to -1 rather than -2."
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
   elsif a_question.match?(/pham/i)
     "++DONT YOU MEAN JONATHAN++"
   elsif a_question.match?(/pham/i)
