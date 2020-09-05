@@ -422,42 +422,42 @@ Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 o
     "Linked Rackets: Out-Hive Smuggling Routes, Ghast Prospecting.\nRACKET BOONS\nIncome: The gang earns D6x10 credits when they collect Income.\nSpecial: Whilst it controls this Racket, the gang treats Chem-synth, Medicae Kit, Stimm-slug Stash, and any weapon with the Gas or Toxin trait as Common.\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
 
 
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
 
   # OTHER
   elsif a_question.match?(/pham/i)
