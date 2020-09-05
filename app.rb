@@ -16,7 +16,8 @@ end
 def bot_answer_to(a_question, user_name)
   # If you want to add Bob to group chat, uncomment the next line
   # return '' unless a_question.downcase.include?('bob') # Only answer to messages with 'bob'
-# TERRITORIES
+
+  # TERRITORIES
   if a_question.match?(/collapsed dome/i)
     "This Territory grants the following Boon:\n
 Income: When collecting income from this Territory, the controlling player may choose to roll between 2D6x10 and 6D6x10. However, if a double is rolled, then no income is generated and a random fighter from the gang suffers a Lasting Injury."
@@ -64,7 +65,8 @@ Special: An Escher gang may either (1) remove a single existing Lasting Injury f
   elsif a_question.match?(/wastes/i)
     "This Territory grants the following Boons:\n
 Special: If challenged in the Occupation phase, the gang may choose the Territory at stake in the battle, even though it would normally be chosen by the challenger. If challenged in the Takeover phase for a Territory the gang already controls, make an Intelligence check for the gang Leader. If the check is passed, the player of the gang may choose to play the Ambush scenario instead of rolling. They are automatically the attacker."
-# RACKETS
+
+  # RACKETS
   elsif a_question.match?(/OUT( |-)HIVE SMUGGLING ROUTES/i)
     "RACKET BOONS\n
 Income: The gang earns D6x10 credits when they collect Income.\n
@@ -124,7 +126,8 @@ Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 o
     "This Territory grants the following Boon:\nSpecial: Whist it controls this Territory, the gang may choose to have up to three fighters deploy via tunnels ahead of any battle. These fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are placed to one side. During the deployment phase, the player sets up two 2’’ wide tunnel entrance markers on any table edge on the ground surface of the battlefield. During the Priority phase of each turn, roll a D6. On a 4+, the group of fighters arrive on the battlefield. That turn they may be activated as a single group, and must move onto the battlefield from one of the tunnel entrance. If the battle ends before the fighters arrive, they take no part in the battle.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: An Orlock gang may choose to deploy up to six fighters via tunnels using the method detailed above. The fighters in each group must be specified before the battle."
   elsif a_question.match?(/narco( |-)distribution/i)
     "Linked Rackets: Out-Hive Smuggling Routes, Ghast Prospecting.\nRACKET BOONS\nIncome: The gang earns D6x10 credits when they collect Income.\nSpecial: Whilst it controls this Racket, the gang treats Chem-synth, Medicae Kit, Stimm-slug Stash, and any weapon with the Gas or Toxin trait as Common.\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
-# WEAPON KEYWORDS
+
+  # WEAPON KEYWORDS
   elsif a_question.match?(/(assault|energy) shield/i)
     "An assault/energy shield grants a +2 armour save modifier (to a maximum of 2+) against melee attacks that originate from within the fighter’s vision arc (the 90° arc to their front), and a +1 armour save modifier against ranged attacks that originate from within the fighter’s vision arc; check this before the fighter is placed Prone and is Pinned. If it is not clear whether the attacker is within the target’s front arc, use a Vision Arc template to check – if the centre of the attacker’s base is within the arc, the assault/energy shield can be used. Against attacks with the Blast trait, use the centre of the Blast marker in place of the attacker. If the target does not have a facing (for example, if they are Prone), the assault/energy shield cannot be used"
   elsif a_question.match?(/BACKSTAB/i)
@@ -176,6 +179,74 @@ A fighter can only carry a limited number of grenades.The Firepower dice is not 
   elsif a_question.match?(/gunk/i)
     "A fighter hit by a weapon with the Gunk Trait becomes subject to the Gunked condition. Gunked fighters reduce their Movement characteristic by 1 to a minimum of 1 and don’t add D3\" to their movement when making a Charge action. In addition, they subtract 1 from the dice roll when making an Initiative check. Gunked fighters are also more flammable and catch fire on a 2+, rather than a 4+, when hit by a weapon with the Blaze trait.\n
 The Gunked condition lasts until the End phase or untilthe fighter catches fire after being hit by a weapon with the Blaze Trait"
+  elsif a_question.match?(/HEXAGRAMMATIC/i)
+    "The ammo used by this weapon has been specially treated to defeat psychic defences and severely harm Psykers. Hits from weapons with this Trait ignore saves provided by psychic powers. Additionally, weapons with this Trait will inflict double damage against Psykers."
+  elsif a_question.match?(/IMPALE/i)
+    "If an attack made by this weapon hits and wounds the target, and the save roll is unsuccessful (or no save roll is made), the projectile continues through them and might hit another fighter! Trace a straight line from the target, directly away from the attacker. If there are any fighters within 1\" of this line, and within the weapon's Long Range, the one that is closest to the target is at risk of being hit. Roll a D6 – on a 3 or more, resolve the weapon’s attack against that fighter, subtracting 1 from the Strength. The projectile can continue through multiple fighters in this way, but if the Strength is reduced to 0, it cannot hit any more fighters."
+  elsif a_question.match?(/KNOCKBACK/i)
+    "If the hit roll for a weapon with the Knockback trait is equal to or higher than the target’s Strength, they are immediately moved 1\" directly away from the attacking fighter. If the fighter cannot be moved the full 1\" because of impassable terrain or another fighter, they move as far as possible and the attack’s Damage is increased by 1. If a Blast weapon has the Knockback trait, roll a D6 for each fighter that is hit. If the result is equal to or higher than their Strength, they are knocked back as described above – however, they are moved directly away from the centre of the Blast marker instead. If the centre of the Blast marker was over the centre of their base, roll a Scatter dice to determine which way they are moved. If a Melee weapon has the Knockback trait, the attacking fighter can choose to follow the target up, moving directly towards them after they have been knocked back to remain in base contact. If the attack was made across a barricade, the attacker cannot do this. If any part of the knocked back fighter's base crosses the edge of a platform, make an Initiative check. If this is failed, they will fall. If this is passed, they stop moving at the edge of the platform."
+  elsif a_question.match?(/LIMITED/i)
+    "This special rule is applied to some special ammo types which can be purchased for weapons. If a weapon fails an Ammo check while using limited ammo, they have run out – that ammo type is deleted from their fighter card, and cannot be used again until more of that special ammo is purchased from the Trading Post. This is in addition to the normal rules for the weapon running Out of Ammo. The weapon can still be reloaded as normal, using its remaining profile(s)."
+  elsif a_question.match?(/MELEE/i)
+    "This weapon can be used during close combat attacks."
+  elsif a_question.match?(/MELTA/i)
+    "If a Short range attack from a weapon with this Trait reduces a fighter to 0 wounds, no Injury dice are rolled – instead, any Injury dice that would be rolled cause an automatic Out of Action result."
+  elsif a_question.match?(/PAIRED/i)
+    "A fighter that is armed with Paired weapons counts as being armed with dual weapons with the Melee trait for the purposes of calculating the number of Attack dice they will roll. Additionally, when making a Charge (Double) action, their Attacks characteristic is doubled."
+  elsif a_question.match?(/PARRY/i)
+    "After an enemy makes close combat attacks against a fighter armed with a Parry weapon, the defending fighter’s owning player can force the attacking player to re-roll one successful hit. If the defending fighter is armed with two Parry weapons, their owning player can force the attacking player to re-roll two successful hits instead."
+  elsif a_question.match?(/PLENTIFUL/i)
+    "Ammunition for this weapon is incredibly common. When reloading it, no Ammo check is required – it is automatically reloaded."
+  elsif a_question.match?(/POWER/i)
+    "The weapon is surrounded by a crackling power field. Attacks made by Power weapons cannot be parried except by other Power weapons. In addition, if the hit roll for a Power weapon is a 6, no save roll can be made against the attack and its Damage is increased by 1."
+  elsif a_question.match?(/PULVERISE/i)
+    "After making an Injury roll for an attack made by this weapon, the attacking player can roll a D6. If the result is equal to or higher than the target's Toughness, or is a natural 6, they can change one Injury dice from a Flesh Wound result to a Serious Injury result."
+  elsif a_question.match?(/rad( |-)phage/i)
+    "After fully resolving any successful hits a fighter suffers from a weapon with this Trait, roll an additional D6. If the roll is a 4 or higher, the fighter will suffer an additional Flesh Wound."
+  elsif a_question.match?(/RAPID FIRE/i)
+    "When firing with a Rapid Fire weapon, a successful hit roll scores a number of hits equal to the number of bullet holes on the Firepower dice. In addition the controlling player can roll more than one Firepower dice, up to the number shown in brackets (for example, when firing a Rapid Fire (2) weapon, up to two firepower dice can be rolled). Make an Ammo check for each Ammo symbol that is rolled. If any of them fail, the gun runs Out of Ammo. If two or more of them fail, the gun has jammed and cannot be used for the rest of the battle.\n
+If a Rapid Fire weapon scores more than one hit, the hits can be split between multiple targets. The first must be allocated to the initial target, but the remainder can be allocated to other fighters within 3’’ of the first who are also within range and line of sight. These must not be any harder to hit than the original target – if a target in the open is hit, an obscured target cannot have hits allocated to it. Allocate all of the hits before making any wound rolls."
+  elsif a_question.match?(/RECKLESS/i)
+    "Reckless weapons are indiscriminate in what they target. Weapons with this Trait ignore the normal target priority rules. Instead, before making an attack with a weapon with this Trait, randomly determine the target of the attack from all eligible models within the fighter’s line of sight."
+  elsif a_question.match?(/RENDING/i)
+    "If the roll to wound with a Rending weapon is a natural 6 the attack causes 1 extra point of damage."
+  elsif a_question.match?(/SCARCE/i)
+    "Ammunition is hard to come by for Scarce weapons, and as such they cannot be reloaded – once they run Out of Ammo, they cannot be used again during the battle."
+  elsif a_question.match?(/SCATTERSHOT/i)
+    "When a target is hit by a scattershot attack, make D6 wounds roll instead of 1."
+  elsif a_question.match?(/SEISMIC/i)
+    "If the target of a Seismic attack is Active, they are always Pinned – even if they have an ability that would normally allow them to avoid being Pinned by ranged attacks. In addition, if the wound roll for a Seismic weapon is a natural 6, no save roll can be made against that attack."
+  elsif a_question.match?(/SEVER/i)
+    "If a wound roll from a weapon with this Trait reduces a fighter to 0 wounds, no Injury dice are rolled – instead, any Injury dice that would be rolled cause an automatic Out of Action result."
+  elsif a_question.match?(/SHIELD( |)BREAKER/i)
+    "Weapons with this Trait ignore the effects of the Assault Shield/Energy Shield trait. In addition, when a target equipped with Field Armour is wounded by a weapon with this Trait, they must roll two dice when making a Field Armour save and choose the lower result."
+  elsif a_question.match?(/SHOCK/i)
+    "If the hit roll for a Shock weapon is a natural 6, the wound roll is considered to automatically succeed (no wound roll needs to be made)"
+  elsif a_question.match?(/SHRED/i)
+    "If the roll to wound with a weapon with this trait is a natural 6, then the Armour Penetration of the weapon is doubled."
+  elsif a_question.match?(/SIDEARM/i)
+    "Weapons with this Trait can be used to make ranged attacks, and can also be used in close combat to make a single attack. Note that their Accuracy bonus only applies when making a ranged attack, not when used to make a close combat attack."
+  elsif a_question.match?(/SILENT/i)
+    "In scenarios that use the Sneak Attack special rules, there is no test to see whether the alarm is raised when this weapon is fired. Additionally, if using the Pitch Black rules, a fighter using this weapon that is Hidden does not become Revealed."
+  elsif a_question.match?(/SINGLE SHOT/i)
+    "This weapon can only be used once per game. After use it counts as having automatically failed an Ammo Check. There is no need to roll the Firepower dice unless the weapon also has the Rapid Fire (X) trait."
+  elsif a_question.match?(/SMOKE/i)
+    "Smoke weapons do not cause hits on fighters – they do not cause Pinning and cannot inflict Wounds. Instead, mark the location where they hit with a counter. They generate an area of dense smoke, which extends 2.5\" out from the centre of the counter; a 5’’ Blast marker can be used to determine this area, but it should be considered to extend vertically as well as horizontally. Fighters can move through the smoke, but it blocks line of sight, so attacks cannot be made into, out of or through it. In the End phase, roll a D6. On a 4 or less, the cloud dissipates and the counter is removed."
+  elsif a_question.match?(/template/i)
+    "Template weapons use the Flame template to determine how many targets they hit."
+  elsif a_question.match?(/TOXIN/i)
+    "Instead of making a wound roll for a Toxin attack, roll a D6. If the result is equal to or higher than the target’s Toughness, or is a natural 6, make an Injury roll for them (regardless of their Wounds characteristic). If the roll is lower than the target’s Toughness, they shrug off the toxin’s effects."
+  elsif a_question.match?(/UNSTABLE/i)
+    "If the Ammo Symbol is rolled on the Firepower dice when attacking with this weapon, there is a chance the weapon will overheat in addition to needing an Ammo check. Roll a D6. On a 1, 2 or 3, the weapon suffers a catastrophic overload and the attacker is taken Out of Action. The attack is still resolved against the target."
+  elsif a_question.match?(/UNWIELDY/i)
+    "A Shoot action made with this weapon counts as a Double action as opposed to a Single action. In addition, a fighter who uses a weapon with both the Unwieldy and Melee traits in close combat cannot use a second weapon at the same time – this one requires both hands to use."
+  elsif a_question.match?(/VERSATILE/i)
+    "The wielder of a Versatile weapon does not need to be in base contact with an enemy fighter in order to Engage them in melee during their activation. They may Engage and make close combat attacks against an enemy fighter during their activation, so long as the distance between their base and that of the enemy fighter is equal to or less than the distance shown for the Versatile weapon’s Long range characteristic. For example, a fighter armed with a Versatile weapon with a Long range of 2\" may Engage an enemy fighter that is up to 2\" away.\n
+The enemy fighter is considered to be Engaged, but may not in turn be Engaging the fighter armed with the Versatile weapon unless they too are armed with a Versatile weapon, and so may not be able to make Reaction attacks.\n
+At all other times other than during this fighter’s activation, Versatile has no effect."
+  elsif a_question.match?(/WEB/i)
+    "If the wound roll for a Web attack is successful, no wound is inflicted, and no save roll or Injury roll is made. Instead, the target automatically becomes Webbed. Treat the fighter as if they were Seriously Injured and roll for Recovery for them during the End phase (Web contains a powerful sedative capable of rendering the strongest fighter unconscious). If a Flesh Wound result is rolled during Recovery, apply the result to the fighter as usual and remove the Webbed condition. If a Serious Injury is rolled, the fighter remains Webbed. If an Out of Action result is rolled, the fighter succumbs to the powerful sedative and is removed from play, automatically suffering a result of 12-26 (Out Cold) on the Lasting Injuries table.\n
+A fighter that is Webbed at the end of the game does not succumb to their Injuries and will automatically recover. However, during the Wrap Up, when rolling to determine if any enemy fighters are Captured at the end of the game, add +1 to the dice roll for each enemy fighter currently Webbed and include them among any eligible to be Captured."
   elsif a_question.match?(/pham/i)
     "++DONT YOU MEAN JONATHAN++"
   else
