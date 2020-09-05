@@ -280,7 +280,36 @@ Restrain (Simple): This fighter is adept at shackling their opponents, even in t
     "Before rolling to hit for the fighter’s close combat attacks, the controlling player can opt instead to make a single Killing Blow attack. This attack cannot be made with a weapon that has the Sidearm trait. If the attack hits, the attack’s Strength and Damage are doubled and no Armour Save roll can be made."
   elsif a_question.match?(/SLAUGHTERBORN/i)
     "For every unsaved wound this fighter inflicts on an enemy fighter with a weapon with the Melee trait, increase their Movement by 1\" for the duration of the battle"
-
+  # FINESSE
+  elsif a_question.match?(/ACROBATIC/i)
+    "While this fighter is Active, they may ignore enemy fighters when making a Move (Simple) action or a Charge (Double) action. In effect, this allows them to move over other fighters. Note that they must still adhere to the 1\" rule once their movement is complete. This fighter may also cross any barricade or linear terrain feature up to 2\" high without a reduction in movement."
+  elsif a_question.match?(/COMBAT FOCUS/i)
+    "For every enemy fighter either Out of Action or Seriously Injured, place a token on this fighter’s Fighter card. This fighter adds 1 to their Willpower and Cool checks for each token on their Fighter card. Note that a result of 2 for either a Willpower or Cool check is still a failure regardless of modifiers."
+  elsif a_question.match?(/COMBAT VIRTUOSO/i)
+    "Any chainswords, fighting knives, power knives, power swords, stiletto knives and stiletto swords wielded by this fighter gain the Versatile trait with a Long range equal to this fighter’s Strength characteristic."
+  elsif a_question.match?(/HIT AND RUN/i)
+    "After making a Charge (Double) action, this fighter may make a Retreat (Basic) action for free before their opponent makes any reaction attacks. Note that even if the Retreat action is unsuccessful, this fighter’s opponent may only make reaction attacks once."
+  elsif a_question.match?(/LIGHTNING REFLEXES/i)
+    "When this fighter is Engaged by an enemy fighter, this fighter may attempt to make a Retreat (Basic) action for free before the enemy fighter makes any attacks or additional actions.\n
+Whether or not the Retreat action was successful, this fighter may only use this skill once per round. Note that if this fighter has a Ready marker, they may still activate as normal."
+  elsif a_question.match?(/SOMERSAULT/i)
+    "This fighter gains the ability to perform the Somersault (Basic) action while they are Standing and Active:\n
+Somersault (Basic) – Place the fighter anywhere within 6\" of their current position, provided they can see the point they wish to move to before they are placed. Note that the fighter must still adhere to the 1\" rule when being placed. Using this action does not count as moving for the purposes of effects that are triggered by movement and for the firing of weapons with the Unwieldy trait."
+  # MUSCLE
+  elsif a_question.match?(/fists of steel/i)
+    "Unarmed attacks made by this fighter count as having a strength of 2 higher than normal and inflict 2 damage."
+  elsif a_question.match?(/iron man/i)
+    "This fighter's Toughness is not reduced by Flesh Wounds. However, if this fighter suffers a number of Flesh Wounds equal to their Toughness characteristic, they will go Out of Action as normal."
+  elsif a_question.match?(/immovable stance/i)
+    "This fighter may perform the Tank (Double) action during their activation:\n
+Tank (Double) - Until the start of this fighter's next activation, this fighter increases their armour save by 2 to a maximum of 2+ and cannot be moved from their current location by any skills such as Hurl or Overseer, or any weapon traits such as Knockback or Drag, nor can they be Pinned."
+  elsif a_question.match?(/na{1,6}rgah(|!)/i)
+    "During this fighter's activation they may attempt to perform a third action after completing their first two. Roll a d6. If the dice roll is equal to or less than their Toughness then they perform the action. If the roll is greater thant their Toughtness, or is a 6, their activation ends immediately. Whether or not they were successful, when their activation ends, this fighter is automatically Pinned (this Pinning cannot be negated by skills such as Nerves of Steel)."
+  elsif a_question.match?(/unleash the beast/i)
+    "This fighter may perform the Flex (Simple) action while they are Active and Engaged:\n
+Flex (Simple) - All fighters (friend or foe) in base contect with this fighter must pass a Strength check or be pushed d3\" directly away from this fighter, stopping only if they come into  contact with another fighter or an impassable terrain feature. If there are multiple enemies being pushed, the player controlling this fighter chooses in which order they are moved."
+  elsif a_question.match?(/walk it off/i)
+    "Should this fighter perform two or more Move (Simple) actions during their activation, they can make a Toughness check at the end of their activation. If this check is passed, this fighter may recover one lost Wound or discard a single Flesh Wound."
 
   # TERRITORIES
   elsif a_question.match?(/collapsed dome/i)
