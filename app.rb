@@ -263,24 +263,91 @@ If the model dodges a weapon that uses a Blast marker or Flame template, a roll 
     "If this fighter is Pinned when they are activated, make an Initiative check for them. If the check is passed the fighter can make a Stand Up (Basic) action for free. If the check is failed, the fighter may still stand up, but it costs one action, as usual."
   elsif a_question.match?(/SPRINT/i)
     "If this fighter makes two Move (Simple) actions when activated during a round, they can use the second to Sprint. This lets them move at double their Movement characteristic for the second Move (Simple) action."
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/pham/i)
-    "++DONT YOU MEAN JONATHAN++"
+  # BRAWN
+  elsif a_question.match?(/BULL( |-|)CHARGE/i)
+    "When this fighter makes close combat attacks as part of a Charge (Double) action, any weapons with the Melee trait they use gain the Knockback Trait and are resolved at +1 Strength."
+  elsif a_question.match?(/BULGING BICEPS/i)
+    "This fighter may wield an Unwieldy weapon in one hand rather than the usual two. Note that Unwieldy weapons still take up the space of two weapons with regards to how many a fighter may carry."
+  elsif a_question.match?(/CRUSHING BLOW/i)
+    "Before rolling to hit for the fighter's close combat attacks, the controlling player can nominate one dice to make a Crushing Blow. This cannot be a dice that is rolling for a weapon with the Sidearm trait. If that dice hits, the attack’s Strength and Damage are each increased by one."
+  elsif a_question.match?(/HEADBUTT/i)
+    "If the fighter is Standing and Engaged, they can make the following action:\n
+Headbutt (Basic) – Pick an Engaged enemy fighter and roll two d6. If either result is equal to or higher than their Toughness, they suffer a hit with a Strength equals to this fighter's Strength +2 resolved at Damage 2. However, if both dice score lower than the enemy fighter's Toughness, this fighter instead suffers a hit equal to their own Strength, resolved at Damage 1."
+  elsif a_question.match?(/HURL/i)
+    "If the fighter is Standing and Engaged, they can make the following action:\n
+Hurl (Basic) – Pick an enemy fighter Engaged by, and in base contact with this fighter or a Seriously Injured enemy fighter within 1’’ of this fighter. Make an Initiative check for the enemy fighter. If failed, the enemy fighter is hurled. Move the enemy fighter d3\" in a direction of your choice – if they were Standing, they become Prone and Pinned after moving. If they come into base contact with a Standing fighter or any terrain, they stop moving and suffer a Strength 3, Damage 1 hit. If they come into base contact with another fighter, that fighter also suffers a Strength 3, Damage 1 hit, and becomes Prone and Pinned."
+  elsif a_question.match?(/IRON( |)JAW/i)
+    "This fighter's Toughness is treated as being two higher than normal when another fighter makes unarmed attacks against them in close combat."
+  # COMBAT
+  elsif a_question.match?(/COMBAT(-| )MASTER/i)
+    "The fighter never suffers penalties to their hit rolls for interference, and can always grant assists, regardless of how many enemy fighters they are Engaged with."
+  elsif a_question.match?(/COUNTER(-| |)ATTACK/i)
+    "When this fighter makes Reaction attacks in close combat, they roll one additional Attack dice for each of the attacker’s Attacks that failed to hit (whether they missed, were parried, etc)"
+  elsif a_question.match?(/DISARM/i)
+    "Any weapons with the Melee trait used by the fighter also gain the Disarm Trait. If a weapon already has this Trait, then the target will be disarmed on a natural roll of 5 or 6, rather than the usual 6."
+  elsif a_question.match?(/PARRY/i)
+    "The fighter can parry attacks as though they were carrying a weapon with the Parry Trait. If they already have one or more weapons with this Trait, they can parry one additional attack."
+  elsif a_question.match?(/RAIN OF BLOWS/i)
+    "This fighter treats the Fight action as Fight (Simple) rather than Fight (Basic). In other words, this fighter may make two Fight (Simple) actions when activated."
+  elsif a_question.match?(/STEP ASIDE/i)
+    "If the fighter is hit in close combat, the fighter can attempt to step aside. Make an Initiative check for them. If the check is passed, the attack misses. This skill can only be used once per enemy in each round or close combat – in other words, if an enemy makes more than one attack, the fighter can only attempt to step aside from one of them."
+  # CUNNING
+  elsif a_question.match?(/BACKSTAB/i)
+    "Any weapons used by this fighter with the Melee trait also gain the Backstab Trait. If they already have this Trait, add 2 to the attacker's Strength rather than the usual 1 when the Trait is used."
+  elsif a_question.match?(/ESCAPE ARTIST/i)
+    "When this fighter makes a Retreat (Basic) action, add 2 to the result of the Initiative check (a natural 1 still fails). Additionally, if this fighter is Captured at the end of a battle, and if they are equipped with a skin blade, they may add 1 to the result of the dice roll to see if they can escape."
+  elsif a_question.match?(/EVADE/i)
+    "If an enemy targets this fighter with a ranged attack, and this fighter is Standing and Active and not in partial cover or full cover, there is an additional -1 modifier to the hit roll, or a -2 modifier if the attack is at Long range."
+  elsif a_question.match?(/INFILTRATE/i)
+    "If this fighter should be set up at the start of a battle, they may instead placed to one side. Then, immediately before the start of the first round, their controlling player may set them up anywhere on the battlefield that is not visible to any enemy fighters, and not within 6\" of any of them. If both players have fighters with this skill, take turns to set one up, starting with the winner of a roll-off."
+  elsif a_question.match?(/LIE LOW/i)
+    "While this fighter is Prone, enemy fighters cannot target them with a ranged attack unless they are within the attacking weapon's Short range. Weapons that do not have a Short range are unaffected by this rule."
+  elsif a_question.match?(/OVERWATCH/i)
+    "If this fighter is Standing and Active, and has a Ready marker on them, they can interrupt a visible enemy fighter’s action as soon as it is declared, but before it is carried out. This fighter loses their Ready marker, then immediately makes a Shoot (Basic) action, targeting the enemy fighter whose action they have interrupted. If the enemy is Pinned or Seriously Injured as a result, their activation ends immediately – their action(s) are not made."
+  # FEROCITY
+  elsif a_question.match?(/BERSERKER/i)
+    "When this fighter makes close combat attacks as part of a Charge (Double) action, they roll one additional Attack dice."
+  elsif a_question.match?(/FEARSOME/i)
+    "If an enemy wishes to make a Charge (Double) action that would result in them making one or more close combat attacks against this fighter, they must make a Willpower check before moving. If the check is failed, they cannot move and their activation ends immediately."
+  elsif a_question.match?(/IMPETUOUS/i)
+    "When this fighter consolidates at the end of a close combat, they can move up to 4\", rather than the usual 2\"."
+  elsif a_question.match?(/NERVES OF STEEL/i)
+    "When the fighter is hit by a ranged attack, make a Cool check for them. If it is passed, they may choose not to be Pinned."
+  elsif a_question.match?(/TRUE GRIT/i)
+    "When making an Injury roll for the fighter, roll one less Injury dice (for example, a Damage 2 weapon would roll one dice). Against attacks with Damage 1, roll two dice – the player controlling the fighter with True Grit, can then choose one dice to discard before the effects of the other are resolved."
+  elsif a_question.match?(/UNSTOPPABLE/i)
+    "Before making a Recovery test for this fighter in the End phase, roll a D6. If the result is 4 or more, one Flesh Wound they have suffered previously is discarded. If they do not have any Flesh Wounds, and the results is 4 or more, roll one additional dice for their Recovery check and choose one to discard."
+  # LEADERSHIP
+  elsif a_question.match?(/COMMANDING PRESENCE/i)
+    "When this fighter activates to make a group activation, they may include one more fighter than normal as part of the group (ie, a Champion could activate two other fighters instead of one, and a Leader could activate three)."
+  elsif a_question.match?(/INSPIRATIONAL/i)
+    "If a friendly fighter within 6\" of this fighter fails a Cool check, make a Leadership check for this fighter. If the Leadership check is passed, then the Cool check also counts as having been passed."
+  elsif a_question.match?(/IRON WILL/i)
+    "Subtract 1 from the result of any Bottle rolls whilst this fighter is on the battlefield and is not Seriously Injured."
+  elsif a_question.match?(/MENTOR/i)
+    "Make a Leadership check for this fighter each time another friendly fighter within 6\" gains a point of Experience. If the check is passed, the other fighter gains two Experience instead of one."
+  elsif a_question.match?(/OVERSEER/i)
+    "If the fighter is Active, they can attempt to make the following action:\"
+Order (Double) – Pick a friendly fighter within 6\". That fighter can immediately make two actions as though it were their turn to activate, even if they are not Ready. If they are Ready, these actions do not remove their Ready marker."
+  elsif a_question.match?(/REGROUP/i)
+    "If this fighter is Standing and Active at the end of their activation, the controlling player may make a Leadership check for them. If this check is passed, each friendly fighter that is currently subject to the Broken condition and within 6\" immediately recovers from being Broken."
+  # SAVANT
+  elsif a_question.match?(/BALLISTICS EXPERT/i)
+    "When this fighter makes an Aim (Basic) action, make an Intelligence check for them. If the check is passed, they gain an additional +1 modifier to their hit roll."
+  elsif a_question.match?(/CONNECTED/i)
+    "This fighter can make a Trade action during the post-battle sequence, in addition to any other actions they make (meaning they could even make two Trade actions). They cannot do this if they are unable to make actions during the post-battle sequence."
+  elsif a_question.match?(/SCAVENGER(\W|)(s|)(| )INSTINCT(s|)/i)
+    "This fighter can make a Scavenge action during the post-battle sequence, in addition to any other actions they make (meaning they could even make two Scavenge actions). They cannot do this if they are unable to make actions during the post-battle sequence."
+  elsif a_question.match?(/FIXER/i)
+    "In the Receive Rewards step of the post-battle sequence, as long as the fighter is not Captured or In Recovery, their gang earns an additional d3x10 credits. Note that they do not need to have taken part in the battle to gain this bonus."
+  elsif a_question.match?(/MEDICAE/i)
+    "When this fighter assists a friendly fighter who is making a Recovery test, re-roll any Out of Action results. If the result is also Out of Action, the result stands."
+  elsif a_question.match?(/MUNITIONEER/i)
+    "Whenever an Ammo check is failed for this fighter or another fighter from their gang within 6\", it can be re-rolled."
+  elsif a_question.match?(/SAVVY TRADER/i)
+    "When this fighter makes a Trade action in the post-battle sequence, add 1 to the result of the dice roll to determine the availability of Rare items on offer at the Trading Post on this visit. Additionally, the cost of one item may be reduced by 20 credits on this visit. Note that this means one item, not one type of item. A single power sword may be purchased for 30 credits, but a second power sword will still cost 50 credits."
+  elsif a_question.match?(/SAVVY SCAVENGER/i)
+    "During the Damnation phase of an Uprising Campaign, while this fighter makes a Scavenge action, add 1 or 2 to the result of the dice roll on the Scavenging Table."
   elsif a_question.match?(/pham/i)
     "++DONT YOU MEAN JONATHAN++"
   elsif a_question.match?(/pham/i)
