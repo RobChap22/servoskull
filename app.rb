@@ -247,6 +247,46 @@ At all other times other than during this fighter’s activation, Versatile has 
   elsif a_question.match?(/WEB/i)
     "If the wound roll for a Web attack is successful, no wound is inflicted, and no save roll or Injury roll is made. Instead, the target automatically becomes Webbed. Treat the fighter as if they were Seriously Injured and roll for Recovery for them during the End phase (Web contains a powerful sedative capable of rendering the strongest fighter unconscious). If a Flesh Wound result is rolled during Recovery, apply the result to the fighter as usual and remove the Webbed condition. If a Serious Injury is rolled, the fighter remains Webbed. If an Out of Action result is rolled, the fighter succumbs to the powerful sedative and is removed from play, automatically suffering a result of 12-26 (Out Cold) on the Lasting Injuries table.\n
 A fighter that is Webbed at the end of the game does not succumb to their Injuries and will automatically recover. However, during the Wrap Up, when rolling to determine if any enemy fighters are Captured at the end of the game, add +1 to the dice roll for each enemy fighter currently Webbed and include them among any eligible to be Captured."
+
+  # SKILLS
+  # AGILITY
+  elsif a_question.match?(/CATFALL/i)
+    "When this fighter falls or jumps down from a ledge, they count the vertical distance moved as being half of what it actually is, rounded up. In addition, if they are not Seriously Injured, or taken Out of Action by a fall, make an Initiative test for them – if it is passed, they remain Standing rather than being Prone and Pinned."
+  elsif a_question.match?(/CLAMBER/i)
+    "When the fighter climbs, the vertical distance they move is not halved. In other words, they always count as climbing up or down a ladder."
+  elsif a_question.match?(/DODGE/i)
+    "If this fighter suffers a wound from a ranged or close combat attack, roll a D6. On a 6, the attack is dodged and has no further effect; otherwise, continue to make a save or resolve the wound as normal.\n
+If the model dodges a weapon that uses a Blast marker or Flame template, a roll of 6 does not automatically cancel the attack – instead, it allows the fighter to move up to 2\" before seeing if they are hit. They cannot move within 1\" of an enemy fighter."
+  elsif a_question.match?(/MIGHTY LEAP/i)
+    "When measuring the distance of a gap this fighter wishes to leap across, ignore the first 2\" of the distance. This means that a fighter with this skill may leap over gaps of 2\" or less without testing against their Initiative. All other rules for leaping over gaps still apply."
+  elsif a_question.match?(/SPRING UP/i)
+    "If this fighter is Pinned when they are activated, make an Initiative check for them. If the check is passed the fighter can make a Stand Up (Basic) action for free. If the check is failed, the fighter may still stand up, but it costs one action, as usual."
+  elsif a_question.match?(/SPRINT/i)
+    "If this fighter makes two Move (Simple) actions when activated during a round, they can use the second to Sprint. This lets them move at double their Movement characteristic for the second Move (Simple) action."
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/pham/i)
+    "++DONT YOU MEAN JONATHAN++"
+
+  # OTHER
   elsif a_question.match?(/pham/i)
     "++DONT YOU MEAN JONATHAN++"
   else
