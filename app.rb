@@ -608,23 +608,18 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
     "Should this fighter make a Trade action in the post-battle sequence, they add an additional +1 modifier to the dice roll to determine the rarity of the items on offer."
   elsif a_question.match?(/MASTER(-| )CRAFTED WEAPON/i)
     "The fighter purchases a new weapon of exceptional craftsmanship. Any weapon may be master-crafted (note that grenades are Wargear, not weapons). The cost of a master-crafted weapon is that of the weapon plus 25%, with fractions rounded up to the nearest 5 credits. For example, a master- crafted bolter/plasma combi weapon would cost 145 credits (115 credits plus 25% equals 143.75 credits. Rounded up to the nearest 5 credits, this weapon costs 145 credits).\nNote that the fighter may replace a weapon with which they are already equipped with a master- crafted version of that weapon, and that the original may be discarded and added to the gang’s Stash. This is an exception to the norm.\nA fighter may re-roll a single failed hit roll for this weapon every round."
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
- # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/MUNG VASE/i)
+    "A Mung Vase is a type of Status Item. However unlike other Status Items, rather than being given to a Leader or Champion to carry, the Mung Vase is kept in the gang’s Stash. When a gang in possession of a Mung Vase recruits a Hired Gun, they can reduce the Hire Gun’s cost by D6x10 credits, to a minimum of 10 credits. The vase is shown off as an example of the gang’s wealth and success, and the Hired Gun believes that agreeing to a reduced fee now will earn them favour with this potentially prosperous employer. There is, however, a chance the Hired Gun will simply try to steal the vase when they leave! After a game in which a Mung Vase was used to reduce the hiring cost of a Hired Gun, roll a D6. On a 1, both the Hired Gun and the vase disappear, never to be seen again.\nIn the post-battle sequence of any battle, a gang can sell the vase. If they do, roll a D6 on the Mung Vase table to see what it is worth (players should resist the temptation to roll on this table unless their gang is attempting to sell a Mung Vase – you don’t need to know your vase is a fake, ignorance is bliss!).\n\nD6 Result\n1 Dismal Fake: A truly sad knock-off. The vase nets the gang D3x5 credits.\n\n2-3 Passable Fake: A nice conversation piece. The vase nets the gang D6x10 credits.\n\n4-5 Impressive Fake: A fine example of the counterfeiters’ art. The vase nets the gang D6x20 credits.\n\n6 Outstanding Fake?: Make an Intelligence check for the gang Leader. If they fail, count this result as an Impressive Fake. If they pass, they realise what they have just in time – add D6x50 to the gang’s Stash.\n\nFinally, if the gang Leader is killed and removed from the gang roster, the vase is lost too – no one else in the gang knows where the vase has been kept hidden!"
+  elsif a_question.match?(/OPULENT JEWELLERY/i)
+    "If this fighter makes a Medical Escort action in the postbattle sequence, they will attempt to impress the Doc with their visible wealth. Sometimes this works, sometimes it does not… You may re-roll the dice when determining the fee the Doc charges, but you must accept the second result, even if it is worse."
+  elsif a_question.match?(/UPHIVE RAIMENTS/i)
+    "If this fighter is not In Recovery during the post-battle sequence, their gang gains an extra D3x10 credits during the Collect Income step."
+  elsif a_question.match?(/SENSOR SKULL/i)
+    "A sensor skull grants the owning fighter the same benefits as a bio-scanner. In addition, when the fighter takes an Aim action, they may add 2 to the result of any hit rolls they make for subsequent shots taken in the same activation rather than the usual 1. This bonus is in addition to any granted by any other wargear or skills the fighter may have."
+  elsif a_question.match?(/MEDI SKULL/i)
+    "When making a Recovery test for the owning fighter, roll an extra Injury dice, then pick one of the dice to resolve and discard the other. This is in addition to any friendly fighters assisting the recovery and any other items such as medicae kits, so it is possible that the owning fighter may be rolling several Injury dice to choose from."
+  elsif a_question.match?(/GUN SKULL/i)
+    "A gun skull is equipped with a compact autopistol and will target whatever or whoever the owning fighter does when they make a ranged attack. Simply roll one extra hit dice and one extra Ammo dice for the gun skull, ideally of a different colour to those being used for the fighter, to represent the gun skull making a ranged attack. Note though that range, line of sight and cover must be worked out from the gun skull itself rather than that of the owning fighter. If the owning fighter does not possess any ranged weapons, the gun skull may shoot at an enemy it can see, chosen by the owning fighter and following the normal target priority rules in relation to the owning fighter’s position.\nThe owning fighter is never considered to be in the way of a gun skull’s shooting attacks and cannot be hit by Stray Shots.\nA gun skull has a BS of 5+ and may never benefit from aiming or any wargear or skills that modify the owning fighter’s to-hit rolls."
 
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
