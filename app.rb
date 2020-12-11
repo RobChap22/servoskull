@@ -476,82 +476,58 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
     "Badzone peddlers and sumphole wise women often sell charms and fetishes ‘guaranteed’ to offer protection. The truly astonishing thing is some of these charms actually work! When a fighter buys a Hexagrammic Fetish they must roll a D6. On a 1, the fetish is rubbish, though the fighter can sell it on to an unsuspecting underhiver for 3D6 credits. On a 2-5, it has some power, and if a Psyker targets the fighter with a psychic power, the Psyker suffers a -1 to their Willpower check. On a 6, the fetish has some real juice; it works as above except the Psyker will suffer a -3 to their Willpower check"
   elsif a_question.match?(/HOLOCHROMATIC FIELD/i)
     "A Holochromatic field surrounds its wearer in an aura of scintillating colours. Ranged attacks against a fighter with a Holochromatic field suffer a -2 to hit, while melee attacks against them suffer a -1 to hit. Each time the fighter is targeted with an attack, roll a D6. On a 1, the Holochromatic field has been drained and cannot be used again this game. Fighters wearing an active Holochromatic field count as always having a revealed marker on them in scenarios using the Pitch Black rules. A Holochromatic field cannot be combined with Cameleoline Cloaks or similar devices that make the wearer harder to see."
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/INDUSTRIAL RESPIRATOR/i)
+    "An Industrial Respirator adds 3 to a fighter’s Toughness, or 4 if combined with a Hazard Suit, against attacks from weapons with the Gas trait. In addition, an Industrial Respirator contains a limited air supply. Once per game, when a fighter with an Industrial Respirator is activated, they can declare they are using its air supply. Until the fighter is activated again, they gain immunity to Gas attacks, can act normally while on fire (though they may still take damage) and may ignore effects keyed to breathing or air quality."
+  elsif a_question.match?(/ISOTROPIC FUEL ROD/i)
+    "A gang with an Isotropic Fuel Rod can use it to turn any Territory into a Settlement Territory. Doing so uses up the Isotropic Fuel Rod, so it should be deleted from the gang roster, and permanently changes the Territory."
+  elsif a_question.match?(/LHO STICKS/i)
+    "A fighter equipped with lho sticks is considered to be ‘cool’ by the more gullible members of their gang. Any friendly fighter with an Intelligence characteristic of 8+ or worse may use this fighter’s Cool characteristic instead of their own if they are within 6\" and line of sight of this fighter."
+  elsif a_question.match?(/LOCK(-| )PUNCH/i)
+    "Lock-punches are crude pneumatic devices used to smash locks out of doors and force them open. A fighter equipped with a lock-punch can use it when they are taking the Force Door (Basic) action to add 4 to their Strength. Doors opened with lock-punches are permanently damaged and must be removed from the board."
+  elsif a_question.match?(/MAGNACLES/i)
+    "Used by both the Adeptus Arbites and local Enforcers across the Imperium, Magnacles are magnetic shackles for locking prisoners in place. A fighter equipped with Magnacles can try to lock them onto an enemy in base contact as an Attack (Basic) action. The target must make an Initiative check to avoid the attack. If this test is failed they are locked in place and cannot move, cannot make ranged attacks and can only make melee attacks at -2 to hit. The target can attempt to free themselves by performing the following action:\n\nBreak Bonds (Double)\nRoll 2D6. If the result is equal or lower than their Strength then they have freed themselves, otherwise they remain trapped. Each friendly fighter in base contact with the target adds 2 to their Strength for the purposes of this roll."
+  elsif a_question.match?(/MALEFIC ARTEFACT/i)
+    "Malefic Artefacts are objects of the Warp or those that have lingered in the hands of corrupted individuals. When a player buys a Malefic Artefact from the Black Market, they won’t know what it does. They must allocate it to one of their fighters and roll a D6 on the Malefic Artefacts table to determine its type. If a Malefic Artefact is later given to a different fighter in the gang for any reason, the new fighter must pass an Intelligence check the first time they wish to activate it. If they pass, they may use the artefact as normal from now on. If they fail, they wait until their next game to try to activate the artefact again.\n\nD6 Effect:\n1 Cursed Artefact: The fighter accidentally triggers the artefact as they’re messing about with it. The Malefic Artefact mysteriously vanishes and the fighter begins their next game with the Insane condition.\n2 Whisper Vox: Hidden truths issue forth from the artefact, informing its bearer as to the intentions of those around them. The fighter gains the Overwatch skill. If they already have the Overwatch skill, they can take the Aim (Basic) action in addition to the Shoot (Basic) action when using this skill.\n3 Void Gate: The artefact is a gateway to a dark yawning void that the fighter may open to sap the strength of those around them. The fighter can perform the Unleash the Void (Double) action. If they take this action, all other fighters within 6\" of them can only take a single action during their activation.\n4 Etheric Lantern: When the artefact is activated, it acts as a beacon to the denizens of the Warp who would feast upon the dead and dying. The fighter can perform the Ignite Etheric Lantern (Double) action. If they do, any Seriously Injured fighter within 12\" must make a Toughness check or go Out of Action.\n5 Chronoscope: Time works differently around the artefact, sometimes speeding up, sometimes slowing down. When the fighter activates roll a D6. On a 1, they may take no actions this round. On a 2-5, they can take an extra action this round. On a 6, after they complete their activation they may be placed anywhere within 12\" of their current location.\n6 Terrox Telepathica: Dire thoughts are projected from the artefact driving all those nearby mad. The fighter gains immunity to the Insane condition. Any other fighter that activates within 6\" of the fighter must immediately make a Willpower check or gain the Insane condition."
+  elsif a_question.match?(/MEDICAE KIT/i)
+    "When a fighter with a Medicae kit assists a friendly fighter’s Recovery test, roll an extra injury dice then choose one to discard."
+  elsif a_question.match?(/PHOTO(-| )GOGGLES/i)
+    "A fighter with photo goggles can attack through smoke clouds, can make ranged attacks against fighters 12\" away under the Pitch Black rules and may gain other benefits in low light conditions, depending upon the scenario. In addition, if they are hit by a Flash weapon, add 1 to the result of the Initiative test to see whether they become subject to the Blind condition."
+  elsif a_question.match?(/MNEMONIC INLOAD SPIKE/i)
+    "Adeptus Mechanicus Tech-Priests use Mnemonic Inload Spikes for the swift transfer of data from one cortex to the next. Each spike contains potential secrets and skills that the user can inload directly to their brain, though for those without the proper cybernetic interfaces the process can be fatal. When a gang buys an inload spike, they must choose one of their fighters to attempt to use its data. The chosen fighter must immediately roll on the Lasting Injuries table. If the fighter is still alive after making this roll they gain one skill of their choice from Agility, Brawn, Combat, Cunning, Ferocity, Leadership, Savant or Shooting. The spike is then used up and removed from the gang’s stash."
+  elsif a_question.match?(/PHOTO(-| )LUMENS/i)
+    "Commonly carried by Palanite Enforcers, a fighter that is equipped with a photo-lumen can make ranged attacks against enemy fighters up to 12\" away under the Pitch Black rules. However, when the Pitch Black rules are in effect, a fighter equipped with a photo-lumen cannot be Hidden – they are instead always subject to the Revealed condition due to the bright light emanating from their gear."
+  elsif a_question.match?(/PSI(-| )GRUB/i)
+    "Psi-grubs are alien parasites that feed upon psychic power. When bloated with the energies of the Immaterium, they can then be used to fuel psychic abilities. If a fighter with a Psi-grub uses a psychic power or is the target of a psychic power, place a token on their Fighter card after working out the effects of the power. Once there is at least one token on the fighter’s card, they can attempt to use the Psi-grub whenever they manifest a psychic power.\nTo trigger the Psi-grub, the fighter makes a Tap Psi-Grub (Basic) Action and rolls a D6. If the result is equal to or lower than the number of tokens on their Fighter card, the Psi-grub is triggered, otherwise there is no effect. When the Psi-grub is triggered, remove all Psi-grub tokens from the fighter’s card and immediately use one of the fighter’s psychic powers just as if they had taken the Wyrd Power (X) action. This action does not require the fighter to make a Willpower check.\nIf there are ever six tokens on the fighter’s card, the Psigrub immediately explodes! Remove all the tokens and the Psi-grub from the fighter’s card and roll an Injury dice for the fighter"
+  elsif a_question.match?(/RADCOUNTER/i)
+    "A fighter equipped with a radcounter can never be the random target of an Event unless there are no other fighters to choose from."
+  elsif a_question.match?(/RATSKIN MAP/i)
+    "Before a gang with a Ratskin Map rolls to determine the scenario as part of the pre-game sequence, they can declare they are using their Ratskin Map. If both gangs have a Ratskin Map, they should roll off to see whose gang gets to use theirs for this game – capitalising on the map’s information before their opponent can. The player then rolls on the Ratskin Map table to see how valuable the information on it is. Note, once the type of map is determined, it remains the same, and provided it is worth something, a gang may use it again in the pre-game sequence of subsequent games.\n\nD6 Effect:\n1 Fake Instead of rolling for the scenario as normal, your opponent chooses the scenario for this game. Remove the Ratskin Map from your gang roster.\n2 Worn and Incomplete: After making the roll to determine the scenario, you may add or subtract 1 from the result.\n3 Treasure Map: Roll another D6. On a 1-5, the map is a Fake (see above). On a 6, it is a genuine treasure map. If your gang wins the scenario, they can add D6x20 credits to their Stash in addition to any other rewards.\n4 Ancient and Faded: After making the roll to determine the scenario, you may add or subtract 2 from the result.\n5 Secret Pathways: D3 Fighters in your gang gain the Infiltrate skill for the duration of this scenario.\n6 Recent and Accurate: After making the roll to determine the scenario, you may add or subtract up to 3 from the result."
+  elsif a_question.match?(/RESPIRATOR/i)
+    "If a fighter with a respirator is hit by a weapon with the Gas trait, their Toughness is increased by 2 for the purposes of the roll to see whether they are affected."
+  elsif a_question.match?(/SANCTIONING WRIT/i)
+    "A Sanctioning Writ is an official document penned and signed by the Merchants Guild granting its bearer the right to set bounties on the enemies of Necromunda. Sometimes these are stolen from Guilders – signed but without the subject of the bounty filled in – and are used by gangs to put an official target on their rivals. A fighter can use a Sanctioning Writ to place a bounty on any member of a Law Abiding gang. This bounty remains in place until it is fulfilled, the targeted fighter dies or the campaign comes to an end.\nA Sanctioning Writ can only be used once, after which it is lost, and a fighter can only have one bounty on their head at a time."
+  elsif a_question.match?(/SECOND BEST/i)
+    "A fighter with a bottle of Second Best can make the Take a Swig (Simple) action. After they take this action, roll a D6. On a 1, 2 or 3, the bottle is empty; remove it from the fighter’s card. Every time a fighter makes this action, place an Intoxicated marker on their card and remove one of their Flesh Wounds (if they have any). Intoxicated markers remain until the end of the game. The effects of the booze are dependent on how many markers they have on their card.\n\nIntoxicated Markers/Effect:\n1 Feeling Good: -1 to ranged attack hit rolls, +1 to the result of Cool checks.\n2 Getting Unsteady: -2 to ranged attack hit rolls, +2 to the result of Cool checks. If the fighter makes two Move actions in a row, they must pass an Initiative check after completing the second action or become Prone.\n3+ Blind Drunk: -3 to ranged attack hit rolls and -1 to melee attack hit rolls, +3 to the result of Cool checks. When the fighter makes a Move action, instead of using the fighter’s Movement characteristic, move the fighter D6\" in a direction determined by the Scatter dice."
+  elsif a_question.match?(/(SERVO HARNESS - PARTIAL|SERVO HARNESS PARTIAL|PARTIAL SERVO HARNESS)/i)
+    "A fighter wearing a partial servo harness gains a +2 modifier to their Strength characteristic and a +1 modifier to their Toughness characteristic. This may take them above their maximum characteristics but it is not a permanent increase and will be lost should the servo harness be lost or cease to function for any reason.\nAdditionally, a fighter wearing partial servo harness gains the benefits of suspensors on any Unwieldy ranged weapon they carry. However, a fighter wearing a partial servo harness reduces their Movement and Initiative by 1. This item cannot be combined with a servo claw or any other type of servo harness."
+  elsif a_question.match?(/(SERVO HARNESS - FULL|SERVO HARNESS FULL|FULL SERVO HARNESS)/i)
+    "A fighter wearing a full servo harness gains all of the benefits of a partial servo harness, but without the negative modifiers to Movement and Initiative. This item cannot be combined with a servo claw or any other type of servo harness."
+  elsif a_question.match?(/SKINBLADE/i)
+    "If the fighter is captured at the end of a battle, they can attempt to escape. If they do, roll a D6. On a result of 1 or 2, they are unsuccessful. On a result of 3 or 4, they can escape but are injured in the process – make a Lasting Injury roll for them. On a result of 5 or 6, they escape. A fighter who escapes is no longer Captured, however, their skinblade is lost and deleted from their Fighter card."
+  elsif a_question.match?(/STIMM(-| )SLUG STASH/i)
+    "Once per game, a fighter with a stimm-slug stash can use it at the start of their turn, when they are chosen to make an action. Immediately discard one Flesh Wound from the fighter’s card, if any are present. Until the end of the round, the fighter’s Move, Strength and Toughness characteristics are each increased by 2. At the start of the End phase, roll a D6. On a 1, the stimm overload is too much – roll an Injury dice and apply the result to the fighter."
+  elsif a_question.match?(/STRIP KIT/i)
+    "When a fighter with a strip kit makes an Intelligence check to operate a door terminal or bypass the lock on a loot casket, add 2 to the result."
+  elsif a_question.match?(/suspensor harness/i)
+    "A fighter equipped with a suspensor harness may carry four weapons rather than three, while a Hired Gun Bounty Hunter with a suspensor harness may carry six weapons rather than five. As usual, weapons marked on the Equipment List with (*) take up the space of two weapons."
+  elsif a_question.match?(/THREADNEEDLE WORMS/i)
+    "Threadneedle worms are a deadly bio-weapon able to ravage an area of life in seconds. The lethality of Threadneedle worms makes them an ideal weapon of last resort for gangers who don’t care about collateral damage. A fighter equipped with Threadneedle worms can unleash them by taking the Can of Worms (Basic) action. Threadneedle worms can only be used once, after which they are removed from the fighter’s card. When Threadneedle worms are used, roll a D6 on the Threadneedle Worms table. The worms are then used up and removed from the gang’s stash.\n\nD6 Result\n1 The Worms Turn: Roll an Injury dice for the fighter using the Threadneedle Worms.\n2-3 A Few Live Worms: Place a 5\" Blast marker anywhere within D6\" of the fighter then roll an Injury dice for each model under the marker.\n4-5 A Few More Live Worms: Place a 5\" Blast marker anywhere within D6\" of the fighter, then place two additional 5\" Blast markers so they are in contact with the first marker. Roll an Injury dice for each model under any of the markers.\n6 A Can Full of Worms: Roll an Injury dice for every enemy fighter on the battlefield, treating Out of Action results as Seriously Injured."
+  elsif a_question.match?(/WILD SNAKE/i)
+    "A fighter with a bottle of Wild Snake can make the Take a Swig (Simple) action. After they make this action, roll a D6. On a 1 or 2, the bottle is empty; remove it from the fighter’s card. Every time a fighter makes this action, place an Intoxicated marker on their card and remove one of their Flesh Wounds (if they have any). Intoxicated markers remain until the end of the game. The effects of the booze are dependent on how many markers they have on their card:\n\nIntoxicated Markers / Effect:\n1 A Good Buzz: -1 to ranged attack hit rolls, +2 to the result of Cool checks.\n2 Seeing Double: -1 to ranged attack hit rolls, +3 to the result of Cool checks. When making ranged attack hit rolls after choosing a target, randomise the actual target of the attack between the intended target and any model (friend or foe) within 6\" of them.\n3+ Snake Courage!: -2 to ranged attack hit rolls, automatically pass any Cool checks"
+  elsif a_question.match?(/WEB SOLVENT/i)
+    "When a fighter equipped with web solvent makes a Recovery check due to the Webbed condition, roll an extra Injury dice, picking one of the dice to resolve it and discarding the other. Additionally, when a fighter equipped with web solvent assists a fighter subject to the Webbed condition with a Recovery test, roll an extra two Injury dice and choose which one to apply."
+  elsif a_question.match?(/XENOCULUM/i)
+    "A Xenoculum can represent any number of esoteric alien devices, the true purposes of which only becomes apparent through experimentation. When a player buys a Xenoculum from the Black Market, they won’t know what it does. They must allocate it to one of their fighters and roll a D6 on the Xenoculum table to determine its type. If a Xenoculum is later given to a different fighter in the gang for any reason, the new fighter must pass an Intelligence check the first time they wish to activate it. If they pass, they may use the device as normal from now on. If they fail, they wait until their next game to try to activate the device again.\n\nD6 Effect:\n1 Alien Trap: The fighter accidentally triggers the Xenoculum as they’re messing about with it. They immediately suffer D3 S3 D1 hits and the Xenoculum is reduced to a collection of junk.\n2 Xenos Claws: The Xenoculum moulds itself to the fighter’s hands, lengthening into a pair of lethal claws. The fighter’s unarmed attacks become S+2 D2 and gain the Power trait. While the fighter is equipped with the Xenoculum any attacks they make with ranged weapons suffer a -2 to hit.\n3 Ghost Form: The Xenoculum is a powerful transmatter convertor, allowing its user to slip out of sequence with reality for short periods. When the fighter activates, they can enter ghost form. This state persists until their next activation. While in ghost form, the fighter ignores all terrain, the effects of falling and all attacks with the exception of psychic powers. However, they cannot make attacks themselves or interact with their environment in any way. Each time the fighter enters ghost form, they must roll a D6. On a 4+, the Xenoculum has expended its charge and cannot be used again during the battle.\n4 Horror Aura: A subliminal animalistic howl constantly screams forth from the Xenoculum and only its user is immune to its effects. When the fighter activates, any fighter, friend or foe, within 6\" must make a Nerve test or become Broken.\n5 Alien Chemfactory: Strange mechanisms concoct alien chems within the Xenoculum, dispensing them as the fighter desires. The fighter rolls two extra Injury dice when making Recovery rolls, or assisting another Seriously Injured fighter in the Recovery phase, and chooses the dice they wish to take effect. In addition, in the post-battle sequence, one member of the fighter’s crew can make a Medical Escort action for free.\n6 Brain Booster: A cranial spike allows the Xenoculum to be affixed to the fighter’s brain, greatly boosting their cognitive function. The fighter adds 5 to the dice roll when making an Intelligence check. In addition, each time the fighter would gain Experience, they gain one additional point of Experience."
 
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
