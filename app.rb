@@ -463,6 +463,8 @@ Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 o
 
   elsif a_question.match?(/pham/i)
     "++DONT YOU MEAN JONATHAN++"
+  elsif a_question.match?(/JONATHAN/i)
+    "Eyyyyyy, lookit Jonny Phambino ovah heah"
   else
     "++INVALID INPUT++"
   end
