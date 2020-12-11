@@ -442,24 +442,25 @@ Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 o
   #   "++DONT YOU MEAN JONATHAN++"
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
 
   # OTHER
+  elsif a_question.match?(/ACTIVE/i)
+    "A Standing fighter is Active if they are not currently Engaged with any enemy fighters. This is the default Status for a fighter; Standing and Active, and such fighters enjoy the greatest freedom to perform actions."
+  elsif a_question.match?(/ENGAGED/i)
+    "If the base of a Standing fighter is touching the base of an enemy fighter, they are said to be in base to base contact and are Engaged with that enemy fighter. A Standing fighter that is Engaged can generally only choose to fight or retreat, but factors such as skills may increase the number of available options.\nPlayers should note that in some cases a fighter may be able to Engage an enemy fighter they are not in base to base contact with and may act accordingly when activated."
+  elsif a_question.match?(/PRONE/i)
+    "A fighter that is laid down is Prone. A Prone fighter has no facing and they effectively have no vision arc. Unless otherwise stated, Prone fighters never block line of sight – they are considered to be well out of the way of the action. A Prone fighter may be placed face-up or facedown, depending upon their Secondary Status.\nWhilst Prone, a fighter will always be subject to one of two Secondary Statuses as well; Pinned or Seriously Injured. This Secondary Status will affect the actions a Prone fighter may perform and the way in which other fighters may interact with them."
+  elsif a_question.match?(/READY/i)
+    "The most simple but arguably the most important Condition. At the start of each round, during the Priority phase, all fighters will have a Ready marker placed on them. Once that fighter has activated during the Action phase, this marker is removed, indicating that the fighter may not be activated again."
+  elsif a_question.match?(/BROKEN/i)
+    "A fighter may become Broken as the result of seeing a friendly fighter Seriously Injured or taken Out of Action within 3\" of them. Broken fighters may not perform any actions other than Running for Cover (Double) and if Engaged may only make Reaction attacks with a -2 modifier. They will make a Running for Cover (Double) action every time they are activated. Broken fighters may be rallied in the End phase.\nWhen a Broken fighter moves they must attempt to end their move, in order of priority:\n1. So that they are more than 3\" away from enemy fighters.\n2. So that they are out of line of sight of enemy fighters.\n3. In partial or full cover.\n4. As far away from any enemy fighters as possible.\nIf a Broken fighter is Standing and Engaged when activated, they must make an Initiative check. If it is passed, they must move as described previously. Each enemy fighter that is Engaged with them makes an Initiative check and if passed can make Reaction attacks before the Broken fighter is moved. If the Broken fighter fails the Initiative check, they remain Engaged and can perform no further actions."
+  elsif a_question.match?(/RUNNING FOR COVER/i)
+    "(DOUBLE): If the fighter is Standing and Active, they will move 2D6\". If the fighter is Prone and Pinned or Prone and Seriously Injured, they can only move half of their Movement characteristic."
+  elsif a_question.match?(/OUT OF AMMO/i)
+    "Should a fighter roll the Ammo symbol on the Firepower dice, they are required to make an immediate Ammo check for that weapon. If this is failed, that weapon is now Out of Ammo and a marker is placed on the appropriate weapon profile on their Fighter card as a reminder that the weapon cannot be used until it has been reloaded."
+  elsif a_question.match?(/INSANITY/i)
+    "Fighters that have become subject to the Insane Condition for any reason can act quite erratically when activated. When activating an Insane fighter, roll a D6 and consult the table below:\n1-2: The fighter immediately becomes Broken – or, if they were already Broken, they flee the battlefield (even if their gang has not failed a Bottle test).\n3-4: The opposing player can control the Insane fighter for the duration of this activation, treating them as part of their gang in all respects until their activation ends. As soon as their activation ends, the Insane fighter no longer counts as being a part of the opposing gang. In the case of a multi-player game, the winner of a roll-off between the other players will control the Insane fighter.\n5-6: The fighter can act as normal. Once their activation is over, make a Willpower check for them. If it is passed, they lose their Insanity marker."
+
   elsif a_question.match?(/pham/i)
     "++DONT YOU MEAN JONATHAN++"
   else
