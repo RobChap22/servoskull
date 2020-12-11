@@ -312,53 +312,59 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
     "Should this fighter perform two or more Move (Simple) actions during their activation, they can make a Toughness check at the end of their activation. If this check is passed, this fighter may recover one lost Wound or discard a single Flesh Wound."
 
   # TERRITORIES
+  elsif a_question.match?(/ARCHAEOTECH DEVICE/i)
+    "This Territory grants the following Boon:\nSpecial: Any number of weapons owned by the gang may be given one of the falling Traits for free: Blaze, Rad-phage, Seismic, or Shock. All Weapons must be given the same Trait and new weapons purchased later may also be given this Trait. These weapons also gain the Unstable Trait. If the Territory is lost, the weapons lose these additional Traits.\n\nThis Territory grants Van Saar gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\nSpecial: A Van Saar gang may give any number of weapons it owns two of the following Traits for free: Blaze, Radphage, Seismic, or Shock. All weapons must be given the same Trait and new weapons purchased later may also be given these Traits. These weapons also gain the Unstable trait. If the Territory is lost, the weapons lose these additional Traits."
+  elsif a_question.match?(/BONE SHRINE/i)
+    "This Territory grants the following Boon:\nIncome: The gang earns 2D6x5 credits from this Territory when collecting income.\n\nThis Territory grants Cawdor gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\nIncome: The gang earns 4D6x5 credits from this Territory when collecting income."
   elsif a_question.match?(/collapsed dome/i)
-    "This Territory grants the following Boon:\n
-Income: When collecting income from this Territory, the controlling player may choose to roll between 2D6x10 and 6D6x10. However, if a double is rolled, then no income is generated and a random fighter from the gang suffers a Lasting Injury."
+    "This Territory grants the following Boon:\nIncome: When collecting income from this Territory, the controlling player may choose to roll between 2D6x10 and 6D6x10. However, if a double is rolled, then no income is generated and a random fighter from the gang suffers a Lasting Injury."
   elsif a_question.match?(/corpse farm/i)
-    "This Territory grants the following Boon:\n
-Income: When collecting income, the gang gains D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle.\n
-ENHANCED BOON
-This Territory grants Cawdor gangs the following Boons:\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
-Income: When collecting income, the gang gains 2D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle."
+    "This Territory grants the following Boon:\nIncome: When collecting income, the gang gains D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle.\n\nThis Territory grants Cawdor gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nIncome: When collecting income, the gang gains 2D6x10 credits for every fighter on either side that was deleted from their roster during the Update Roster step of the preceding battle."
+  elsif a_question.match?(/DRINKING HOLE/i)
+    "This Territory grants the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: Whilst it controls this Territory, any fighter in the gang may re-roll any failed Cool checks. If a fighter uses this option, place a marker on their card to show that they have hit the bottle. The marked fighters suffer a -1 to hit penalty for the rest of the battle.\n\nThis Territory grants Delaque gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\nSpecial: A Delaque gang may not use the standard Boon. Instead, the player of the Delaque gang that controls this Territory may nominate three enemy fighters at the start of the battle, and places an Intoxicated marker on each fight to show that their drink was spiked. The marked fighters suffer -1 to all tests and checks for the duration of the battle."
   elsif a_question.match?(/fighting pit/i)
-    "This Territory grants the following Boon:\n
-Recruit: Whilst it controls this Territory, the gang may recruit two Hive Scum Hired Guns for free, including their equipment, prior to every battle.\n
-ENHANCED BOON
-This Territory grants Goliath gangs the following Boon:\n
-Reputation: Whilst it controls this Territory, the gang adds +2 to Its Reputation."
+    "This Territory grants the following Boon:\nRecruit: Whilst it controls this Territory, the gang may recruit two Hive Scum Hired Guns for free, including their equipment, prior to every battle.\n\nThis Territory grants Goliath gangs the following Boon:\nReputation: Whilst it controls this Territory, the gang adds +2 to Its Reputation."
   elsif a_question.match?(/gambling den/i)
-    "This Territory grants the following Boons:\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
-Income: The player chooses a suit of cards. The player then draws a card from the shuffled deck of playing cards that includes both Jokers. If they draw a card from the suit they chose, they earn income to the value of the card (Jack 11, Queen 12, King 13, Ace 14) x10 credits. If they draw a card from a suit of the same color, then the Income is the value of the card x5 credits. If it is any other suit they gain no income from the Territory. If, however, they draw a Joker, they must pay all of the income they earn in that post-battle sequence to a random gang taking part in the campaign, as determined by the Arbitrator.\n
-ENHANCED BOON
-This Territory grants Delaque gangs the following Boons:\n
-Reputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\n
-Special: The Delaque player that controls this Territory may nominate a single enemy fighter at the start of the battle. The Delaque have called in the fighter’s debt marker, and in return for keeping all of their limbs intact, the fighter agrees to take no part in the coming battle. The nominated fighter misses the battle."
+    "This Territory grants the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nIncome: The player chooses a suit of cards. The player then draws a card from the shuffled deck of playing cards that includes both Jokers. If they draw a card from the suit they chose, they earn income to the value of the card (Jack 11, Queen 12, King 13, Ace 14) x10 credits. If they draw a card from a suit of the same color, then the Income is the value of the card x5 credits. If it is any other suit they gain no income from the Territory. If, however, they draw a Joker, they must pay all of the income they earn in that post-battle sequence to a random gang taking part in the campaign, as determined by the Arbitrator.\n\nThis Territory grants Delaque gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\nSpecial: The Delaque player that controls this Territory may nominate a single enemy fighter at the start of the battle. The Delaque have called in the fighter’s debt marker, and in return for keeping all of their limbs intact, the fighter agrees to take no part in the coming battle. The nominated fighter misses the battle."
   elsif a_question.match?(/generatorium/i)
-    "This Territory grants the following Boon:\n
-Special: If their gang controls this Territory, a player may choose to stall the generators, temporarily cutting the power to the area in which a battle is taking place and plunging it into darkness. The player may declare they will do this at the beginning of any Priority phase, before the roll for Priority.
-For the remainder of the battle, the Pitch Black rules (see page 328) are in effect. However, at the start of each End phase, there is a chance that the generators will automatically restart and the light flood back. At the start of each End phase, before making any Bottle tests, the player that controls this Territory rolls a D6. If the result is a 5 or more, the generators restart and the Pitch Black rules immediately cease to be in effect. If the roll is a 1-4, the generators stay silent.\n
-ENHANCED BOON
-This Territory grants Van Saar gangs the following Boon:\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation."
+    "This Territory grants the following Boon:\nSpecial: If their gang controls this Territory, a player may choose to stall the generators, temporarily cutting the power to the area in which a battle is taking place and plunging it into darkness. The player may declare they will do this at the beginning of any Priority phase, before the roll for Priority. For the remainder of the battle, the Pitch Black rules (see page 328) are in effect. However, at the start of each End phase, there is a chance that the generators will automatically restart and the light flood back. At the start of each End phase, before making any Bottle tests, the player that controls this Territory rolls a D6. If the result is a 5 or more, the generators restart and the Pitch Black rules immediately cease to be in effect. If the roll is a 1-4, the generators stay silent.\n\nThis Territory grants Van Saar gangs the following Boon:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation."
+  elsif a_question.match?(/MINE WORKINGS/i)
+    "This Territory grants the following Boon:\nIncome: The gang earns D6x10 credits from this Territory when collecting income. The gang may set Captured fighters to work in the mines rather than selling them to the Guilders. For every Captive working the mine, roll an additional D6 to generate income. If the Territory changes control, all of the Captives remain working the mine. A Captive sent to the mines may not subsequently be Sold to Guild. While a Captive is working in the mine, the gang may attempt a Rescue Mission at any time.\n\nThis Territory grants Orlock gangs the following Boon:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation."
+  elsif a_question.match?(/NARCO DEN/i)
+    "This Territory grants the following Boon:\nIncome: The gang earns D6x5 credits from this Territory when collecting income.\n\nThis Territory grants Escher gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nIncome: The gang earns D6x5 credits from this Territory when collecting income. If the gang also controls a Synth Still, this is increased to D6x10."
+  elsif a_question.match?(/NEEDLE WAYS/i)
+    "This Territory grants the following Boon:\nSpecial: Whilst it controls this Territory, the gang may infiltrate up to three fighters onto the battlefield ahead of any battle. Infiltrating fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are placed to one side. At the end of the first round, the controlling player nominates any spot on the ground surface of the battlefield and sets up each infiltrating fighter within 2’’ of that spot.\n\nThis Territory grants Delaque gangs the following Boons:\nSpecial: A Delaque gang that controls this Territory may infiltrate two groups of up to three fighters using the method detailed above. The fighters in each group must be specified before the battle."
+  elsif a_question.match?(/OLD RUINS/i)
+    "This Territory grants the following Boon:\nIncome: The gang earns D3x10 credits from this Territory when collecting income. Additionally, add +1 to the dice roll for each Dome Runner attached to the gang."
+  elsif a_question.match?(/PROMETHIUM CACHE/i)
+    "This Territory grants the following Boons:\nEquipment: Whilst it controls this Territory, three fighters in the gang gain incendiary charges for free.\nSpecial: All fighters in the gang may re-roll Ammo checks for any weapon that has the Blaze trait."
+  elsif a_question.match?(/REFUSE DRIFT/i)
+    "This Territory grants the following Boon:\nIncome: The gang earns 2D6x5 credits from this Territory when collecting income. However, if a double is rolled, a randomly determined fighter has a nasty encounter with a waste-lurker and must miss the next battle whilst they recover. No income is lost.\n\nThis Territory grants Cawdor gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nIncome: The gang earns 2D6x5 credits from this Territory when collecting income. A Cawdor gang has no risk of encountering a nasty waste-lurker."
+  elsif a_question.match?(/ROGUE DOC SHOP/i)
+    "This Territory grants the following Boon:\nRecruit: The gang may recruit a Rogue Doc Hanger-on for free."
+  elsif a_question.match?(/settlement/i)
+    "This Territory grants the following Boons:\nIncome: The gang earns D6x10 credits from this Territory when collecting income.\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nRecruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
+  elsif a_question.match?(/slag furnace/i)
+    "This Territory grants the following Boon:\nIncome: The gang-earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Goliath gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\nRecruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
+  elsif a_question.match?(/SLUDGE SEA/i)
+    "This Territory grants the following Boon:\nEquipment: Whilst it controls this Territory, three fighters in the gang gain choke gas grenades for free."
   elsif a_question.match?(/smelting works/i)
-    "This Territory grants the following Boon:\n
-Income: the gang earns D6x5 credits from this Territory when Collecting income.\n
-ENHANCED BOON
-This Territory grants Goliath gangs the following Boon:\n
-Income: The gang earns D6x5 credits from this Territory when collecting income. If the gang also controls a Slag Furnace, this is increased to D6x10 credits."
+    "This Territory grants the following Boon:\nIncome: the gang earns D6x5 credits from this Territory when Collecting income.\n\nThis Territory grants Goliath gangs the following Boon:\nIncome: The gang earns D6x5 credits from this Territory when collecting income. If the gang also controls a Slag Furnace, this is increased to D6x10 credits."
+  elsif a_question.match?(/SYNTH STILL/i)
+    "This Territory grants the following Boon:\nSpecial: Whilst it controls this Territory, the gang treats chem-synths, medicae kits, stimm-slug stashes and any weapon with the Gas or Toxin trait as Common.\n\nThis Territory grants Escher gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: Whilst it holds this Territory, the gang treats chem-synths, medicae kits, stimm-slug stashes and any weapon with the Gas or Toxin trait as Common, and halves the cost of these items (rounding up)."
   elsif a_question.match?(/stinger mould sprawl/i)
-    "This Territory grants the following Boon:\n
-Special: During the post-battle sequence, the gang controlling this Territory may re-roll a Single Lasting Injury roll on a fighter. Note that a Memorable Death result may not be re-rolled.\n
-ENHANCED BOON
-This Territory grants Escher gangs the following Boons:\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
-Special: An Escher gang may either (1) remove a single existing Lasting Injury from a fighter, or (2) re-roll a single Lasting Injury roll on a fighter, including a Memorable Death result."
+    "This Territory grants the following Boon:\nSpecial: During the post-battle sequence, the gang controlling this Territory may re-roll a Single Lasting Injury roll on a fighter. Note that a Memorable Death result may not be re-rolled.\n\nThis Territory grants Escher gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: An Escher gang may either (1) remove a single existing Lasting Injury from a fighter, or (2) re-roll a single Lasting Injury roll on a fighter, including a Memorable Death result."
+  elsif a_question.match?(/tech bazaar/i)
+    "This Territory grants the following Boons:\nIncome: The gang earns D6x10 credits from this Territory when collecting income.\nEquipment: Select one Leader or Champion to make a Haggle post-battle action. Roll 2D6: The gang may immediately choose one item from the Rare Trade chart with a Rare value equal to the result of the dice roll and add it to their Stash for half of its usual value, rounded down. If the roll is lower than 7, pick a Common Weapon or Piece of equipment to add to the gang's Stash for half of its usual value, rounded down. If the roll is 3 or lower, then the fighter proves to be very poor at haggling and no equipment is gained. If the fighter selected has Exotic Furs, add +1 to the result of the 2D6 dice roll.\nENHANCED BOON\nThis Territory grants Van Saar gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nIncome: The gang earns D6x10 credits from this Territory when collecting income. If the gang also controls an Archaeotech Device, this is increased to 2D6x10."
+  elsif a_question.match?(/toll crossing/i)
+    "This Territory grants the following Boon:\nIncome: The gang earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boon:\nSpecial: Whilst it controls this Territory, an Orlock gang has Priority in the first round of any battle. Any gang in the campaign may pay the Orlock gang 20 credits to gain the same benefit in a single battle against another gang."
+  elsif a_question.match?(/tunnels/i)
+    "This Territory grants the following Boon:\nSpecial: Whist it controls this Territory, the gang may choose to have up to three fighters deploy via tunnels ahead of any battle. These fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are placed to one side. During the deployment phase, the player sets up two 2’’ wide tunnel entrance markers on any table edge on the ground surface of the battlefield. During the Priority phase of each turn, roll a D6. On a 4+, the group of fighters arrive on the battlefield. That turn they may be activated as a single group, and must move onto the battlefield from one of the tunnel entrance. If the battle ends before the fighters arrive, they take no part in the battle.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: An Orlock gang may choose to deploy up to six fighters via tunnels using the method detailed above. The fighters in each group must be specified before the battle."
   elsif a_question.match?(/wastes/i)
-    "This Territory grants the following Boons:\n
-Special: If challenged in the Occupation phase, the gang may choose the Territory at stake in the battle, even though it would normally be chosen by the challenger. If challenged in the Takeover phase for a Territory the gang already controls, make an Intelligence check for the gang Leader. If the check is passed, the player of the gang may choose to play the Ambush scenario instead of rolling. They are automatically the attacker."
+    "This Territory grants the following Boons:\nSpecial: If challenged in the Occupation phase, the gang may choose the Territory at stake in the battle, even though it would normally be chosen by the challenger. If challenged in the Takeover phase for a Territory the gang already controls, make an Intelligence check for the gang Leader. If the check is passed, the player of the gang may choose to play the Ambush scenario instead of rolling. They are automatically the attacker."
+  elsif a_question.match?(/WORKSHOP/i)
+    "This Territory grants the following Boon:\nRecruit: The gang may recruit an Ammo-jack Hanger-on for free."
+
 
   # RACKETS
   elsif a_question.match?(/narco( |-)distribution/i)
@@ -416,30 +422,19 @@ Special: If challenged in the Occupation phase, the gang may choose the Territor
 
 
 
-  elsif a_question.match?(/ROGUE DOC SHOP/i)
-    "This Territory grants the following Boon:\nRecruit: The gang may recruit a Rogue Doc Hanger-on for free."
-  elsif a_question.match?(/settlement/i)
-    "This Territory grants the following Boons:\n
-Income: The gang earns D6x10 credits from this Territory when collecting income.\n
-Reputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\n
-Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
-  elsif a_question.match?(/slag furnace/i)
-    "This Territory grants the following Boon:\nIncome: The gang-earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Goliath gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +2 to its Reputation.\nRecruit: The gang may choose to roll two D6 after every battle. On a roll of 6 on either dice, the gang may recruit a single Juve from their House List for free. If both dice come up as 6, then the gang may recruit a Ganger from their House List for free."
-  elsif a_question.match?(/tech bazaar/i)
-    "This Territory grants the following Boons:\nIncome: The gang earns D6x10 credits from this Territory when collecting income.\nEquipment: Select one Leader or Champion to make a Haggle post-battle action. Roll 2D6: The gang may immediately choose one item from the Rare Trade chart with a Rare value equal to the result of the dice roll and add it to their Stash for half of its usual value, rounded down. If the roll is lower than 7, pick a Common Weapon or Piece of equipment to add to the gang's Stash for half of its usual value, rounded down. If the roll is 3 or lower, then the fighter proves to be very poor at haggling and no equipment is gained. If the fighter selected has Exotic Furs, add +1 to the result of the 2D6 dice roll.\nENHANCED BOON\nThis Territory grants Van Saar gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nIncome: The gang earns D6x10 credits from this Territory when collecting income. If the gang also controls an Archaeotech Device, this is increased to 2D6x10."
-  elsif a_question.match?(/toll crossing/i)
-    "This Territory grants the following Boon:\nIncome: The gang earns D6x5 credits from this Territory when collecting income.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boon:\nSpecial: Whilst it controls this Territory, an Orlock gang has Priority in the first round of any battle. Any gang in the campaign may pay the Orlock gang 20 credits to gain the same benefit in a single battle against another gang."
-  elsif a_question.match?(/tunnels/i)
-    "This Territory grants the following Boon:\nSpecial: Whist it controls this Territory, the gang may choose to have up to three fighters deploy via tunnels ahead of any battle. These fighters must be part of the crew for a battle, but instead of being set up on the battlefield, they are placed to one side. During the deployment phase, the player sets up two 2’’ wide tunnel entrance markers on any table edge on the ground surface of the battlefield. During the Priority phase of each turn, roll a D6. On a 4+, the group of fighters arrive on the battlefield. That turn they may be activated as a single group, and must move onto the battlefield from one of the tunnel entrance. If the battle ends before the fighters arrive, they take no part in the battle.\nENHANCED BOON\nThis Territory grants Orlock gangs the following Boons:\nReputation: Whilst it controls this Territory, the gang adds +1 to its Reputation.\nSpecial: An Orlock gang may choose to deploy up to six fighters via tunnels using the method detailed above. The fighters in each group must be specified before the battle."
 
 
 
 
 
-
-
-
-
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
   # elsif a_question.match?(/pham/i)
