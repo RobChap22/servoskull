@@ -368,7 +368,7 @@ ENHANCED BOONS
 Linked Rackets: Ghast Prospecting, The Cold Trade.\n
 Income: If the gang also controls one of the Linked Rackets, the gang earns 2D6x10 credits when they collect Income.\n
 Income: If the gang also controls both of the Linked Rackets, the gang earns 3D6x10 credits when they collect Income."
-  elsif a_question.match?(/LIFE COIN EXCHANGE /i)
+  elsif a_question.match?(/LIFE COIN EXCHANGE/i)
     "RACKET BOONS\n
 Recruit: Whilst it controls this Racket, the gang may recruit two Hive Scum or one Bounty Hunter Hired Gun for free, including their equipment, prior to every battle.\n
 ENHANCED BOONS
