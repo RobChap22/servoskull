@@ -601,7 +601,74 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   elsif a_question.match?(/TELESCOPIC SIGHT/i)
     "(Pistols, Basic and Special weapons)\nIf a fighter attacks with this weapon after making an Aim action, the weapon’s Short range accuracy modifier is used even if the target is within the weapon’s Long range."
 
+  # STATUS ITEMS
+  elsif a_question.match?(/GOLD(-| )PLATED GUN/i)
+    "Any weapon can be gold-plated. A fighter with a goldplated gun adds +1 to their Leadership characteristic. Additionally, once per game, the fighter may re-roll a failed Ammo check."
+  elsif a_question.match?(/EXOTIC FURS/i)
+    "Should this fighter make a Trade action in the post-battle sequence, they add an additional +1 modifier to the dice roll to determine the rarity of the items on offer."
+  elsif a_question.match?(/MASTER(-| )CRAFTED WEAPON/i)
+    "The fighter purchases a new weapon of exceptional craftsmanship. Any weapon may be master-crafted (note that grenades are Wargear, not weapons). The cost of a master-crafted weapon is that of the weapon plus 25%, with fractions rounded up to the nearest 5 credits. For example, a master- crafted bolter/plasma combi weapon would cost 145 credits (115 credits plus 25% equals 143.75 credits. Rounded up to the nearest 5 credits, this weapon costs 145 credits).\nNote that the fighter may replace a weapon with which they are already equipped with a master- crafted version of that weapon, and that the original may be discarded and added to the gang’s Stash. This is an exception to the norm.\nA fighter may re-roll a single failed hit roll for this weapon every round."
+
   # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+ # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+   # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+   # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
   # elsif a_question.match?(/pham/i)
@@ -620,127 +687,6 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   #   "++DONT YOU MEAN JONATHAN++"
 
 
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
 
   # CONDITIONS
   elsif a_question.match?(/ACTIVE/i)
