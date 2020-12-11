@@ -529,6 +529,70 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   elsif a_question.match?(/XENOCULUM/i)
     "A Xenoculum can represent any number of esoteric alien devices, the true purposes of which only becomes apparent through experimentation. When a player buys a Xenoculum from the Black Market, they won’t know what it does. They must allocate it to one of their fighters and roll a D6 on the Xenoculum table to determine its type. If a Xenoculum is later given to a different fighter in the gang for any reason, the new fighter must pass an Intelligence check the first time they wish to activate it. If they pass, they may use the device as normal from now on. If they fail, they wait until their next game to try to activate the device again.\n\nD6 Effect:\n1 Alien Trap: The fighter accidentally triggers the Xenoculum as they’re messing about with it. They immediately suffer D3 S3 D1 hits and the Xenoculum is reduced to a collection of junk.\n\n2 Xenos Claws: The Xenoculum moulds itself to the fighter’s hands, lengthening into a pair of lethal claws. The fighter’s unarmed attacks become S+2 D2 and gain the Power trait. While the fighter is equipped with the Xenoculum any attacks they make with ranged weapons suffer a -2 to hit.\n\n3 Ghost Form: The Xenoculum is a powerful transmatter convertor, allowing its user to slip out of sequence with reality for short periods. When the fighter activates, they can enter ghost form. This state persists until their next activation. While in ghost form, the fighter ignores all terrain, the effects of falling and all attacks with the exception of psychic powers. However, they cannot make attacks themselves or interact with their environment in any way. Each time the fighter enters ghost form, they must roll a D6. On a 4+, the Xenoculum has expended its charge and cannot be used again during the battle.\n\n4 Horror Aura: A subliminal animalistic howl constantly screams forth from the Xenoculum and only its user is immune to its effects. When the fighter activates, any fighter, friend or foe, within 6\" must make a Nerve test or become Broken.\n\n5 Alien Chemfactory: Strange mechanisms concoct alien chems within the Xenoculum, dispensing them as the fighter desires. The fighter rolls two extra Injury dice when making Recovery rolls, or assisting another Seriously Injured fighter in the Recovery phase, and chooses the dice they wish to take effect. In addition, in the post-battle sequence, one member of the fighter’s crew can make a Medical Escort action for free.\n\n6 Brain Booster: A cranial spike allows the Xenoculum to be affixed to the fighter’s brain, greatly boosting their cognitive function. The fighter adds 5 to the dice roll when making an Intelligence check. In addition, each time the fighter would gain Experience, they gain one additional point of Experience."
 
+  # ARMOUR
+  elsif a_question.match?(/ABLATIVE OVERLAY/i)
+    "Sometimes the best way to improve a suit of armour is to add even more armour over the top. An ablative overlay is a layer of armour that can be worn in addition to another suit of armour, or can be worn on its own. It can range from sophisticated gel coatings and reactive plates, to more primitive furs quilted with ballistic cloth and fragments from ruined armour pieces. The first time a fighter wearing an ablative overlay is required to make a save, their save is 2 better than normal (i.e., a model with a 5+ save would gain a 3+ save). A model without a save gains a 5+ save. The second time they must make a save, it becomes 1 better than normal or 6+ if they did not already have a save. After the fighter has been hit twice, the ablative overlay is spent and has no further effect on the game, but is retained by the fighter and may be used again in future games."
+  elsif a_question.match?(/ARCHAEO(-| )CARAPACE/i)
+    "An ancient device from the Dark Age of Technology, the Archaeo-carapace is a piston-driven rig that grafts itself to the user. It offers impressive protection, but at the same time slowly begins to take over the wearer, until there is little distinction between them and the machine. An Archaeo-carapace grants its wearer a 4+ save. If the wearer suffers a Lasting Injury result of Humiliated, Head Injury, Eye Injury, Hand Injury, Hobbled, Spinal Injury or Enfeebled, instead of suffering the effects of the injury they gain a bionic appropriate to the location damaged (i.e., if a Head Injury was suffered, they would gain a Cortex-cogitator bionic). These bionics do not increase the fighter’s characteristics. Unlike normal bionics, they cannot be damaged or destroyed, and if the fighter suffers an injury to a location already replaced by a bionic then the injury is ignored.\nTransformation into a blasphemous cyber-creature is not without its perils, however. Whenever the fighter activates they must roll a D6. If the result is less than the number of bionics they currently have, they gain the Insane condition. If the fighter ever has six or more bionics, they vanish into the underhive never to be seen again – the player must remove the fighter from their gang roster."
+  elsif a_question.match?(/ARMOURED BODYGLOVE/i)
+    "Van Saar fighters are somewhat protected from the effects of their own rad weapons by their armour and are therefore immune to the effects of the Rad-phage Weapon Trait (i.e., they will not suffer the additional flesh wound) unless, otherwise noted. If a fighter is wearing an armoured bodyglove, their save roll is improved by 1. For example, if they are wearing Flak armour and an armoured bodyglove, they would have a 5+ save, which would be increased to 4+ against Blasts. If a fighter does not already have a save roll, an armoured bodyglove grants a 6+ save. An armoured bodyglove may be combined with other types of armour. It may not however be combined with an armoured undersuit."
+  elsif a_question.match?(/ARMOURWEAVE/i)
+    "A product of xenos science, the armourweave suit combines psycho-reactive plastics and kinetic bafflers to deaden blows. Armourweave is also practically impossible to tear or cut, meaning even against the most powerful attacks it will offer some measure of protection.\nArmourweave grants its wearer a save of 5+. This save cannot be reduced to lower than 6+ by AP or other modifiers, though attacks that do not allow a save will ignore Armourweave as normal."
+  elsif a_question.match?(/CARAPACE/i)
+    "Light: Light carapace armour grants a 4+ save roll.\n\nHeavy: Heavy carapace armour grants a 4+ save roll. This is increased to 3+ against attacks originating within the fighter’s vision arc (the 90° arc to their front); check this before the fighter model is placed prone and is Pinned. If it is not clear if the attacker is within the fighter’s arc, use a Vision Arc template to check – if the centre of the attacker’s base is within the arc, use the 3+ save roll. Against attacks with the Blast trait, use the centre of the Blast marker in place of the attacker. If the fighter does not have a facing (for example, if they are prone), use the 4+ save roll. However, due to the extra weight of this armour, the fighter’s Initiative is reduced by 1 and their movement by 1\" when making a Charge action."
+  elsif a_question.match?(/CERAMITE SHIELD/i)
+    "Ceramite shields are made from scavenged armoured plating destined for the military vehicles of the Imperium. As much mobile cover as personal protection, they are lugged into battle by burly gangers who don’t mind the weight compared to the benefits the shield affords. A fighter with a Ceramite shield adds +2 to their save against attacks originating in their line of sight provided they are Standing, however for the wielder the Move action becomes a (Basic) action rather than a (Simple) action. A fighter with a Ceramite shield ignores the effects of the Melta trait if an attack originates in their line of sight."
+  elsif a_question.match?(/FLAK/i)
+    "Flak armour grants a 6+ save roll. Against weapons that use a Blast marker or Flame template, this is increased to 5+ save roll."
+  elsif a_question.match?(/FURNACE PLATES/i)
+    "Furnace plates grant a 6+ save roll. This is increased to 5+ against attacks originating within the fighter’s vision arc (the 90° arc to their front); check this before the fighter model is placed prone and is Pinned. If it is not clear if the attacker is within the fighter’s arc, use a Vision Arc template to check – if the centre of the attacker’s base is within the arc, use the 5+ save roll. Against attacks with the Blast trait, use the centre of the Blast marker in place of the attacker. If the fighter does not have a facing (for example, if they are prone), use the 6+ save roll."
+  elsif a_question.match?(/GUTTERFORGED CLOAK/i)
+    "Made from fragments of ruined armour, a Gutterforged cloak provides protection at a very modest price. Common among badzones settlers, the cloak is also designed to offer some measure of defence again the hazards of the underhive. A Gutterforged cloak grants its wearer a save of 6+, or a save of 5+ against damage resulting from Underhive Perils or environmental effects."
+  elsif a_question.match?(/HARDENED FLAK ARMOUR/i)
+    "Flak armour grants a 6+ save roll. Against weapons that use a Blast marker or Flame template, this is increased to a 5+ save roll. Additionally, when an enemy fighter makes a ranged attack against a fighter wearing hardened flak armour, the Armour Penetration of the weapon used is decreased by 1, to a minimum of -1."
+  elsif a_question.match?(/HARDENED LAYERED FLAK ARMOUR/i)
+    "Hardened layered flak armour grants a 5+ save roll. Against weapons that use a Blast marker or Flame template, this is increased to a 4+ save roll. Additionally, when an enemy fighter makes a ranged attack against a fighter wearing hardened layered flak armour, the Armour Penetration of the weapon used is decreased by 1, to a minimum of -1."
+  elsif a_question.match?(/HAZARD SUIT/i)
+    "The Ash Wastes are a hostile place, their dunes are frequently toxic or corrosive, and strong winds whip up regular ash storms capable of blasting any exposed skin raw in minutes. Consequently, those such as ash crust miners and the poor wretches who maintain a hive’s outer armoured skin frequently wear heavy suits of rubberised canvas with vulcanised plates that protects them form the dangers of their working environment. A hazard suit grants a 6+ save roll. Additionally, when a hazard suit is combined with a respirator, the fighter’s Toughness is increased by 3 against Gas attacks, rather than the usual 2. Finally, a fighter wearing a hazard suit is immune to the Blaze and Rad-phage traits."
+  elsif a_question.match?(/LAYERED FLAK ARMOUR/i)
+    "Layered flak armour grants a 5+ save roll. Against weapons that use a Blast marker or Flame template, this is increased to a 4+ save roll."
+  elsif a_question.match?(/MANTLE MALIFICA/i)
+    "Constructed from pieces of gore-forged metal, a Mantle Malifica incorporates profane icons and Warp-infused materials to protect its wearer from harm. Unfortunately, wearing such a tainted garment will slowly erode the mind and soul of all but the most strong-willed – or those already insane. A Mantle Malifica grants its wearer a 5+ save, or an unmodifiable 4+ save against the effects of psychic powers. Note that this save, if successful, does not cancel the use of a psychic power, it only renders the wearer immune to the power’s effects. In the End phase of each round, the wearer must make a Willpower check or gain the Insane condition."
+  elsif a_question.match?(/MESH/i)
+    "Mesh armour grants a 5+ save roll."
+  elsif a_question.match?(/PLATE MAIL/i)
+    "Plate mail grants a 6+ save roll. This is increased to a 5+ save roll against attacks originating within the fighter’s vision arc (the 90° arc to their front); check this before the fighter model is placed Prone and is Pinned. If it is not clear if the attacker is within the fighter’s front arc, use a Vision Arc template to check – if the centre of the attacker’s base is within the arc, use the 5+ save roll. Against attacks with the Blast trait, plate mail always grants a 5+ save roll."
+  elsif a_question.match?(/REFLEC SHROUD/i)
+    "Created from layers of reflective metals, a Reflec shroud provides an effective ward against energy weapons. A Reflec shroud grants its wearer a save of 5+. The wearer also counts the AP of las, plasma and melta weapons as ‘-’ regardless of their actual AP."
+  elsif a_question.match?(/SCRAP SHIELD/i)
+    "Sometimes fighters fashion crude shields from bits of barricades or simply panels prised from tunnel walls. These are then painted in gang colours and affixed to other suits of armour, either strapped to an arm or mounted over a shoulder. A fighter can be equipped with a scrap shield in addition to a suit of armour. The scrap shield offers no protection against ranged attacks, but while Engaged, the fighter increases their save by 1 against Reaction attacks."
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
@@ -561,48 +625,6 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
 
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
 
 
 
