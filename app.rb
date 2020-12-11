@@ -401,29 +401,21 @@ Special: If challenged in the Occupation phase, the gang may choose the Territor
     "Linked Rackets: Proxies of the Omnissiah, Blood Pits.\n\nRACKET BOONS\nIncome: Whilst it controls this Racket, the gang gains 2D6x10 credits when they collect Income if they won their battle.\n\nENHANCED BOONS\nEquipment: If the gang also controls one of the Linked Rackets, all of the gang’s Leader and Champions may each have one of the following Extravagant Goods for free: Gold-plated Gun, Exotic Furs, Opulent Jewellery, Uphive Raiments.\nIncome: If the gang also controls both of the Linked Rackets, the gang’s Leader gains a Caryatid Exotic Beast for free. This Caryatid will not leave its master if the gang loses Reputation, but will leave if the gang loses control of this Racket."
   elsif a_question.match?(/BULLET CUTTING/i)
     "Linked Rackets: Proxies of the Omnissiah, Blood Pits.\n\nRACKET BOONS\nSpecial: Whilst it controls this Racket, all fighters in the gang may re-roll any failed Ammo checks.\nEquipment: Whilst it controls this Racket, the gang treats all items from either the Trading Post or the Black Market with a Rarity of 9 or below as Common.\n\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang gains D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income."
-
   elsif a_question.match?(/SETTLEMENT PROTECTION/i)
-    "RACKET BOONS\n
-Recruit: Whilst it controls this Racket, the gang gains one Hanger-on of the controlling player’s choice for free.\n
-Income: Whilst it controls this Racket, the gang gains D6x10 credits when they collect Income.\n
-ENHANCED BOONS
-Linked Rackets: Guild Bond (any), Bullet Cutting.\n
-Income: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\n
-Income: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income."
+    "Linked Rackets: Guild Bond (any), Bullet Cutting.\n\nRACKET BOONS\nRecruit: Whilst it controls this Racket, the gang gains one Hanger-on of the controlling player’s choice for free.\nIncome: Whilst it controls this Racket, the gang gains D6x10 credits when they collect Income.\n\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income."
+  elsif a_question.match?(/CARAVAN ROUTE CONTROL/i)
+    "Linked Rackets: Guild of Coin Bond, The Cold Trade.\n\nRACKET BOONS\nIncome: Whilst it controls this Racket, the gang gains D6x10 credits when they collect Income.\n\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income."
   elsif a_question.match?(/WYRD TRADE/i)
-    "RACKET BOONS\n
-Equipment: Whilst it controls this Racket, the gang treats Ghast as a Common item.\n
-ENHANCED BOONS
-Linked Rackets: Peddlers of Forbidden Lore, Whisper Brokers.\n
-Income: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\n
-Income: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income"
+    "Linked Rackets: Peddlers of Forbidden Lore, Whisper Brokers.\n\nRACKET BOONS\nEquipment: Whilst it controls this Racket, the gang treats Ghast as a Common item.\n\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income"
+  elsif a_question.match?(/PRODUCTION SKIMMING/i)
+    "Linked Rackets: Caravan Route Control, Guild Bond (any).\n\nRACKET BOONS\nIncome: Whilst it controls this Racket, the gang gains D6x10 credits when they collect Income.\n\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\nIncome: If the gang also controls both of the Linked Rackets, the gang gains 3D6x10 credits when they collect Income."
   elsif a_question.match?(/RESURRECTION GAME/i)
-    "RACKET BOONS\n
-Special: Whilst it controls this Racket, the gang may ignore one Critical Injury or Memorable Death result on the Lasting Injury table per battle. When these results are rolled, the fighter simply goes Into Recovery.\n
-ENHANCED BOONS
-Linked Rackets: Corpse Guild Bond, Peddlers of Forbidden Lore.\n
-Income: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\n
-Special: Any gang in the campaign may pay the gang controlling this Racket to return a dead fighter from the grave. This costs the original value of the fighter (including equipment) +100 credits. Roll 2D6. On a roll of 7-12 the fighter is resurrected and gains the Fearsome skill. On a roll of 3-6 the fighter is resurrected but suffers a permanent loss of 1 Toughness and gains the Fearsome skill if they don’t have it already. On a roll of 2, the resurrection fails."
+    "Linked Rackets: Corpse Guild Bond, Peddlers of Forbidden Lore.\n\nRACKET BOONS\nSpecial: Whilst it controls this Racket, the gang may ignore one Critical Injury or Memorable Death result on the Lasting Injury table per battle. When these results are rolled, the fighter simply goes Into Recovery.\n\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\nSpecial: Any gang in the campaign may pay the gang controlling this Racket to return a dead fighter from the grave. This costs the original value of the fighter (including equipment) +100 credits. Roll 2D6. On a roll of 7-12 the fighter is resurrected and gains the Fearsome skill. On a roll of 3-6 the fighter is resurrected but suffers a permanent loss of 1 Toughness and gains the Fearsome skill if they don’t have it already. On a roll of 2, the resurrection fails."
+  elsif a_question.match?(/PEDDLERS OF FORBIDDEN LORE/i)
+    "Linked Rackets: Wyrd Trade, The Resurrection Game.\n\nRACKET BOONS\nSpecial: Whilst the gang controls this Racket, the controlling player may re-roll the dice when determining Priority.\n\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\nSpecial: Whilst the gang controls this Racket, its Leader and its all Champions gain a 4+ saving throw that cannot be modified by a weapon’s Armour Piercing value."
+
+
+
   elsif a_question.match?(/ROGUE DOC SHOP/i)
     "This Territory grants the following Boon:\nRecruit: The gang may recruit a Rogue Doc Hanger-on for free."
   elsif a_question.match?(/settlement/i)
@@ -447,12 +439,7 @@ Recruit: The gang may choose to roll two D6 after every battle. On a roll of 6 o
 
 
 
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
+
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
   # elsif a_question.match?(/pham/i)
