@@ -567,46 +567,39 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   elsif a_question.match?(/SCRAP SHIELD/i)
     "Sometimes fighters fashion crude shields from bits of barricades or simply panels prised from tunnel walls. These are then painted in gang colours and affixed to other suits of armour, either strapped to an arm or mounted over a shoulder. A fighter can be equipped with a scrap shield in addition to a suit of armour. The scrap shield offers no protection against ranged attacks, but while Engaged, the fighter increases their save by 1 against Reaction attacks."
 
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
+  # FIELD ARMOUR
+  elsif a_question.match?(/CONVERSION FIELD/i)
+    "A conversion field works by transforming the kinetic energy of an attack into light energy, absorbing the impact in a blinding flash. When a fighter wearing a conversion field is hit by an attack, roll a D6. On a 5+, the conversion field works and the attack has no further effect. However, any fighters, friend or foe, within 3\" of the wearer count as being hit by a weapon with the Flash trait as the field reacts in a tremendous burst of light. Note that the wearer is unaffected by this flash of light as they are inside the field."
+  elsif a_question.match?(/DISPLACER FIELD/i)
+    "A displacer field reacts to the energy of an impact by teleporting the wearer a safe distance away. The harder the impact, the further the wearer will be moved. If a fighter wearing a displacer field is hit, roll a D6. On a 4+, the fighter is moved a number of inches equal to the Strength of the attack in a random direction, determined by rolling a Scatter dice, and the hit is ignored (even if any part of the fighter is still under the template – if the attack used one – after being displaced). A displacer field will not deposit its wearer inside a terrain feature, the fighter will move by the shortest route possible so that it can be placed clear of any impassable terrain features. Similarly, the fighter’s base cannot overlap another fighter’s base and the wearer must be moved by the shortest route possible until its base can be placed without overlapping. Note that the wearer may end up within 1\" of an enemy fighter and may even end up Engaged as a result of being displaced.\nHowever, displacer fields are notoriously oblivious to safe footings. In a Zone Mortalis game, a fighter wearing a displacer field may be deposited above a pit fall or similar hazard. In a Sector Mechanicus game, a fighter above ground level may simply be flung into the open air. If any part of the fighter’s base ends overhanging a hazard or overhanging a platform edge, the fighter must pass an initiative test or will fall, following all the rules for falling as required by the terrain type being fought over. If the entirety of the fighter's base is over a hazard or in the open air, they will simply fall.\nIf a fighter wearing a displacer field is transported off the board, they immediately go Out of Action.\nIf an attack does not have a Strength value, then a displacer field cannot work against it."
+  elsif a_question.match?(/REFRACTOR FIELD/i)
+    "A refractor field bends the energy of an attack around the wearer, harmlessly distributing it over a large area and robbing the attack of its lethal force. When a fighter wearing a refractor field is hit by an attack, roll a D6. On a 5+ the hit is ignored.\nHowever, should the field work and the hit be ignored, roll another D6. If the result is a 1, then the field has been overburdened by the attack and its generator is burned out. Remove the refractor field from the fighter’s card, it no longer works."
 
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
+  # CORPSE GRINDER MASKS
+  elsif a_question.match?(/INITIATE(’|)S MASK/i)
+    "An Initiate’s mask adds 1 to any save rolls the fighter makes.\nAdditionally, should a fighter wearing this mask suffer a Lasting Injury result of 51: Head Injury or 52: Eye Injury, roll a D6. On a 6, the fighter does not suffer the characteristic reduction, but will still go Into Recovery."
+  elsif a_question.match?(/SKINNER(’|)S MASK/i)
+    "A Skinner’s mask adds 1 to any save rolls the fighter makes.\nAdditionally, should a fighter wearing this mask suffer a Lasting Injury result of 51: Head Injury, or 52: Eye Injury, roll a D6. On a 6, the fighter does not suffer the characteristic reduction, but will still go Into Recovery.\nFinally, the mask grants the fighter wearing it the Fearsome (Ferocity) skill:\nFearsome: If an enemy wishes to make a Charge (Double) action that would result in them making one or more close combat attacks against this fighter, they must make a Willpower check before moving. If the check is failed, they cannot move and their activation ends immediately."
+  elsif a_question.match?(/CUTTER(’|)S MASK/i)
+    "A Cutter’s mask adds 1 to any save rolls the fighter makes.\nAdditionally, should a fighter wearing this mask suffer a Lasting Injury result of 51: Head Injury or 52: Eye Injury, roll a D6. On a 6, the fighter does not suffer the characteristic reduction, but will still go Into Recovery.\nFinally, this mask confers the Terrifying special rule onto the fighter wearing it:\nTerrifying: If an enemy fighter wishes to make a Fight (Basic) or Shoot (Basic) action that targets this fighter, they must make a Willpower check. If the check is failed, they cannot perform the action and their action ends immediately."
+  elsif a_question.match?(/BUTCHER(’|)S MASK/i)
+    "A Butcher’s mask grants the fighter a save roll of 6+. This save cannot be combined with other armour, but neither can it be modified by a weapon’s Armour Piercing value. However, a fighter can only make one save attempt per attack. Therefore, you must choose to either make a save attempt using the fighter’s armour save or using this save.\nAdditionally, should a fighter wearing this mask suffer a Lasting Injury result of 51: Head Injury or 52: Eye Injury, roll a D6. On a 6, the fighter does not suffer the characteristic reduction, but will still go Into Recovery.\nFinally, this mask confers the Terrifying special rule onto the fighter wearing it:\nTerrifying: If an enemy fighter wishes to make a Fight (Basic) or Shoot (Basic) action that targets this fighter, they must make a Willpower check. If the check is failed, they cannot perform the action and their action ends immediately."
 
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
+  # WEAPON ACCESSORIES
+  elsif a_question.match?(/GUNSHROUD/i)
+    "(Pistols and Basic weapons)\nA weapon fitted with a gunshroud gains the Silent trait."
+  elsif a_question.match?(/HOTSHOT LAS PACK/i)
+    "(Lasgun and Laspistol only)\nAt the expense of reliability, a lasgun or laspistol (not including las carbines, las sub-carbines or suppression lasers) can be fitted with a hotshot las pack, increasing its Strength to 4 and Armour Piercing to -1. However, the weapon loses the Plentiful trait and its Ammo value is reduced to 4+."
+  elsif a_question.match?(/INFRA(-| )SIGHT/i)
+    "(Pistols, Basic, Special and Heavy weapons)\nWeapons with the Rapid Fire (X) or Blast (3\"/5\") trait cannot be fitted with an infra-sight. A weapon with an infra-sight can be used to attack through smoke clouds, and prove more effective in Pitch Black conditions (see page 328). In addition, there is no hit modifier when the weapon targets a fighter in partial cover, and a -1 modifier (instead of -2) when it targets a fighter in full cover."
+  elsif a_question.match?(/LAS(-| )PROJECTOR/i)
+    "(Pistols, Basic and Special weapons)\nThe weapon’s Short range accuracy bonus is improved by 1 (for example, if it is +1 it becomes +2; if it is – it becomes +1; if it is -1 it becomes – )"
+  elsif a_question.match?(/MONO(-| )SIGHT/i)
+    "(Basic, Special and Heavy weapons)\nIf the fighter attacks with this weapon after making an Aim action, add 2 to the result of the hit roll instead of 1."
+  elsif a_question.match?(/SUSPENSOR/i)
+    "(Heavy weapons)\nAn Unwieldy ranged weapon fitted with suspensors is far more manoeuvrable. Firing it becomes a Basic action rather than a Double action."
+  elsif a_question.match?(/TELESCOPIC SIGHT/i)
+    "(Pistols, Basic and Special weapons)\nIf a fighter attacks with this weapon after making an Aim action, the weapon’s Short range accuracy modifier is used even if the target is within the weapon’s Long range."
 
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
