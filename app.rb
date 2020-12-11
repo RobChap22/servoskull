@@ -17,7 +17,7 @@ def bot_answer_to(a_question, user_name)
   # If you want to add Bob to group chat, uncomment the next line
   # return '' unless a_question.downcase.include?('bob') # Only answer to messages with 'bob'
 
-  # WEAPON KEYWORDS
+  # WEAPON TRAITS
   if a_question.match?(/(assault|energy) shield/i)
     "An assault/energy shield grants a +2 armour save modifier (to a maximum of 2+) against melee attacks that originate from within the fighter’s vision arc (the 90° arc to their front), and a +1 armour save modifier against ranged attacks that originate from within the fighter’s vision arc; check this before the fighter is placed Prone and is Pinned. If it is not clear whether the attacker is within the target’s front arc, use a Vision Arc template to check – if the centre of the attacker’s base is within the arc, the assault/energy shield can be used. Against attacks with the Blast trait, use the centre of the Blast marker in place of the attacker. If the target does not have a facing (for example, if they are Prone), the assault/energy shield cannot be used"
   elsif a_question.match?(/BACKSTAB/i)
@@ -139,6 +139,7 @@ At all other times other than during this fighter’s activation, Versatile has 
 A fighter that is Webbed at the end of the game does not succumb to their Injuries and will automatically recover. However, during the Wrap Up, when rolling to determine if any enemy fighters are Captured at the end of the game, add +1 to the dice roll for each enemy fighter currently Webbed and include them among any eligible to be Captured."
 
   # SKILLS
+
   # AGILITY
   elsif a_question.match?(/CATFALL/i)
     "When this fighter falls or jumps down from a ledge, they count the vertical distance moved as being half of what it actually is, rounded up. In addition, if they are not Seriously Injured, or taken Out of Action by a fall, make an Initiative test for them – if it is passed, they remain Standing rather than being Prone and Pinned."
@@ -420,13 +421,311 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   elsif a_question.match?(/PEDDLERS OF FORBIDDEN LORE/i)
     "Linked Rackets: Wyrd Trade, The Resurrection Game.\n\nRACKET BOONS\nSpecial: Whilst the gang controls this Racket, the controlling player may re-roll the dice when determining Priority.\n\nENHANCED BOONS\nIncome: If the gang also controls one of the Linked Rackets, the gang gains 2D6x10 credits when they collect Income.\nSpecial: Whilst the gang controls this Racket, its Leader and its all Champions gain a 4+ saving throw that cannot be modified by a weapon’s Armour Piercing value."
 
+  # EQUIPMENT
+  elsif a_question.match?(/AMMO CACHE/i)
+    "Ammo caches are added to the gang’s Stash, instead of being carried by a particular fighter. Immediately after the last of the fighters in the crew is set up at the start of a battle, the controlling player can choose to set up any ammo caches from their Stash. If the scenario has an attacker and a defender, and this gang is defending, roll a D6 for each of their ammo caches. On a 1-4, they were not expecting the attackers and the caches cannot be used; on a 5 or 6, they are lucky enough to have them to hand.\nEach ammo cache must be set up within 1\" of one of their fighters and within their deployment zone if the scenario has one. It is then deleted from the gang’s Stash. During the battle, ammo caches follow the rules on page 328."
+  elsif a_question.match?(/ARMOURED UNDERSUIT/i)
+    "If a fighter is wearing an armoured undersuit, their save roll is improved by 1. For example, if they are wearing Flak armour and an armoured undersuit, they would have a 5+ save, which would be increased to a 4+ save against blasts. If a fighter does not already have a save roll, an armoured undersuit grants a save of 6+."
+  elsif a_question.match?(/ARCHAEOTECH DEVICE/i)
+    "When a player buys an Archaeotech Device from the Trading Post, they won’t know what it does. They must allocate it to one of their fighters and roll on the Archaeotech Device table to determine its type. If an Archaeotech Device is given to a different fighter in the gang for any reason, the new fighter must pass an Intelligence check the first time they wish to activate it. If they pass, they may use the device as normal from now on. If they fail, they wait until their next game to try to activate the device again.\n\nD6 Type:\n1 Dangerous: The fighter accidentally triggers the device as they’re messing about with it. They immediately suffer D6 Str 2 Damage 1 hits and the archaeotech is reduced to a pile of worthless molten slag.\n2 Viewer: The fighter can use the device to view different places, shifting their perspective to almost any point, even if it’s beyond closed doors and solid walls. A fighter with this device can make the Scan (Simple) action to place a Revealed marker on an enemy fighter within 18\". If the fighter is selected to be a sentry, when they are activated, roll a D6 for them. On a 6, they automatically raise the alarm as they spot the enemy sneaking around.\n3 Cutting Beam: The device can be used to focus a cutting beam of great power on a stationary object. Unfortunately, it’s useless as a weapon because both the target and the fighter have to be perfectly still for the beam to focus, but it makes for a good can opener! A fighter with this device can make the Laser Cut (Double) action if they are within 1\" of a door, loot casket or other damageable piece of terrain. This action inflicts a single automatic hit against the chosen target, resolved with Strength 8 and Damage 3.\n4 Lifter: The device is a sophisticated form of suspensor which can negate or lessen gravity for its bearer, allowing them to float up or down for a limited period. When making a Move or Charge action, the fighter ignores all terrain, may move freely between levels without restriction, and can never fall. They may not, however, ignore impassable terrain or walls, and may not end their movement with their base overlapping an obstacle or another fighter’s base.\n5 Holo Projector: The device functions as a holo projector and can be used to make the fighter appear a short distance away from where they really are. This gives the fighter a saving throw of 4, 5 or 6 on a D6 against any hits from shooting, which is not affected by Armour Penetration. As soon as the saving throw is failed, the projector stops working for the rest of the game. Also note that the holo projector is useless against close combat attacks and weapons with the Template or Blast Traits.\n6 Weapon: The device is a powerful and compact weapon. It is only pistol-sized but it is as effective as a much larger piece of ordnance. Roll a D6 to find out what it is: 1-2 – boltgun, 3 – flamer, 4 – meltagun, 5 – plasma gun, 6 – grenade launcher with frag grenades. The weapon has the standard profile for a weapon of its type but with the addition of the Sidearm Trait. Because the weapon is compact and selfmaintaining it can be used by anyone, not just Specialists, Champions or Leaders."
+  elsif a_question.match?(/BIO-BOOSTER/i)
+    "The first time in each game that an Injury roll is made for a fighter with a bio-booster, one less Injury dice is rolled. If only one dice should have been rolled, two dice are rolled instead and the player controlling the fighter with the biobooster can discard one of them."
+  elsif a_question.match?(/BIO-SCANNER/i)
+    "If a fighter with a bio-scanner is a sentry in a scenario that uses the Sentries special rule, they can attempt to spot attackers even if they are not within their vision arc. In addition, the D6 roll to see whether a fighter is spotted has a +1 modifier (a natural 1 still fails)."
+  elsif a_question.match?(/BLIND SNAKE POUCH/i)
+    "A fighter with a Blind Snake Pouch gains the Dodge skill. If they already have the Dodge skill then they will successfully dodge attacks on a D6 roll of 5 or 6 rather than just a roll of 6. In addition, when making a dodge against an attack made by a fighter using the Overwatch skill, the dodge will succeed on a D6 roll of 4, 5 or 6."
+  elsif a_question.match?(/BOMB DELIVERY RATS/i)
+    "A fighter equipped with bomb delivery rats may deploy one per turn to carry a single grenade of a type that fighter is equipped with by performing a Prime Bomb Rat (Basic) action. When a bomb delivery rat is deployed, make an Ammo roll for the grenade used as if it had been used normally. The fighter may run out of grenades before they run out of rats!\nWhen the bomb delivery rat is deployed, place it so that the edge of its base is touching that of the fighter and make an Intelligence check for the fighter. If the check is passed, the fighter may choose which direction the rat moves in. If the check is failed, the rat will move in a direction determined by rolling a Scatter dice. In either case, the rat may move up to 6\". Bomb delivery rats ignore all terrain when moving except any that would normally be impassable, such as walls and structures. They suffer no penalties for climbing, they will never fall, and they may freely leap any gap of 2\" or less. Wider gaps are considered impassable.\nA bomb delivery rat is not a fighter and may pass within 1\" of other models. Should the rat end its movement within 1\" of a fighter, friend or enemy, or another bomb delivery rat, roll a D6. On a 2+, the grenade will go off. On a 1, the grenade proves to be a dud and the rat vanishes into the darkness to dwell upon its good fortune. In a either case, the rat is removed from play.\nAt the start of every subsequent round, after rolling for Priority but before activating any fighters, if the bomb delivery rat has not exploded then it will activate again. Check to see if it is within 9’’ of the fighter that deployed it. If it is and if that fighter is Active or Pinned, make an Intelligence check for the fighter. If this is passed, the rat will immediately move up to 6’’ in a direction of your choosing. If it is beyond 9’’, the Intelligence check is failed, the fighter is Engaged or Seriously Injured (Secondary Statuses have no effect), or if the fighter has been taken Out of Action, then the rat will move 6’’ in a direction determined by rolling a Scatter dice. Should the rat end its movement within 1’’ of a fighter, friend or enemy, or another bomb delivery rat, roll a D6. On a 2+, the grenade will go off. On a 1, the grenade proves to be a dud. In either case, the rat is removed from play.\nAny fighter may attempt to shoot at a bomb delivery rat or make a melee attack against one as if it were an enemy fighter. However, there is always an additional -1 modifier on any hit roll made against a bomb delivery rat. If the rat is hit, roll a D6. On a 4+, the grenade goes off. On a 1-3, the grenade does not go off. In either case, once a bomb delivery rat has been hit by a shooting or melee attack, it is removed from play. "
+  elsif a_question.match?(/BOOBY TRAP(S|)/i)
+    "FRAG, GAS, AND MELTA\nA booby trap is represented by a marker placed upon the battlefield at the start of the game, after the battlefield has been set up but before deploying any fighters. If both gangs possess and wish to use booby traps, the defender or the winner of a roll-off (if there is no defender) places theirs first.\nIf any fighter, friendly or enemy, comes within 2\" of a booby trap for any reason, they risk setting the booby trap off. Roll a D6. On a 1, the booby trap is a dud and is removed from the battlefield. On a 2 or 3, the booby trap does not go off but is left in place. On a 4, 5 or 6, the booby trap is triggered and will explode. The profiles for booby traps can be found in the weapon section. The movement of a moving fighter is interrupted whilst this roll is resolved. If the booby trap does not go off, their movement continues after the roll is made. If the booby trap does go off, and the fighter is Pinned or Injured as a result, their movement ends.\nAny fighter can target a booby trap with ranged attacks. Doing so has a -1 modifier to the hit roll at Short range, or a -2 modifier at Long range. If the booby trap is hit, roll a D6. On a 1-2, it is unaffected. On a 3-4, it is immediately triggered. On a 5-6, it is disarmed and removed."
+  elsif a_question.match?(/CAMELEOLINE CLOAK/i)
+    "Cameleoline is a much-sought after material within the Imperium, and is commonly used by the armies of the Emperor for stealth and scout troops. On Necromunda, some examples of the material can be found in the underhive, stitched into more common clothing or as an extra layer on a cloak, allowing the wearer to seemingly vanish if they stand still. If the wearer of a Cameleoline cloak did not move during their activation, ranged attacks made against them suffer a -2 to hit until the start of their next activation."
+  elsif a_question.match?(/CHEM(-| )SYNTH/i)
+    "At the start of their activation, a Standing and Active or Standing and Engaged fighter with a chem-synth can choose to make an Intelligence check. If the check is passed, any Gas or Toxin weapons they use until the end of their activation are enhanced and the target’s Toughness is reduced by 1 when resolving those attacks."
+  elsif a_question.match?(/CHRONO-CRYSTAL/i)
+    "The opportunity to acquire one of Bald Bryen’s Chronocrystals is vanishingly rare, and possession of such an item will not only result in the owner earning the eternal enmity of the infamous mayor of Rust Town, but may also lead to them crossing paths with the Ordo Chronos in the future (or, perhaps, in the past…). Certain scenario special rules will detail the ways in which a Chrono-crystal can be used."
+  elsif a_question.match?(/CRED( |-)SNIFFER/i)
+    "Cred Sniffers are modified auspexes created by enterprising archaeo-thieves. They literally sniff out the rare alloys in cred chits and direct the user to their location. If a fighter equipped with a Cred Sniffer was part of a game and was not taken Out of Action or Seriously Injured, at the end of the battle they earn 4D6 credits for their gang. A gang can only benefit from the effects of one Cred Sniffer at a time."
+  elsif a_question.match?(/CULT ICON/i)
+    "Only one fighter in a gang may carry a cult icon, this must be either the gang Leader or a Champion. This symbol of dedication and devotion serves to inspire gang members to greater acts in battle. When the Leader or Champion carrying the icon makes a group activation, they may activate one additional Readied fighter within 3\", meaning that the Leader may activate three additional fighters whilst a Champion may activate two additional fighters."
+  elsif a_question.match?(/CORPSE GRINDER CULT ICON/i)
+    "Only one fighter in a gang may carry a Corpse Grinder cult icon, this must be either the gang Leader or a Champion. A fighter cannot carry more than one icon.\nThis symbol of blood and gore serves to work members of the cult into a frenzy, throwing themselves at their enemies in a crimson rage. If the fighter carrying this icon is Standing and Active, they may make the following action:\nEnrage: All friendly fighters that are completely within 6\" of this fighter, that have a Ready marker, and that are Standing and Active, add D3\" to their Move characteristic until the End phase of this round."
+  elsif a_question.match?(/DATA(-| )THIEF/i)
+    "Data-thief slates monitor enemy comms and farm useful information from Necromunda’s various vox-nets. If a crew includes at least one fighter equipped with a Datathief,at the start of the game they can make their opponent randomly reveal one of their Gang Tactics cards."
+  elsif a_question.match?(/DROP RIG/i)
+    "An Active fighter with a drop rig can make the following action while they are within 1\" of the edge of a platform:\n\nDescend (Basic):\nThe fighter makes a move of up to 3\" horizontally and up to 12\" vertically. Any vertical movement must be downwards, ie. towards the ground."
+  elsif a_question.match?(/FALSEHOOD/i)
+    "When this device is activated it projects a distortion field that changes the wearer’s appearance, making them appear as someone else. A fighter equipped with a Falsehood cannot be targeted by ranged or melee attacks or enemy psychic powers, and will not cause the alarm to be raised if spotted by a sentry in a game using the Sneak Attack rules. These effects last until the fighter makes a melee or ranged attack, uses a psychic power on an enemy fighter, or until the End phase of the second round. At this point their suspicious or openly hostile acts give them away, the illusion is dispelled and the hood has no further effect."
+  elsif a_question.match?(/FILTER PLUGS/i)
+    "If a fighter with filter plugs is hit by a weapon with the Gas trait, their Toughness is increased by 1 for the purposes of the roll to see whether they are affected. Filter plugs are one-use; if a fighter uses them during a battle, they are deleted from their fighter’s card when the battle ends."
+  elsif a_question.match?(/FORGED GUILDER SEAL/i)
+    "Truly decent forged documents are a rarity in the underhive, and ones good enough for a ganger to pass themselves off as a Guilder even more so – though they do exist. Only the boldest criminals pretend to be Guilders, however, for the consequences of being discovered and caught involves a long and painful execution. When a fighter with a Forged Guilder Seal visits the Trading Post, they reduce the Rarity of Items by 2. In addition, the prices of any items they buy are reduced by 3D6 credits to a minimum of 10 credits. However, if they roll a double 1 or double 6 when reducing the price of an item, they have been discovered. The item is bought as normal, however, the seal is then removed from their Fighter card, and the fighter’s gang are declared Outlaws."
+  elsif a_question.match?(/FRENZON COLLAR/i)
+    "A method of control, the Frenzon collar is usually found clamped around the necks of unwilling penal troopers, where its cocktail of combat drugs drives them into battle at the behest of their masters. Underhive gangers sometimes wear these collars willingly into combat, or as part of a dare. A fighter equipped with a Frenzon collar is considered to be permanently under the effects of Frenzon. In addition, each collar comes with a master motivator. At the start of the game, the player must decide if their Leader or one of their Champions is carrying the master motivator. When the Leader or Champion with the master motivator makes a group activation, they may include models wearing Frenzon collars (up to the normal number of fighters they may group activate) regardless of where they are on the battlefield. Note that if a gang includes more than one fighter equipped with a Frenzon collar, they will only ever have a single master motivator which governs all collars in the gang."
+  elsif a_question.match?(/GRAPNEL(-| )LAUNCHER/i)
+    "An Active fighter with a grapnel launcher can make the following action:\n\nGrapnel (Double):\nThe fighter can move up to 12\" in a straight line, in any direction. This move can take them to a different level, as long as they do not move through any terrain."
+  elsif a_question.match?(/GRAV(-| )CHUTE/i)
+    "If a fighter falls or jumps down to a lower level, they do not suffer any damage – they simply move down without any rolls being made."
+  elsif a_question.match?(/GUILDER CARTOGRAPH/i)
+    "While a gang is in possession of a Guilder Cartograph, they may alter the Environment when using the Badzones Environments Events Cards or chart. After determining the Environment at the beginning of the game, the gang with the Cartograph may immediately discard it and generate a new Environment. If both players have a Cartograph, they should roll off to see who gets to use theirs for this scenario.\nIn addition to changing the Environment, Cartographs often show the location of Guilder supply caches. During deployment, a gang with a Cartograph can place four loot caskets anywhere on the battlefield.\nOf course, the underhive is changing, and maps can become outdated. After each game in which a gang used their Guilder Cartograph, their player should roll a D6. On a 4+, the information it contains is still good, otherwise it is of no further use and should be deleted from the gang roster"
+  elsif a_question.match?(/HALO DEVICE/i)
+    "From the forlorn regions beyond the edge of the Imperium, intrepid Rogue Traders sometimes bring back strange objects. Known as Halo devices, these alien artefacts are often imbued with ancient energies, able to sustain their owners even beyond death, though often at a cost to others. When a fighter equipped with a Halo device suffers a Lasting Injury (including death), their player can choose another member of their gang to suffer the effects of the Lasting Injury instead. Note that if the fighter was taken Out of Action they are still removed from the game, while the fighter chosen to suffer the Lasting Injury remains on the board unless the result was a 61-66, in which case they are removed."
+  elsif a_question.match?(/HARRIER(-| )SKULLS/i)
+    "With every innovation in combat there is usually a counter-innovation to defeat it. Harrier-skulls are a kind of servo-skull designed to act as decoys for Grapplehawks and other hunting beasts. If an Exotic Beast wants to make an attack against a fighter equipped with Harrierskulls, it must first pass an Intelligence check – otherwise the Attack action fails and is wasted. If the owner of the Exotic Beast is within 3\" of the target of the attack, the beast may use its owner’s Intelligence for the check instead."
+  elsif a_question.match?(/HEXAGRAMMIC FETISH/i)
+    "Badzone peddlers and sumphole wise women often sell charms and fetishes ‘guaranteed’ to offer protection. The truly astonishing thing is some of these charms actually work! When a fighter buys a Hexagrammic Fetish they must roll a D6. On a 1, the fetish is rubbish, though the fighter can sell it on to an unsuspecting underhiver for 3D6 credits. On a 2-5, it has some power, and if a Psyker targets the fighter with a psychic power, the Psyker suffers a -1 to their Willpower check. On a 6, the fetish has some real juice; it works as above except the Psyker will suffer a -3 to their Willpower check"
+  elsif a_question.match?(/HOLOCHROMATIC FIELD/i)
+    "A Holochromatic field surrounds its wearer in an aura of scintillating colours. Ranged attacks against a fighter with a Holochromatic field suffer a -2 to hit, while melee attacks against them suffer a -1 to hit. Each time the fighter is targeted with an attack, roll a D6. On a 1, the Holochromatic field has been drained and cannot be used again this game. Fighters wearing an active Holochromatic field count as always having a revealed marker on them in scenarios using the Pitch Black rules. A Holochromatic field cannot be combined with Cameleoline Cloaks or similar devices that make the wearer harder to see."
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
 
 
 
 
-
-
-
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
   # elsif a_question.match?(/pham/i)
