@@ -291,11 +291,9 @@ Restrain (Simple): This fighter is adept at shackling their opponents, even in t
   elsif a_question.match?(/HIT AND RUN/i)
     "After making a Charge (Double) action, this fighter may make a Retreat (Basic) action for free before their opponent makes any reaction attacks. Note that even if the Retreat action is unsuccessful, this fighter’s opponent may only make reaction attacks once."
   elsif a_question.match?(/LIGHTNING REFLEXES/i)
-    "When this fighter is Engaged by an enemy fighter, this fighter may attempt to make a Retreat (Basic) action for free before the enemy fighter makes any attacks or additional actions.\n
-Whether or not the Retreat action was successful, this fighter may only use this skill once per round. Note that if this fighter has a Ready marker, they may still activate as normal."
+    "When this fighter is Engaged by an enemy fighter, this fighter may attempt to make a Retreat (Basic) action for free before the enemy fighter makes any attacks or additional actions.\nWhether or not the Retreat action was successful, this fighter may only use this skill once per round. Note that if this fighter has a Ready marker, they may still activate as normal."
   elsif a_question.match?(/SOMERSAULT/i)
-    "This fighter gains the ability to perform the Somersault (Basic) action while they are Standing and Active:\n
-Somersault (Basic) – Place the fighter anywhere within 6\" of their current position, provided they can see the point they wish to move to before they are placed. Note that the fighter must still adhere to the 1\" rule when being placed. Using this action does not count as moving for the purposes of effects that are triggered by movement and for the firing of weapons with the Unwieldy trait."
+    "This fighter gains the ability to perform the Somersault (Basic) action while they are Standing and Active:\n\nSomersault (Basic) – Place the fighter anywhere within 6\" of their current position, provided they can see the point they wish to move to before they are placed. Note that the fighter must still adhere to the 1\" rule when being placed. Using this action does not count as moving for the purposes of effects that are triggered by movement and for the firing of weapons with the Unwieldy trait."
   # MUSCLE
   elsif a_question.match?(/fists of steel/i)
     "Unarmed attacks made by this fighter count as having a strength of 2 higher than normal and inflict 2 damage."
@@ -326,6 +324,128 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
     "When this fighter is activated, before declaring their first action, this fighter may perform a Reload (Simple) action for free. This does not prevent them from performing the same action once or twice more during their activation should they choose."
 
   # HOUSE BULLSHIT
+
+  # CHEM-ALCHEMY
+  elsif a_question.match?(/BAD BLOOD/i)
+    "When a fighter under the effects of this chem suffers one or more Wounds and/ or Flesh Wounds, all fighters in base contact with them must make an Initiative check. If this check is failed, they are considered to have taken a hit from a weapon with the Toxin trait."
+  elsif a_question.match?(/BLOOD RUSH/i)
+    "When this stimm is administered to a fighter, that fighter may remove a single Flesh Wound or immediately recover from being Seriously Injured."
+  elsif a_question.match?(/BRAIN LOCK/i)
+    "A fighter under the effects of this stimm counts as a Psyker for the purposes of disrupting enemy psychic powers (as described in the Necromunda Rulebook)."
+  elsif a_question.match?(/DREAMLAND/i)
+    "A fighter under the effects of this stimm ignores the effects of the Insane condition."
+  elsif a_question.match?(/HYPER/i)
+    "A fighter under the effects of this stimm increases their Movement characteristic by 2, and, when they take the Charge (Double) Action, they add D6\" to their movement rather than D3\". This increased level of hyper-activity makes them exceptionally twitchy, and they must reduce all their hit rolls by 1."
+  elsif a_question.match?(/ICE COLD/i)
+    "A fighter under the effects of this stimm adds 2 to any Cool checks they are required to make."
+  elsif a_question.match?(/JOLT/i)
+    "Until the end of the round in which this stimm was administered, a fighter under the effects of this stimm counts any Serious Injuries they suffer as Flesh Wounds."
+  elsif a_question.match?(/NIGHT NIGHT/i)
+    "When a fighter under the effects of this stimm goes Out of Action, do not roll for a Lasting Injury. Instead, the fighter counts as having rolled a result of 12-26 Out Cold on the Lasting Injury table. Note that the fighter may still be captured as normal."
+  elsif a_question.match?(/PUKE/i)
+    "A fighter under the effects of this stimm doubles their Toughness when testing to see if they are affected by weapons with the Toxin or Gas traits."
+  elsif a_question.match?(/WIDE(-| )EYE/i)
+    "A fighter under the effects of this stimm ignores the effects of the Pitch Black rules. In addition, if the fighter is a Sentry in a battle using the Sneak Attack rules (as described in the Necromunda Rulebook) then they always count enemy fighters as being ‘in the open’."
+
+  # elsif a_question.match?(/ACIDIC/i)
+  #   "A fighter hit by a weapon with the Gas trait with this Gaseous Ammo applied does not benefit from armour or Wargear that would normally increase their Toughness against weapons with the Gas trait (i.e., respirators). Out of Action results on the Injury dice generated by hits from a weapon with the Gas trait with this Gaseous Ammo applied count as Seriously Injured results instead."
+
+  # elsif a_question.match?(/BANE/i)
+  #   "A fighter hit by a weapon with the Gas trait with this Gaseous Ammo applied counts their Toughness as 3, regardless of their actual Toughness characteristic. Note that Wargear such as a respirator can still modify the fighter’s Toughness against Gas weapons as normal."
+
+  # elsif a_question.match?(/BLACKOUT/i)
+  #   "If a fighter suffers a Serious Injury from a weapon with the Gas trait with this Gaseous Ammo applied, they are taken Out of Action, just as if they had rolled an Out of Action result. Fighters taken Out of Action by a weapon with the Gas trait with this Gaseous Ammo applied do not need to roll on the Lasting Injury table. Instead, the fighter counts as having rolled a result of 12-26 Out Cold on the Lasting Injury table."
+
+  # elsif a_question.match?(/BLINDING/i)
+  #   "A fighter that suffers a Flesh Wound from a weapon with the Gas trait with this Gaseous Ammo applied becomes subject to the Blind condition until the End phase of the current round."
+
+  # elsif a_question.match?(/EXPANSIVE/i)
+  #   "This Gaseous Ammo can only be applied to a weapon that has both the Gas and Blast (X\") traits. When placing a Blast marker generated by a weapon with the Gas trait with this Gaseous Ammo applied, a fighter may place one more Blast marker than normal. This marker must be placed so that it is touching at least one other Blast marker generated by this weapon."
+
+  # elsif a_question.match?(/HALLUCINOGEN/i)
+  #   "A fighter hit by a weapon with the Gas trait with this Gaseous Ammo applied must make a Willpower check in addition to the Toughness check to resist the effects of being hit by a weapon with the Gas trait. If this Willpower check is failed, the fighter immediately becomes subject to the Insane condition."
+
+  # elsif a_question.match?(/LEADEN/i)
+  #   "After resolving an attack using a weapon with the Gas trait with this Gaseous Ammo applied, place a 3\" Blast marker so that its central hole is within the area of the Flame template or Blast marker placed when making the attack. Any fighters that move through this Blast marker count as being hit by the weapon that made this attack (work out this hit when the fighter ends their current action). This Blast marker remains in play until the End phase of the current round."
+
+  # elsif a_question.match?(/LIFTIN(’|G|)/i)
+  #   "This Gaseous Ammo can only be applied to a weapon that has both the Gas and Template traits. When making an attack using a weapon with the Gas trait with this Gaseous Ammo applied, the template may be placed up to 6\" away from the fighter making the attack. When placing the template, it must be positioned so the narrow end points directly towards the fighter making the attack. The wide end of the template must be the furthest part of the template from the fighter."
+
+  # elsif a_question.match?(/PATHOGENIC/i)
+  #   "After a fighter is hit by a weapon with the Gas trait with this Gaseous Ammo applied, place a marker next to them. At the start of that fighter’s next activation, roll a D6. On a 3+, immediately remove this marker. On a roll of 1 or 2, the fighter immediately suffers the effects of the Gas trait, just as if they had been hit by the same weapon again."
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+
+
+
+
+
+  PYROPHORIC
+Pyrophoric gases are particularly insidious, clinging to
+their targets for extended periods of time and remaining
+self-fuelling in their immolation.
+Effect: A weapon with the Gas trait with this Gaseous
+Ammo applied gains the Blaze trait.
+
+
+
+
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/pham/i)
+  #   "++DONT YOU MEAN JONATHAN++"
 
   # LEGENDARY NAMES
   elsif a_question.match?(/Iron Hard/i)
