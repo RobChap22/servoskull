@@ -311,6 +311,60 @@ Tank (Double) - Until the start of this fighter's next activation, this fighter 
 Flex (Simple) - All fighters (friend or foe) in base contect with this fighter must pass a Strength check or be pushed d3\" directly away from this fighter, stopping only if they come into  contact with another fighter or an impassable terrain feature. If there are multiple enemies being pushed, the player controlling this fighter chooses in which order they are moved."
   elsif a_question.match?(/walk it off/i)
     "Should this fighter perform two or more Move (Simple) actions during their activation, they can make a Toughness check at the end of their activation. If this check is passed, this fighter may recover one lost Wound or discard a single Flesh Wound."
+  # BRAVADO
+  elsif a_question.match?(/BIG BROTHER/i)
+    "Whilst this fighter is Standing and Active, any friendly fighter with the Gang Fighter (X) special rule that is within 9\" and line of sight of this fighter may use this fighter’s Cool characteristic for Nerve tests instead of their own. "
+  elsif a_question.match?(/BRING IT ON(!|)/i)
+    "The fighter gains the ability to make the Issue Challenge (Basic) action:\n\nIssue Challenge (Basic) – Choose an enemy fighter within 12\". Until the end of this round, or until the chosen fighter is attacked by a friendly fighter, they must make a Willpower check if they wish to make a ranged or close combat attack that targets any fighter other than the fighter who issued the challenge (fighters that have been challenged ignore the normal rules for target priority as detailed in the Necromunda Rulebook)."
+  elsif a_question.match?(/GUILDER CONTACTS/i)
+    "Any Bounty Hunters and Hive Scum hired by this fighter’s gang (as detailed on ) will reduce their hiring fee by D6x10 credits to a minimum of 20 credits. Roll separately for each Bounty Hunter and Hive Scum hired."
+  elsif a_question.match?(/KING HIT/i)
+    "When making an unarmed attack (see the Necromunda Rulebook) this fighter may choose to roll a single Attack dice, irrespective of their Attacks characteristic or any other bonuses. If they choose to do so, the attack gains the Knockback, Shock, Pulverise and Concussion traits."
+  elsif a_question.match?(/SHOTGUN SAVANT/i)
+    "When armed with a shotgun of any type (including combat shotguns and sawn-off shotguns), this fighter may choose to use the shotgun’s Short range Accuracy modifier when making shots at Long range. In addition, when rolling the dice to determine the number of hits from a shotgun with the Scattershot trait, this fighter may roll two D6 and choose the highest."
+  elsif a_question.match?(/STEADY HANDS/i)
+    "When this fighter is activated, before declaring their first action, this fighter may perform a Reload (Simple) action for free. This does not prevent them from performing the same action once or twice more during their activation should they choose."
+
+  # HOUSE BULLSHIT
+
+  # LEGENDARY NAMES
+  elsif a_question.match?(/Iron Hard/i)
+    "This fighter counts the first Serious Injury or Out of Action result they suffer during any battle as a Flesh Wound instead. However, if this fighter is taken Out of Action, their crew will automatically fail the next Bottle test it is required to make."
+  elsif a_question.match?(/Bullet Dodger/i)
+    "Once per battle, when an enemy fighter makes a ranged attack that targets this fighter, you can force that enemy fighter to re-roll all successful to hit rolls made as part of that ranged attack. During this fighter’s next activation after this ability has been used, they can only make Move (Simple) actions."
+  elsif a_question.match?(/Badzone Legend/i)
+    "This fighter can make a special 3+ save roll against any damage sustained as a result of any environmental hazard (i.e., damage not originating from an attack by another fighter). During this fighter’s next activation after this ability has been used, they cannot initiate or take part in Group Activations."
+  elsif a_question.match?(/Promethium(-| )proof Killer/i)
+    "This fighter ignores all of the effects of the Blaze trait. However, this fighter cannot benefit from or utilise the Leading by Example special rule."
+  elsif a_question.match?(/Slippery Scummer/i)
+    "If the fighter is ever captured (see the Necromunda Rulebook), they can choose to have another fighter from their gang be captured in their place. If this ability is used and another fighter is taken captive in this way, then the gang cannot and will not attempt a Rescue of that fighter."
+  elsif a_question.match?(/Blade Breaker/i)
+    "When this fighter is hit by an attack made by an enemy fighter using a weapon with either the Melee trait, the Versatile trait, or both, immediately roll a D6. On a roll of a natural 6, the hit automatically becomes a miss and the enemy fighter is immediately Disarmed (just as if they had been hit on a roll of 6 by a weapon with the Disarm trait)."
+  elsif a_question.match?(/Bigman/i)
+    "When this fighter makes a Group Activation, they may include fighters within 6\" rather than the usual 3\". However, this fighter must reduce the benefit of any cover they are in by 1 (i.e., while in Full Cover, enemy fighters only suffer a -1 modifier to their hit rolls when targeting this fighter, rather than the usual -2)."
+  elsif a_question.match?(/Lucky/i)
+    "Once per battle, this fighter can change the result of any one dice they have rolled to a 6 (you may decide to use this ability after the dice have been rolled). However, in a battle that uses the Reinforcement rules, this fighter’s Fighter card must be placed in the Reinforcement deck."
+  elsif a_question.match?(/Impressive Scars/i)
+    "As long as a friendly fighter has a line of sight to this fighter, the distance between that fighter and this fighter does not matter for the purposes of the Leading by Example special rule. However, this fighter must reduce the number of fighters they can include in a Group Activation by 1."
+  elsif a_question.match?(/Too Pretty for Primus/i)
+    "If this fighter is still on the battlefield at the end of a battle, their gang adds 2D6x5 credits to their Stash. However, if a double is rolled, these credits are added to your opponent’s Stash instead."
+  elsif a_question.match?(/Iron Stare/i)
+    "Enemy fighters wishing to target this fighter with a ranged attack must first pass a Cool check if this fighter has a line of sight to that enemy fighter. In addition, this fighter never counts as the closest fighter for the purposes of Target Priority."
+  elsif a_question.match?(/Rock Steady/i)
+    "As long as this fighter is Standing and Active, or Standing and Engaged, you can roll two D6 for Bottle tests and apply the lowest result. However, if your gang fails its Bottle test, friendly fighters must re- roll a successful Cool check to see if they flee the battlefield."
+  elsif a_question.match?(/One Punch/i)
+    "When making an unarmed attack (see the Necromunda Rulebook) this fighter may choose to roll a single Attack dice, irrespective of their Attacks characteristic or any other bonuses. If this attack hits, it is resolved at Strength 8 and Damage 2, and no Save roll can be made (with the exception of Field armour)."
+  elsif a_question.match?(/Bullet Lord/i)
+    "Once per battle, rather than rolling the Firepower dice, this fighter can choose the result of the dice roll to be a 3. However, after working out the effects of the attack, the fighter’s weapon counts as having failed an Ammo check."
+  elsif a_question.match?(/Two(-| )guns/i)
+    "When this fighter uses the Twin Guns Blazing rule, after working out the effect of their attacks, enemy fighters within 6\" must make a Nerve test. However, during any round in which this fighter uses the Twin Gun Blazing rule they cannot make, or participate in, a Group Activation."
+  elsif a_question.match?(/Chancer/i)
+    "Whenever this fighter hits an enemy fighter with an Improbable Shot, they gain D3 XP. When spending Experience on skill Advancements, this fighter cannot choose skills, and must always gain a randomly determined new skill instead."
+  elsif a_question.match?(/Headshot/i)
+    "If this fighter takes an enemy fighter Out of Action with their first Shoot (Basic) action of the battle, they gain D3 XP. However, all missed ranged attacks made by the fighter count as Stray Shots."
+  elsif a_question.match?(/One Shot/i)
+    "Once per battle this fighter can choose to automatically hit with a ranged weapon attack, provided the weapon does not have the Rapid Fire (X) trait or the Blast (X) trait. However, if this fighter can take a Shoot (Basic) action during their activation they must do so. Note that, when this fighter uses this ability, they must still roll the Firepower dice."
+
 
   # TERRITORIES
   elsif a_question.match?(/ARCHAEOTECH DEVICE/i)
@@ -480,6 +534,8 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
     "An Industrial Respirator adds 3 to a fighter’s Toughness, or 4 if combined with a Hazard Suit, against attacks from weapons with the Gas trait. In addition, an Industrial Respirator contains a limited air supply. Once per game, when a fighter with an Industrial Respirator is activated, they can declare they are using its air supply. Until the fighter is activated again, they gain immunity to Gas attacks, can act normally while on fire (though they may still take damage) and may ignore effects keyed to breathing or air quality."
   elsif a_question.match?(/ISOTROPIC FUEL ROD/i)
     "A gang with an Isotropic Fuel Rod can use it to turn any Territory into a Settlement Territory. Doing so uses up the Isotropic Fuel Rod, so it should be deleted from the gang roster, and permanently changes the Territory."
+  elsif a_question.match?(/JUMP BOOSTER/i)
+    "Once per activation, a fighter equipped with a jump booster may choose to use it when they make either a Move (Simple) action or a Charge (Double) action. When a jump booster is used, it may be used in one of two ways, chosen by the controlling player:\n\n• The fighter may use the jump booster in ‘safe mode’, allowing them to add 3\" to their Movement characteristic for the duration of this action.\n• The fighter may ‘overcharge’ the jump booster, allowing them to add D3+3\" to their Movement characteristic for the duration of this action. However, doing so is not without risk, and should a natural 1 be rolled when rolling the dice, something has gone wrong and the jump booster will malfunction. The fighter does not move at all, and instead immediately becomes Prone and Pinned. \n\nWhen a fighter moves with the aid of a jump booster, up to half of their total movement may be made vertically, allowing the fighter to move between levels and even to move over impassable terrain if they have sufficient movement to do so. However, should the fighter’s movement end in the air, i.e., if the fighter does not have sufficient movement to land safely on a level surface, they will fall the remaining distance (note that, if this distance is 2\" or less, the fighter will count as jumping down).\nShould a fighter use a jump booster when making a Charge (Double) action, for the duration of this activation they may apply both a +1 modifier to each Hit roll they make and a +1 modifier to their Strength characteristic.\n\nHAZARDOUSEQUIPMENT\nUsing a jump booster is not without its risks, and this is never more true than when the user is attempting to use flame weapons or lob grenades! To represent this added danger, during any activation in which a fighter equipped with a jump booster uses it when making a Move (Simple) action, any weapons they are armed with that have either the Grenade or Template trait will also gain the Unstable trait. Once the fighter’s activation ends, this rule ceases to apply."
   elsif a_question.match?(/LHO STICKS/i)
     "A fighter equipped with lho sticks is considered to be ‘cool’ by the more gullible members of their gang. Any friendly fighter with an Intelligence characteristic of 8+ or worse may use this fighter’s Cool characteristic instead of their own if they are within 6\" and line of sight of this fighter."
   elsif a_question.match?(/LOCK(-| )PUNCH/i)
@@ -621,25 +677,7 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   elsif a_question.match?(/GUN SKULL/i)
     "A gun skull is equipped with a compact autopistol and will target whatever or whoever the owning fighter does when they make a ranged attack. Simply roll one extra hit dice and one extra Ammo dice for the gun skull, ideally of a different colour to those being used for the fighter, to represent the gun skull making a ranged attack. Note though that range, line of sight and cover must be worked out from the gun skull itself rather than that of the owning fighter. If the owning fighter does not possess any ranged weapons, the gun skull may shoot at an enemy it can see, chosen by the owning fighter and following the normal target priority rules in relation to the owning fighter’s position.\nThe owning fighter is never considered to be in the way of a gun skull’s shooting attacks and cannot be hit by Stray Shots.\nA gun skull has a BS of 5+ and may never benefit from aiming or any wargear or skills that modify the owning fighter’s to-hit rolls."
 
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
 
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-   # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
 
   # elsif a_question.match?(/pham/i)
   #   "++DONT YOU MEAN JONATHAN++"
