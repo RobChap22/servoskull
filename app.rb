@@ -52,7 +52,7 @@ Note that this Blast marker can move through impassable terrain such as walls an
 If the weapon also has the Impale special rule and hits more than one fighter, only the last fighter to be hit can be dragged."
   elsif a_question.match?(/entangle/i)
     "Hits scored by weapons with the Entangle trait cannot be negated by the Parry trait. In addition, if the hit roll for an Entangle weapon is a natural 6, any Reaction attacks made by the target have an additional -2 hit modifier"
-  elsif a_question.match?(/fear/i)
+  elsif a_question.match?(/fear$/i)
     "Instead of making an Injury roll for an attack with the Fear trait, the opposing player makes a Nerve test for the target, subtracting 2 from the result. If the test fails, the target is immediately Broken and runs for cover."
   elsif a_question.match?(/flare/i)
     "A fighter who takes a hit from a weapon with the Flare Trait, or who is touched by a Blast marker fired from a weapon with the Flare Trait, is Revealed if the battlefield is in darkness (see Pitch Black). If a weapon has both the Flare Trait and the Blast Trait after determining where the Blast marker ends up, leave it in place. In the End phase, roll a D6. On a 4 or more, the flare goes out and the marker is removed, otherwise it remains in play. While the Blast marker is on the board, all models at least touched by it are illuminated as if they had a Blaze marker or a Revealed marker"
