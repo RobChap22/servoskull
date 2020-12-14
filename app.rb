@@ -740,37 +740,55 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   elsif a_question.match?(/^GUN SKULL$/i)
     "A gun skull is equipped with a compact autopistol and will target whatever or whoever the owning fighter does when they make a ranged attack. Simply roll one extra hit dice and one extra Ammo dice for the gun skull, ideally of a different colour to those being used for the fighter, to represent the gun skull making a ranged attack. Note though that range, line of sight and cover must be worked out from the gun skull itself rather than that of the owning fighter. If the owning fighter does not possess any ranged weapons, the gun skull may shoot at an enemy it can see, chosen by the owning fighter and following the normal target priority rules in relation to the owning fighter’s position.\nThe owning fighter is never considered to be in the way of a gun skull’s shooting attacks and cannot be hit by Stray Shots.\nA gun skull has a BS of 5+ and may never benefit from aiming or any wargear or skills that modify the owning fighter’s to-hit rolls."
 
+  # CHEMS
+  elsif a_question.match?(/^FRENZON$/i)
+    "A fighter under the influence of Frenzon gains the Nerves of Steel, True Grit, Unstoppable and Berserk skills, however, all their weapons count as having the Reckless Trait. Unless the fighter is Engaged or Seriously Injured, the fighter must use at least one of their actions to move toward the nearest enemy fighter or perform a Charge (Double) action against a visible enemy if one is within range.\n\nSIDE EFFECTS\nFrenzon is highly addictive. During the Wrap-up, any fighter who used Frenzon must make a Toughness check, adding 2 to the dice roll. If the check is failed, the fighter has become addicted to Frenzon. Once a fighter is addicted to Frenzon, they can only be included in a crew if they have taken a dose of the chem. The only way a fighter can shake this addiction is to pay 2D6x10 credits for anti-addiction chems during the post-battle sequence when the gang is buying equipment."
+  elsif a_question.match?(/^GHAST$/i)
+    "When a fighter uses Ghast, they roll a D6. On a 1, they become subject to the Insane condition. On a 2-5, they gain a random psychic power from the table below. On a 6, they both gain a random psychic power and become subject to the Insane condition.\n\nD6 Result\nTelekinesis – Assail (Basic):\nImmediately make a ranged attack against an enemy fighter or an obstacle within 12\" and line of sight. If hit, move the target D3\" in any direction.\n\n2 Pyromancy – Flame Blast (Basic), Continuous Effect:\nFor as long as this Wyrd Power is maintained, one ranged weapon carried by this fighter gains the Blaze Trait.\n\n3 Chronomancy – Freeze Time (Double):\nAll fighters, friend and foe, within 12\", may only take a single action when activated for the remainder of this round.\n\n4 Technomancy – Weapon Jinx (Simple):\nChoose an enemy fighter within 18\" of this fighter. The enemy fighter must immediately make an Ammo check for one of their weapons, chosen by this fighter.\n\n5 Telepathy – Terrify (Double):\nChoose an enemy fighter within 18\" of this fighter. The enemy fighter must make a Nerve test with -3 to the roll or become subject to the Broken condition.\n\n6 Biomancy – Quickening (Basic), Continuous Effect:\nFor as long as this Wyrd Power is maintained, increase this fighter’s M by 3 and their WS, BS and I by 1 (to a maximum of 2+).\n\nSIDE EFFECTS\nAt the end of any game in which a fighter used Ghast, they must make a Willpower check. If the check is failed, the fighter suffers a decrease of 1 to their Willpower (i.e., if the fighter’s Willpower is 7+, it becomes 8+). If a natural 12 is rolled for the check, the fighter’s mind is permanently damaged and they must begin any future battles subject to the Insane condition."
+  elsif a_question.match?(/^ICROTIC SLIME$/i)
+    "When a fighter uses Icrotic Slime, make a Characteristic check for their Movement, Strength, Toughness, Initiative, Attacks and Cool characteristics. For each test that is passed, improve that characteristic by D3.\n\nSIDE EFFECTS\nWhilst under the effects of Icrotic Slime, the fighter’s Leadership, Intelligence and Willpower are decreased to 10+ (unless these characteristics are already worse than this). At the end of any battle in which a fighter used Icrotic Slime, roll 2D6 for that fighter. On a roll of 2, the slime eats the fighter’s brain and they are killed. Immediately remove them from the gang’s roster. On a roll of 3-11, the slime is successfully removed but the fighter is placed Into Recovery. On a roll of 12, the slime is successfully removed but not without complications. Make a roll on the Lasting Injury table against the fighter, re-rolling results of 61-66."
+  elsif a_question.match?(/^KALMA$/i)
+    "In addition to other methods of use, a gang can give Kalma to a fighter they hold captive during the Rescue scenario. When a fighter affected by Kalma wishes to make an action, roll 2D6 for them and add their Toughness. On a roll of 11 or lower, they do nothing and the action is wasted. On a roll of 12 or more, they shake off the effects of the chem and can act normally for the remainder of the battle.\n\nSIDE EFFECTS\nThere are no long term effects from taking Kalma."
+  elsif a_question.match?(/^OBSCURA$/i)
+    "In addition to other methods of use, a gang can give Obscura to a fighter they hold captive during the Rescue scenario. A fighter under the influence of Obscura changes their Movement characteristic to D6\" and all their weapons count as having the Reckless trait.\nNote that when they move, a fighter under the influence of Obscura must move the full distance rolled, even if this would take them into base contact with an enemy fighter, in which case they will Engage that enemy fighter, or over the edge of a ledge. Fighters under the influence of Obscura must still respect the 1\" rule – if they cannot get into base contact with an enemy fighter when moving, they must stop 1\" away.\nIn the End phase of each round a fighter affected by Obscura may, if their controlling player wishes, roll 2D6 and add their Toughness. If the result is 12 or more, they shake off the effects of the chem.\n\nSIDE EFFECTS\nWhen a dose of Obscura wears off, the fighter enters a deep melancholy and they may only perform a single action in each of their activations for the remainder the battle.\nDuring the Wrap-up, any fighter who used Obscura must make a Toughness check. If the check is failed, the fighter has become addicted to Obscura. Once a fighter is addicted to Obscura, they can only be included in a crew on a D6 roll of a 4+ prior to the battle. The only way a fighter can shake this addiction is to pay 2D6x10 credits for anti-addiction chems during the post-battle sequence when the gang is buying equipment."
+  elsif a_question.match?(/^(‘|)SLAUGHT$/i)
+    "A fighter affected by ‘Slaught increases their Weapon Skill and Initiative to 2+ and adds 1 to their Attacks characteristic.\n\nSIDE EFFECTS\nDuring the Wrap-up, any fighter who used ‘Slaught must make a Toughness check. If the check is failed, the fighter has become addicted to ‘Slaught. In each future battle the fighter takes part in, if they do not take a dose of ‘Slaught, they must decrease their Weapon Skill and Initiative to 5+, and their Attacks to 1 (unless these characteristics are already worse than this). If they take a dose, the effects are reduced and their Weapon Skill and Initiative become 3+ and they gain no bonus to their Attacks characteristics. A fighter can shake their addiction to ‘Slaught by voluntarily going into Recovery during any post-battle sequence."
+  elsif a_question.match?(/^SPUR$/i)
+    "A fighter affected by Spur increases their Movement characteristic by 2 and improves their Initiative characteristic to 2+.\n\nSIDE EFFECTS\nOnce a fighter has taken a dose of Spur, they must check to see if it wears off in each subsequent End phase. Roll 2D6 for the fighter and add their Toughness. If the result is 10 or more, the Spur has worn off and the fighter is no longer subject to its effects."
+  elsif a_question.match?(/^STINGER MO(U|)LD$/i)
+    "A dose of Stinger Mould can be used after a fighter has rolled on the Lasting Injury table. If the result of the roll was anything other than a 66 – Memorable Death, the result it is ignored (including positive results such as 11 – Lesson Learned).\nAlternatively, a fighter can attempt to use a dose of Stinger Mould to remove an existing Lasting Injury. During Step 6 of the post-battle sequence, after distributing equipment but before updating the gang roster, roll a D6 for any fighter attempting to use Stinger Mould in this way. On a 5 or 6, the effects of one Lasting Injury the fighter has suffered are immediately negated.\n\nSIDE EFFECTS\nThere are no long term effects of taking Stinger Mould."
 
-
-  # elsif a_question.match?(/pham/i)
+  # elsif a_question.match?(/^$/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-   # elsif a_question.match?(/pham/i)
+  # elsif a_question.match?(/^$/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
-  # elsif a_question.match?(/pham/i)
+  # elsif a_question.match?(/^$/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
-  # elsif a_question.match?(/pham/i)
+  # elsif a_question.match?(/^$/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
-  # elsif a_question.match?(/pham/i)
+  # elsif a_question.match?(/^$/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
-  # elsif a_question.match?(/pham/i)
+  # elsif a_question.match?(/^$/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
-  # elsif a_question.match?(/pham/i)
-  #   "++DONT YOU MEAN JONATHAN++"
-   # elsif a_question.match?(/pham/i)
+  # elsif a_question.match?(/^$/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
-  # elsif a_question.match?(/pham/i)
+  # elsif a_question.match?(/^$/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
-  # elsif a_question.match?(/pham/i)
+  # elsif a_question.match?(/^$/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/^$/i)
+  #   "++DONT YOU MEAN JONATHAN++"
+
+  # elsif a_question.match?(/^$/i)
   #   "++DONT YOU MEAN JONATHAN++"
 
   # CONDITIONS
