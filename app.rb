@@ -843,7 +843,7 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   elsif a_question.match?(/^JONATHAN$/i)
     "Eyyyyyy, lookit Jonny Phambino ovah heah"
   else
-    "++ENTER KEYWORD EXACTLY++\n++CHECK README FOR MORE INFO++"
+    "++ENTER KEYWORD EXACTLY++\n++CHECK README TO SEE SUPPORTED RULES++"
   end
 end
 
