@@ -444,6 +444,19 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
     "This Cyberteknika upgrade repairs the damage caused when a fighter suffers a Spinal Injury result on the Lasting Injury table.\n\nThis Cyberteknika upgrade may be damaged if the fighter suffers a future Spinal Injury result on the Lasting Injury table.\n\nEach level of this Cyberteknika grants the fighter the benefits detailed below:\n\nAlpha: An unarmed attack made by this fighter has a Damage characteristic of 3, rather than the usual 1.\n\nGamma: An unarmed attack made by this fighter has a Damage characteristic of 3, rather than the usual 1. In addition, this fighter may apply a +2 modifier to their Strength characteristic when resolving hits made with a weapon that has either the Melee or Versatile trait.\n\nOmega: An unarmed attack made by this fighter has a Damage characteristic of 3, rather than the usual 1. In addition, this fighter may apply a +2 modifier to their Strength characteristic when resolving hits made with a weapon that has either the Melee or Versatile trait. Finally, any weapon this fighter is equipped with is considered to have suspensors fitted to it."
   elsif a_question.match?(/^VASCULAR CYBERTEKNIKA$/i)
     "This Cyberteknika upgrade repairs the damage caused when a fighter suffers an Enfeebled Injury result on the Lasting Injury table.\n\nThis Cyberteknika upgrade may be damaged if the fighter suffers a future Enfeebled Injury result on the Lasting Injury table.\n\nEach level of this Cyberteknika grants the fighter the benefits detailed below:\n\nAlpha: This fighter may apply a +1 modifier to their Toughness characteristic for the purposes of the number of Flesh Wounds they can take before going Out of Action.\n\nGamma: This fighter may apply a +1 modifier to their Toughness characteristic for the purposes of the number of Flesh Wounds they can take before going Out of Action. In addition, this fighter may re-roll any Toughness check they are required to make.\n\nOmega: This fighter may apply a +1 modifier to their Toughness characteristic for the purposes of the number of Flesh Wounds they can take before going Out of Action. In addition, this fighter may re-roll any Toughness check they are required to make. Finally, in the End phase of each round, this Fighter may discard a Flesh Wound they have suffered."
+  # PIETY
+  elsif a_question.match?(/^LORD OF RATS$/i)
+    "Friendly Juve (or Prospect) fighters that are within 12\" of this fighter and can draw line of sight to them may apply a +2 modifier to their Cool checks and Willpower checks. Rats, including Necromunda Rats, Bomb Delivery Rats and any rats that feature in a battle due to a scenario or environment special rule, that end their movement within 3\" of the fighter are immediately moved by the smallest amount possible so they are at least 3\" away from the fighter."
+  elsif a_question.match?(/^SCAVENGER('|)S EYE$/i)
+    "During any scenario that features loot markers, scrap or any kind of harvested goods that are then transformed into credits at the end of the battle, the fighter’s gang may add an additional +1 to the dice roll for determining their worth. For example, if a scenario called for the gathering of loot and each loot marker held by the gang at the end of the battle was worth D3x10 credits, then each one would grant the fighter’s gang (D3+1)x10 credits."
+  elsif a_question.match?(/^BLAZING FAITH$/i)
+    "Should this fighter ever become subject to the Blaze condition, they may continue to act normally rather than acting as determined by the Trait and the condition – though they may still suffer damage each time they activate as normal. In addition, this fighter ignores the effects of the Insanity condition."
+  elsif a_question.match?(/^UNSHAKABLE CONVICTION$/i)
+    "This fighter may make reaction attacks while Seriously Injured and cannot be the target of a Coup De Grace (Simple) action. In addition, whilst Seriously Injured this fighter may perform the Flock Together (Double) action:\n\nFlock Together (Double):\nThis fighter may move a distance equal to their Movement characteristic plus D3\", provided they move directly towards a friendly House Cawdor fighter."
+  elsif a_question.match?(/^DEVOTIONAL FRENZY$/i)
+    "When this fighter is activated, their controlling player may declare they will use this skill. Until the start of their next activation, improve their Weapon Skill, Cool, Leadership and Willpower characteristics by D3, rolling separately for each characteristic. At the end of their activation, the fighter immediately suffers an automatic Damage 1 hit which cannot be saved. Devotional Frenzy can only be declared once per round."
+  elsif a_question.match?(/^RESTLESS FAITH$/i)
+    "During the Choose Crew step of the pre-battle sequence, this fighter may be taken out of Recovery (see the Necromunda Rulebook) and included in the deck of available fighters. If this is done and the fighter takes part in the battle, they begin the battle with a single Flesh Wound."
 
   # TERRITORIES
   elsif a_question.match?(/^ARCHAEOTECH DEVICE$/i)
@@ -840,8 +853,6 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   # OTHER
   elsif a_question.match?(/^pham$/i)
     "++DONT YOU MEAN JONATHAN++"
-  elsif a_question.match?(/^JONATHAN$/i)
-    "Eyyyyyy, lookit Jonny Phambino ovah heah"
   else
     "++ENTER KEYWORD EXACTLY++\n++CHECK README TO SEE SUPPORTED RULES++"
   end
