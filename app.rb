@@ -13,6 +13,20 @@ def client
   end
 end
 
+# weapon traits
+# skills
+# house bullshit
+# territories
+# rackets
+# equipment
+# armour
+# field armour
+# CGC masks
+# weapon accessories
+# status items
+# chems
+# conditions
+
 def bot_answer_to(a_question, user_name)
   # If you want to add Bob to group chat, uncomment the next line
   # return '' unless a_question.downcase.include?('bob') # Only answer to messages with 'bob'
@@ -55,15 +69,15 @@ If the weapon also has the Impale special rule and hits more than one fighter, o
     "If a fighter is hit by a Flash weapon, no wound roll is made. Instead, make an Initiative check for the target. If it is failed, they are blinded. A blinded fighter loses their Ready marker; if they do not have a Ready marker, they do not gain a Ready marker at the start of the following round. Until the next time the fighter is activated, they cannot make any attacks other than reaction attacks, for which any hit rolls will only succeed on a natural 6."
   elsif a_question.match?(/^gas$/i)
     "When a fighter is hit by an attack made by a Gas weapon, they are not Pinned and a wound roll is not made.\n
-Instead, roll a D6. If the result is equal to or higher than the target’s Toughness, or is a natural 6, make an Injury roll for them (regardless of their Wounds characteristic). If the roll is lower than the target’s Toughness, they shrug off the effects of the gas – no save roll can be made."
+    Instead, roll a D6. If the result is equal to or higher than the target’s Toughness, or is a natural 6, make an Injury roll for them (regardless of their Wounds characteristic). If the roll is lower than the target’s Toughness, they shrug off the effects of the gas – no save roll can be made."
   elsif a_question.match?(/^graviton pulse$/i)
     "Instead of rolling to wound normally with this weapon, any model caught in the blast must instead roll to or under their Strength on a D6 (a roll of 6 always counts as a fail).\n\nAfter the weapon has been fired, leave the Blast marker in place. For the remainder of the round, any model moving through this area will use 2’’ of their movement for every 1’’ they move. Remove the Blast marker during the End phase."
   elsif a_question.match?(/^grenade$/i)
     "Despite being Wargear, grenades are treated as a special type of ranged weapon. A fighter equipped with grenades can throw one as a Shoot (Basic) action. Grenades do not have a Short range, and their Long range is determined by multiplying the fighter’s Strength by the amount shown.\n
-A fighter can only carry a limited number of grenades.The Firepower dice is not rolled when attacking with a grenade. Instead, after the attack has been resolved, an Ammo check is made automatically. If this is failed, grenades cannot be reloaded; the fighter has run out of that type of grenade and cannot use them for the remainder of the battle."
+    A fighter can only carry a limited number of grenades.The Firepower dice is not rolled when attacking with a grenade. Instead, after the attack has been resolved, an Ammo check is made automatically. If this is failed, grenades cannot be reloaded; the fighter has run out of that type of grenade and cannot use them for the remainder of the battle."
   elsif a_question.match?(/^gunk$/i)
     "A fighter hit by a weapon with the Gunk Trait becomes subject to the Gunked condition. Gunked fighters reduce their Movement characteristic by 1 to a minimum of 1 and don’t add D3\" to their movement when making a Charge action. In addition, they subtract 1 from the dice roll when making an Initiative check. Gunked fighters are also more flammable and catch fire on a 2+, rather than a 4+, when hit by a weapon with the Blaze trait.\n
-The Gunked condition lasts until the End phase or untilthe fighter catches fire after being hit by a weapon with the Blaze Trait"
+    The Gunked condition lasts until the End phase or untilthe fighter catches fire after being hit by a weapon with the Blaze Trait"
   elsif a_question.match?(/^HEXAGRAMMATIC$/i)
     "The ammo used by this weapon has been specially treated to defeat psychic defences and severely harm Psykers. Hits from weapons with this Trait ignore saves provided by psychic powers. Additionally, weapons with this Trait will inflict double damage against Psykers."
   elsif a_question.match?(/^IMPALE$/i)
@@ -72,6 +86,8 @@ The Gunked condition lasts until the End phase or untilthe fighter catches fire 
     "If the hit roll for a weapon with the Knockback trait is equal to or higher than the target’s Strength, they are immediately moved 1\" directly away from the attacking fighter. If the fighter cannot be moved the full 1\" because of impassable terrain or another fighter, they move as far as possible and the attack’s Damage is increased by 1.\n\nIf a Blast weapon has the Knockback trait, roll a D6 for each fighter that is hit. If the result is equal to or higher than their Strength, they are knocked back as described above – however, they are moved directly away from the centre of the Blast marker instead. If the centre of the Blast marker was over the centre of their base, roll a Scatter dice to determine which way they are moved.\n\nIf a Melee weapon has the Knockback trait, the attacking fighter can choose to follow the target up, moving directly towards them after they have been knocked back to remain in base contact. If the attack was made across a barricade, the attacker cannot do this.\n\nIf any part of the knocked back fighter's base crosses the edge of a platform, make an Initiative check. If this is failed, they will fall. If this is passed, they stop moving at the edge of the platform."
   elsif a_question.match?(/^LIMITED$/i)
     "This special rule is applied to some special ammo types which can be purchased for weapons. If a weapon fails an Ammo check while using limited ammo, they have run out – that ammo type is deleted from their fighter card, and cannot be used again until more of that special ammo is purchased from the Trading Post. This is in addition to the normal rules for the weapon running Out of Ammo. The weapon can still be reloaded as normal, using its remaining profile(s)."
+  elsif a_question.match?(/^MASTER(-| |)CRAFTED$/i)
+    "Once per battle, a fighter with a Master-crafted weapon may re-roll a single failed hit roll."
   elsif a_question.match?(/^MELEE$/i)
     "This weapon can be used during close combat attacks."
   elsif a_question.match?(/^MELTA$/i)
@@ -80,6 +96,8 @@ The Gunked condition lasts until the End phase or untilthe fighter catches fire 
     "A fighter that is armed with Paired weapons counts as being armed with dual weapons with the Melee trait for the purposes of calculating the number of Attack dice they will roll. Additionally, when making a Charge (Double) action, their Attacks characteristic is doubled."
   elsif a_question.match?(/^PARRY$/i)
     "After an enemy makes close combat attacks against a fighter armed with a Parry weapon, the defending fighter’s owning player can force the attacking player to re-roll one successful hit. If the defending fighter is armed with two Parry weapons, their owning player can force the attacking player to re-roll two successful hits instead."
+  elsif a_question.match?(/^PHASE$/i)
+    "Save rolls granted by armour or field armour cannot be made against a weapon with this Trait. If the target is hit, treat them as having no save. Note, however, that saves granted by a special rule may still be made - this Trait only ignores armour and field armour. "
   elsif a_question.match?(/^PLENTIFUL$/i)
     "Ammunition for this weapon is incredibly common. When reloading it, no Ammo check is required – it is automatically reloaded."
   elsif a_question.match?(/^POWER$/i)
@@ -90,7 +108,7 @@ The Gunked condition lasts until the End phase or untilthe fighter catches fire 
     "After fully resolving any successful hits a fighter suffers from a weapon with this Trait, roll an additional D6. If the roll is a 4 or higher, the fighter will suffer an additional Flesh Wound."
   elsif a_question.match?(/^RAPID FIRE$/i)
     "When firing with a Rapid Fire weapon, a successful hit roll scores a number of hits equal to the number of bullet holes on the Firepower dice. In addition the controlling player can roll more than one Firepower dice, up to the number shown in brackets (for example, when firing a Rapid Fire (2) weapon, up to two firepower dice can be rolled). Make an Ammo check for each Ammo symbol that is rolled. If any of them fail, the gun runs Out of Ammo. If two or more of them fail, the gun has jammed and cannot be used for the rest of the battle.\n
-If a Rapid Fire weapon scores more than one hit, the hits can be split between multiple targets. The first must be allocated to the initial target, but the remainder can be allocated to other fighters within 3’’ of the first who are also within range and line of sight. These must not be any harder to hit than the original target – if a target in the open is hit, an obscured target cannot have hits allocated to it. Allocate all of the hits before making any wound rolls."
+    If a Rapid Fire weapon scores more than one hit, the hits can be split between multiple targets. The first must be allocated to the initial target, but the remainder can be allocated to other fighters within 3’’ of the first who are also within range and line of sight. These must not be any harder to hit than the original target – if a target in the open is hit, an obscured target cannot have hits allocated to it. Allocate all of the hits before making any wound rolls."
   elsif a_question.match?(/^RECKLESS$/i)
     "Reckless weapons are indiscriminate in what they target. Weapons with this Trait ignore the normal target priority rules. Instead, before making an attack with a weapon with this Trait, randomly determine the target of the attack from all eligible models within the fighter’s line of sight."
   elsif a_question.match?(/^RENDING$/i)
@@ -127,8 +145,8 @@ If a Rapid Fire weapon scores more than one hit, the hits can be split between m
     "A Shoot action made with this weapon counts as a Double action as opposed to a Single action. In addition, a fighter who uses a weapon with both the Unwieldy and Melee traits in close combat cannot use a second weapon at the same time – this one requires both hands to use."
   elsif a_question.match?(/^VERSATILE$/i)
     "The wielder of a Versatile weapon does not need to be in base contact with an enemy fighter in order to Engage them in melee during their activation. They may Engage and make close combat attacks against an enemy fighter during their activation, so long as the distance between their base and that of the enemy fighter is equal to or less than the distance shown for the Versatile weapon’s Long range characteristic. For example, a fighter armed with a Versatile weapon with a Long range of 2\" may Engage an enemy fighter that is up to 2\" away.\n
-The enemy fighter is considered to be Engaged, but may not in turn be Engaging the fighter armed with the Versatile weapon unless they too are armed with a Versatile weapon, and so may not be able to make Reaction attacks.\n
-At all other times other than during this fighter’s activation, Versatile has no effect."
+    The enemy fighter is considered to be Engaged, but may not in turn be Engaging the fighter armed with the Versatile weapon unless they too are armed with a Versatile weapon, and so may not be able to make Reaction attacks.\n
+    At all other times other than during this fighter’s activation, Versatile has no effect."
   elsif a_question.match?(/^WEB$/i)
     "If the wound roll for a Web attack is successful, no wound is inflicted, and no save roll or Injury roll is made. Instead, the target automatically becomes Webbed. Treat the fighter as if they were Seriously Injured and roll for Recovery for them during the End phase (Web contains a powerful sedative capable of rendering the strongest fighter unconscious). If a Flesh Wound result is rolled during Recovery, apply the result to the fighter as usual and remove the Webbed condition. If a Serious Injury is rolled, the fighter remains Webbed. If an Out of Action result is rolled, the fighter succumbs to the powerful sedative and is removed from play, automatically suffering a result of 12-26 (Out Cold) on the Lasting Injuries table.\n
 A fighter that is Webbed at the end of the game does not succumb to their Injuries and will automatically recover. However, during the Wrap Up, when rolling to determine if any enemy fighters are Captured at the end of the game, add +1 to the dice roll for each enemy fighter currently Webbed and include them among any eligible to be Captured."
@@ -241,7 +259,7 @@ Order (Double) – Pick a friendly fighter within 6\". That fighter can immediat
     "If the fighter uses the Twin Guns Blazing rule to attack with two weapons with the Sidearm trait, they do not suffer the -1 penalty to their hit rolls and can, if they wish, target a different enemy model with each weapon with the Sidearm trait."
   elsif a_question.match?(/^HIP(|-| )SHOOTING$/i)
     "If the fighter is Standing and Active, they can make thefollowing action:\n
-Run and Gun (Double) – The fighter may move up to double their Movement characteristic and then make an attack with a ranged weapons. The hit roll suffers an additional -1 modifier, and Unwieldy weapons can never be used in conjunction with this skill."
+    Run and Gun (Double) – The fighter may move up to double their Movement characteristic and then make an attack with a ranged weapons. The hit roll suffers an additional -1 modifier, and Unwieldy weapons can never be used in conjunction with this skill."
   elsif a_question.match?(/^MARKSMAN$/i)
     "The fighter is not affected by the rules for Target Priority. In addition, if the hit roll for an attack made by the fighter with a ranged weapon (that does not have the Blast trait) is a natural 6, they score a critical hit, and the weapon’s Damage is doubled (if they are firing a weapon with the Rapid Fire trait, only the Damage of the first hit is doubled)."
   elsif a_question.match?(/^PRECISION SHOT$/i)
@@ -255,10 +273,10 @@ Run and Gun (Double) – The fighter may move up to double their Movement charac
     "When this fighter performs a Coup de Grace, they may roll twice on the Lasting Injury table and choose which result to apply."
   elsif a_question.match?(/^NON(-|)VERBAL COMMUNICATION$/i)
     "If this fighter is Standing and Active, they can attempt to make the following action:\n
-Comms (Double): Pick a friendly fighter within 6\". That fighter can immediately make a Cool check. If the check is passed, their vision arc is extended to 360° until the End phase of this round."
+    Comms (Double): Pick a friendly fighter within 6\". That fighter can immediately make a Cool check. If the check is passed, their vision arc is extended to 360° until the End phase of this round."
   elsif a_question.match?(/^RESTRAINT PROTOCOLS$/i)
     "Rather than perform a Coup de Grace, this fighter may instead perform a Restrain (Simple) action:\n
-Restrain (Simple): This fighter is adept at shackling their opponents, even in the heat of battle. Each time this fighter performs this action, make a note that they have restrained an enemy fighter. During the Wrap-up, add 1 to the dice roll to determine if an enemy fighter has been Captured for each enemy fighter that has been restrained."
+    Restrain (Simple): This fighter is adept at shackling their opponents, even in the heat of battle. Each time this fighter performs this action, make a note that they have restrained an enemy fighter. During the Wrap-up, add 1 to the dice roll to determine if an enemy fighter has been Captured for each enemy fighter that has been restrained."
   elsif a_question.match?(/^TEAM( |)WORK$/i)
     "When a fighter with this skill is activated, they may make a group activation as if they were a Champion. If this fighter is a Champion, they may activate two additional Ready fighters within 3\" of them at the start of their Activation, rather than the usual one. If this fighter is a Leader, they may activate three additional Ready fighters within 3\" of them at the start of their Activation, rather than the usual two."
   elsif a_question.match?(/^THREAT RESPONSE$/i)
@@ -296,12 +314,12 @@ Restrain (Simple): This fighter is adept at shackling their opponents, even in t
     "This fighter's Toughness is not reduced by Flesh Wounds. However, if this fighter suffers a number of Flesh Wounds equal to their Toughness characteristic, they will go Out of Action as normal."
   elsif a_question.match?(/^immovable stance$/i)
     "This fighter may perform the Tank (Double) action during their activation:\n
-Tank (Double) - Until the start of this fighter's next activation, this fighter increases their armour save by 2 to a maximum of 2+ and cannot be moved from their current location by any skills such as Hurl or Overseer, or any weapon traits such as Knockback or Drag, nor can they be Pinned."
+    Tank (Double) - Until the start of this fighter's next activation, this fighter increases their armour save by 2 to a maximum of 2+ and cannot be moved from their current location by any skills such as Hurl or Overseer, or any weapon traits such as Knockback or Drag, nor can they be Pinned."
   elsif a_question.match?(/^na{1,6}rgah(|!)$/i)
     "During this fighter's activation they may attempt to perform a third action after completing their first two. Roll a d6. If the dice roll is equal to or less than their Toughness then they perform the action. If the roll is greater thant their Toughtness, or is a 6, their activation ends immediately. Whether or not they were successful, when their activation ends, this fighter is automatically Pinned (this Pinning cannot be negated by skills such as Nerves of Steel)."
   elsif a_question.match?(/^unleash the beast$/i)
     "This fighter may perform the Flex (Simple) action while they are Active and Engaged:\n
-Flex (Simple) - All fighters (friend or foe) in base contect with this fighter must pass a Strength check or be pushed d3\" directly away from this fighter, stopping only if they come into  contact with another fighter or an impassable terrain feature. If there are multiple enemies being pushed, the player controlling this fighter chooses in which order they are moved."
+    Flex (Simple) - All fighters (friend or foe) in base contect with this fighter must pass a Strength check or be pushed d3\" directly away from this fighter, stopping only if they come into  contact with another fighter or an impassable terrain feature. If there are multiple enemies being pushed, the player controlling this fighter chooses in which order they are moved."
   elsif a_question.match?(/^walk it off$/i)
     "Should this fighter perform two or more Move (Simple) actions during their activation, they can make a Toughness check at the end of their activation. If this check is passed, this fighter may recover one lost Wound or discard a single Flesh Wound."
   # BRAVADO
@@ -330,6 +348,19 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
     "When this fighter is hit by a weapon with the Gas or Toxin traits, the opposing player must roll two D6 and discard the highest roll when rolling to see if this fighter is affected.\nIn addition, should this fighter suffer a hit from a weapon with the Rad-phage trait, roll an additional D6 as normal. However, on a roll of 4 or higher, they do not suffer an additional Flesh Wound. Instead, the fighter may discard a Flesh Wound they have already suffered.\nFinally, in any scenario that uses the Pitch Black rules, this fighter always counts as being Revealed."
   elsif a_question.match?(/^WEAPONSMITH$/i)
     "Any weapons this fighter is equipped with lose the Scarce trait if it has it. Any weapons this fighter is equipped with will gain the Plentiful trait if it does not have the Scarce trait. Weapons that already have the Plentiful trait gain no additional benefit from this skill."
+  # OBFUSICATION
+  elsif a_question.match?(/^FACELESS$/i)
+    "From the start of each round until after this fighter has activated, enemy fighters must pass a Willpower check to target them with a ranged attack, or place a Blast marker so that it is touching their base. If the check is failed, the enemy fighter may choose another target."
+  elsif a_question.match?(/^PSI(-| |)TOUCHED$/i)
+    "The fighter may re-roll Willpower checks when attempting to activate Wyrd Powers or to resist them. When visiting the Black Market as part of the post- battle sequence, the fighter may always choose to purchase Ghast without the need to make an Availability roll."
+  elsif a_question.match?(/^TAKE(-| |)DOWN$/i)
+    "When this fighter takes an enemy fighter Out of Action, place that enemy fighter to one side. At the end of the battle, if this fighter’s gang has won the scenario, then instead of using the normal method for determining if enemy fighters are captured, roll a D6 for each enemy fighter that was taken Out of Action and placed aside by this fighter. On a 4+, this fighter has the choice of automatically capturing that enemy fighter. As normal, a gang cannot capture more than a single fighter after a battle."
+  elsif a_question.match?(/^RUMOUR(-| |)MONGER$/i)
+    "The fighter can perform the Despicable Rumours post- battle action during the post-battle actions step of the post-battle sequence:\n\nDespicable Rumours\nMake an Intelligence check for the fighter. If they pass, reduce the Reputation of the gang(s) they just faced by D3 and increase the Reputation of this fighter’s own gang by an equal amount."
+  elsif a_question.match?(/^FAKE(-| |)OUT$/i)
+    "When making the roll to determine the scenario during the pre-battle sequence, this fighter’s gang may roll three D6 rather than the usual two. One of these dice (chosen by the player) must be discarded."
+  elsif a_question.match?(/^DOPPELGANGER$/i)
+    "During the Select Crews step of the pre-battle sequence, this fighter’s gang may attempt to include an extra fighter than normally allowed by the scenario. Have the leader of the enemy gang make an Intelligence check. If they fail, this fighter’s gang may include one extra fighter in their starting crew."
 
   # HOUSE BULLSHIT
 
@@ -457,6 +488,46 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
     "When this fighter is activated, their controlling player may declare they will use this skill. Until the start of their next activation, improve their Weapon Skill, Cool, Leadership and Willpower characteristics by D3, rolling separately for each characteristic. At the end of their activation, the fighter immediately suffers an automatic Damage 1 hit which cannot be saved. Devotional Frenzy can only be declared once per round."
   elsif a_question.match?(/^RESTLESS FAITH$/i)
     "During the Choose Crew step of the pre-battle sequence, this fighter may be taken out of Recovery (see the Necromunda Rulebook) and included in the deck of available fighters. If this is done and the fighter takes part in the battle, they begin the battle with a single Flesh Wound."
+  # PSYCHOTERIC WHISPERS
+  # MADNESS
+  elsif a_question.match?(/^Existential Barrage$/i)
+    "Existential Barrage (Simple):\nChoose a single enemy fighter that is within 1\" of the Psyker. That fighter immediately makes an Intelligence check. If this check is failed, they become Broken and immediately flee. If, after they have moved, there are any fighters friendly to them within 5\", those fighters must also immediately pass a Nerve test or also become Broken."
+  elsif a_question.match?(/^Terrible Truths$/i)
+    "Terrible Truths (Basic):\nChoose a single enemy fighter that is within 3\" of the Psyker. That fighter must make an Intelligence check. If this check is failed, they gain the Insane condition."
+  elsif a_question.match?(/^Psychotic Lure$/i)
+    "Psychotic Lure (Basic):\nChoose a single enemy fighter that currently has a Ready marker and is within 3\" of the Psyker. The opposing player must activate that fighter in their next turn. The chosen fighter cannot perform a Group Activation when next activated."
+  elsif a_question.match?(/^Cyclopean Gaze$/i)
+    "Cyclopean Gaze (Double):\nChoose a single enemy fighter that currently has a Ready marker and is within 1\" of the Psyker. The chosen fighter immediately loses their Ready Marker."
+  elsif a_question.match?(/^Craven Howl$/i)
+    "Craven Howl (Basic), Continuous Effect:\nWhile this power is maintained, Broken enemy fighters cannot attempt to Rally whilst within 5\" of the Psyker."
+  elsif a_question.match?(/^Unrememberable Utterance$/i)
+    "Unrememberable Utterance (Simple), Continuous Effect:\nWhile this power is maintained, all enemy fighters who activate whilst within 3\" of the Psyker can only perform one action, rather than the usual two (note that this means the fighter will be unable to perform a Double action)."
+  # DELUSION
+  elsif a_question.match?(/^Spatial Psychosis$/i)
+    "Spatial Psychosis (Simple):\nChoose a single enemy fighter within 12\" of the Psyker, that is Standing and is not Engaged. That fighter immediately becomes Pinned. Note that if that fighter is within 1⁄2\" of the edge of a ledge or platform, this may cause them to fall."
+  elsif a_question.match?(/^Seen Unseen$/i)
+    "Seen Unseen (Basic), Continuous Effect:\nChoose a single enemy fighter that is within 3\" of the Psyker. While this power is maintained, the chosen fighter treats all fighters as being enemy fighters, and all fighters treat the chosen fighter as being an enemy fighter.\n\nNote that this means any rule, special or otherwise, that affects friendly fighters or friendly faction fighters ceases to work for the chosen fighter whilst this power is maintained as the chosen fighter has no friendly fighters of any sort on the battlefield."
+  elsif a_question.match?(/^Ghost and Shadow$/i)
+    "Ghost and Shadow (Basic):\nChoose a single enemy fighter that is within 10\" of the Psyker. The Psyker’s controlling player may immediately change this fighter’s facing (in other words, they may turn the model to face any direction)."
+  elsif a_question.match?(/^Deceitful Thoughts$/i)
+    "Deceitful Thoughts (Double):\nChoose a single enemy fighter that is within 5\" of the Psyker. That fighter immediately makes an Intelligence check. If this check is failed, the Psyker’s controlling player may immediately move that fighter up to their Move characteristic in any direction. Note that this move may not be used to move enemy fighters off ledges, into dangerous terrain or any other part of the battlefield harmful to them."
+  elsif a_question.match?(/^Suicidal Embrace$/i)
+    "Suicidal Embrace (Basic):\nChoose a single enemy fighter that is within 3\" of the Psyker. That fighter immediately makes an Intelligence check. If this check is failed, that fighter must resolve a single close combat attack against themselves with one of their Melee weapons (chosen at random, if the fighter has no weapons with the Melee trait, they will make an unarmed attack against themselves). This attack automatically hits, but must roll to wound and inflict Damage as normal."
+  elsif a_question.match?(/^Opprobrious Curse$/i)
+    "Opprobrious Curse (Simple):\nChoose a single enemy fighter that is within 3\" of the Psyker. That fighter immediately makes a Toughness check. If this check is failed, the fighter immediately suffers a Flesh Wound."
+  # DARKNESS
+  elsif a_question.match?(/^Cacophony of Silence$/i)
+    "Cacophony of Silence (Double), Continuous Effect:\nWhile this power is maintained, all enemy fighters within 5\" of the Psyker must re-roll successful Hit rolls when making a ranged attack."
+  elsif a_question.match?(/^Penumbral Mirror$/i)
+    "Penumbral Mirror (Basic):\nChoose one enemy fighter and one friendly fighter that are both currently within 5\" of the Psyker. Immediately move the chosen friendly fighter to any other point within 5\" of the chosen enemy fighter. The chosen friendly fighter may even move into base contact with the chosen enemy fighter."
+  elsif a_question.match?(/^A Perfect Void$/i)
+    "A Perfect Void (Basic), Continuous Effect:\nWhile this power is maintained, the Psyker counts as being in full cover to all enemy fighters within 10\"."
+  elsif a_question.match?(/^Eternal Slumber$/i)
+    "Eternal Slumber (Double):\nAll Seriously Injured enemy fighters within 3\" of the Psyker immediately go Out of Action."
+  elsif a_question.match?(/^Cloak of Whispers$/i)
+    "Cloak of Whispers (Basic), Continuous Effect:\nWhile this power is maintained, the Psyker and all friendly Delaque fighters within 3\" of them cannot be the target of, or be affected by, any gang tactics played by the enemy player."
+  elsif a_question.match?(/^Sight Blight$/i)
+    "Sight Blight (Basic), Continuous Effect:\nWhile this power is maintained, all enemy fighters within 5\" of the Psyker count as being affected by the Pitch Black rules as detailed in the Necromunda Rulebook. Note that this does not actually create an area of darkness and only affects those who enter or remain in range of the Psyker."
 
   # TERRITORIES
   elsif a_question.match?(/^ARCHAEOTECH DEVICE$/i)
@@ -645,6 +716,8 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
     "Malefic Artefacts are objects of the Warp or those that have lingered in the hands of corrupted individuals. When a player buys a Malefic Artefact from the Black Market, they won’t know what it does. They must allocate it to one of their fighters and roll a D6 on the Malefic Artefacts table to determine its type. If a Malefic Artefact is later given to a different fighter in the gang for any reason, the new fighter must pass an Intelligence check the first time they wish to activate it. If they pass, they may use the artefact as normal from now on. If they fail, they wait until their next game to try to activate the artefact again.\n\nD6 Effect:\n1 Cursed Artefact: The fighter accidentally triggers the artefact as they’re messing about with it. The Malefic Artefact mysteriously vanishes and the fighter begins their next game with the Insane condition.\n\n2 Whisper Vox: Hidden truths issue forth from the artefact, informing its bearer as to the intentions of those around them. The fighter gains the Overwatch skill. If they already have the Overwatch skill, they can take the Aim (Basic) action in addition to the Shoot (Basic) action when using this skill.\n\n3 Void Gate: The artefact is a gateway to a dark yawning void that the fighter may open to sap the strength of those around them. The fighter can perform the Unleash the Void (Double) action. If they take this action, all other fighters within 6\" of them can only take a single action during their activation.\n\n4 Etheric Lantern: When the artefact is activated, it acts as a beacon to the denizens of the Warp who would feast upon the dead and dying. The fighter can perform the Ignite Etheric Lantern (Double) action. If they do, any Seriously Injured fighter within 12\" must make a Toughness check or go Out of Action.\n\n5 Chronoscope: Time works differently around the artefact, sometimes speeding up, sometimes slowing down. When the fighter activates roll a D6. On a 1, they may take no actions this round. On a 2-5, they can take an extra action this round. On a 6, after they complete their activation they may be placed anywhere within 12\" of their current location.\n\n6 Terrox Telepathica: Dire thoughts are projected from the artefact driving all those nearby mad. The fighter gains immunity to the Insane condition. Any other fighter that activates within 6\" of the fighter must immediately make a Willpower check or gain the Insane condition."
   elsif a_question.match?(/^MEDICAE KIT$/i)
     "When a fighter with a Medicae kit assists a friendly fighter’s Recovery test, roll an extra injury dice then choose one to discard."
+  elsif a_question.match?(/^PSYCHOMANCER('|)S HARNESS$/i)
+    "This strange form of servo harness combines familiar underhive technology with the mysterious psychic sciences of House Delaque. Plugging directly into the wearer’s mind mechanically and psychically, the wearer’s strength and agility is greatly enhanced by the harness.\nA fighter wearing a psychomancer’s harness increases their Move characteristic by +2\". Additionally, when this fighter climbs, the vertical distance they move is not halved. In other words, they always count as climbing up or down a ladder.\nA fighter wearing a psychomancer’s harness is automatically equipped with paired psychomantic claws. However, the fighter can only be equipped with a maximum of two weapons purchased from those listed in their entry (rather than the usual three) and may not be equipped with any weapons marked with an asterisk (*), or any weapons with the Unwieldy trait."
   elsif a_question.match?(/^PHOTO(-| )GOGGLES$/i)
     "A fighter with photo goggles can attack through smoke clouds, can make ranged attacks against fighters 12\" away under the Pitch Black rules and may gain other benefits in low light conditions, depending upon the scenario. In addition, if they are hit by a Flash weapon, add 1 to the result of the Initiative test to see whether they become subject to the Blind condition."
   elsif a_question.match?(/^MNEMONIC INLOAD SPIKE$/i)
@@ -743,13 +816,13 @@ Flex (Simple) - All fighters (friend or foe) in base contect with this fighter m
   # WEAPON ACCESSORIES
   elsif a_question.match?(/^GUNSHROUD$/i)
     "(Pistols and Basic weapons)\nA weapon fitted with a gunshroud gains the Silent trait."
-  elsif a_question.match?(/^HOTSHOT LAS PACK$/i)
+  elsif a_question.match?(/^HOT(-| |)SHOT LAS(-| |)PACK$/i)
     "(Lasgun and Laspistol only)\nAt the expense of reliability, a lasgun or laspistol (not including las carbines, las sub-carbines or suppression lasers) can be fitted with a hotshot las pack, increasing its Strength to 4 and Armour Piercing to -1. However, the weapon loses the Plentiful trait and its Ammo value is reduced to 4+."
-  elsif a_question.match?(/^INFRA(-| )SIGHT$/i)
+  elsif a_question.match?(/^INFRA(-| |)SIGHT$/i)
     "(Pistols, Basic, Special and Heavy weapons)\nWeapons with the Rapid Fire (X) or Blast (3\"/5\") trait cannot be fitted with an infra-sight. A weapon with an infra-sight can be used to attack through smoke clouds, and prove more effective in Pitch Black conditions (see page 328). In addition, there is no hit modifier when the weapon targets a fighter in partial cover, and a -1 modifier (instead of -2) when it targets a fighter in full cover."
-  elsif a_question.match?(/^LAS(-| )PROJECTOR$/i)
+  elsif a_question.match?(/^LAS(-| |)PROJECTOR$/i)
     "(Pistols, Basic and Special weapons)\nThe weapon’s Short range accuracy bonus is improved by 1 (for example, if it is +1 it becomes +2; if it is – it becomes +1; if it is -1 it becomes – )"
-  elsif a_question.match?(/^MONO(-| )SIGHT$/i)
+  elsif a_question.match?(/^MONO(-| |)SIGHT$/i)
     "(Basic, Special and Heavy weapons)\nIf the fighter attacks with this weapon after making an Aim action, add 2 to the result of the hit roll instead of 1."
   elsif a_question.match?(/^SUSPENSOR$/i)
     "(Heavy weapons)\nAn Unwieldy ranged weapon fitted with suspensors is far more manoeuvrable. Firing it becomes a Basic action rather than a Double action."
