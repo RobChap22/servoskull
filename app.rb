@@ -57,8 +57,7 @@ def bot_answer_to(a_question, user_name)
   elsif a_question.match?(/^disarm$/i)
     "If the hit roll for an attack made with a Disarm weapon is a natural 6, the target cannot use any weapons when making Reaction attacks during that combat – they make unarmed attacks instead."
   elsif a_question.match?(/^drag$/i)
-    "If a fighter is hit by a Drag weapon but not taken Out of Action, the attacker can attempt to drag the target closer after the attack has been resolved. If a they do, roll a d6. If the score is equal to or higher than the target’s Strength, the target is dragged D3’’ straight towards the attacker, stopping if they hit any terrain. If they move into another fighter (other than the attacker), both fighters are moved the remaining distance towards the attacker.\n
-If the weapon also has the Impale special rule and hits more than one fighter, only the last fighter to be hit can be dragged."
+    "If a fighter is hit by a Drag weapon but not taken Out of Action, the attacker can attempt to drag the target closer after the attack has been resolved. If a they do, roll a d6. If the score is equal to or higher than the target’s Strength, the target is dragged D3’’ straight towards the attacker, stopping if they hit any terrain. If they move into another fighter (other than the attacker), both fighters are moved the remaining distance towards the attacker.\nIf the weapon also has the Impale special rule and hits more than one fighter, only the last fighter to be hit can be dragged."
   elsif a_question.match?(/^entangle$/i)
     "Hits scored by weapons with the Entangle trait cannot be negated by the Parry trait. In addition, if the hit roll for an Entangle weapon is a natural 6, any Reaction attacks made by the target have an additional -2 hit modifier"
   elsif a_question.match?(/^fear$/i)
@@ -67,17 +66,16 @@ If the weapon also has the Impale special rule and hits more than one fighter, o
     "A fighter who takes a hit from a weapon with the Flare Trait, or who is touched by a Blast marker fired from a weapon with the Flare Trait, is Revealed if the battlefield is in darkness (see Pitch Black). If a weapon has both the Flare Trait and the Blast Trait after determining where the Blast marker ends up, leave it in place. In the End phase, roll a D6. On a 4 or more, the flare goes out and the marker is removed, otherwise it remains in play. While the Blast marker is on the board, all models at least touched by it are illuminated as if they had a Blaze marker or a Revealed marker"
   elsif a_question.match?(/^flash$/i)
     "If a fighter is hit by a Flash weapon, no wound roll is made. Instead, make an Initiative check for the target. If it is failed, they are blinded. A blinded fighter loses their Ready marker; if they do not have a Ready marker, they do not gain a Ready marker at the start of the following round. Until the next time the fighter is activated, they cannot make any attacks other than reaction attacks, for which any hit rolls will only succeed on a natural 6."
+  elsif a_question.match?(/^FORCE$/i)
+    "In the hands of a non-psyker a Force Weapon has no additional effects. However, when weilded by a fighter with either the Sanctioned Psyker or Non-sanctioned Psyker special rule, the weapon gains both the Power and Sever traits."
   elsif a_question.match?(/^gas$/i)
-    "When a fighter is hit by an attack made by a Gas weapon, they are not Pinned and a wound roll is not made.\n
-    Instead, roll a D6. If the result is equal to or higher than the target’s Toughness, or is a natural 6, make an Injury roll for them (regardless of their Wounds characteristic). If the roll is lower than the target’s Toughness, they shrug off the effects of the gas – no save roll can be made."
+    "When a fighter is hit by an attack made by a Gas weapon, they are not Pinned and a wound roll is not made.\nInstead, roll a D6. If the result is equal to or higher than the target’s Toughness, or is a natural 6, make an Injury roll for them (regardless of their Wounds characteristic). If the roll is lower than the target’s Toughness, they shrug off the effects of the gas – no save roll can be made."
   elsif a_question.match?(/^graviton pulse$/i)
     "Instead of rolling to wound normally with this weapon, any model caught in the blast must instead roll to or under their Strength on a D6 (a roll of 6 always counts as a fail).\n\nAfter the weapon has been fired, leave the Blast marker in place. For the remainder of the round, any model moving through this area will use 2’’ of their movement for every 1’’ they move. Remove the Blast marker during the End phase."
   elsif a_question.match?(/^grenade$/i)
-    "Despite being Wargear, grenades are treated as a special type of ranged weapon. A fighter equipped with grenades can throw one as a Shoot (Basic) action. Grenades do not have a Short range, and their Long range is determined by multiplying the fighter’s Strength by the amount shown.\n
-    A fighter can only carry a limited number of grenades.The Firepower dice is not rolled when attacking with a grenade. Instead, after the attack has been resolved, an Ammo check is made automatically. If this is failed, grenades cannot be reloaded; the fighter has run out of that type of grenade and cannot use them for the remainder of the battle."
+    "Despite being Wargear, grenades are treated as a special type of ranged weapon. A fighter equipped with grenades can throw one as a Shoot (Basic) action. Grenades do not have a Short range, and their Long range is determined by multiplying the fighter’s Strength by the amount shown.\nA fighter can only carry a limited number of grenades.The Firepower dice is not rolled when attacking with a grenade. Instead, after the attack has been resolved, an Ammo check is made automatically. If this is failed, grenades cannot be reloaded; the fighter has run out of that type of grenade and cannot use them for the remainder of the battle."
   elsif a_question.match?(/^gunk$/i)
-    "A fighter hit by a weapon with the Gunk Trait becomes subject to the Gunked condition. Gunked fighters reduce their Movement characteristic by 1 to a minimum of 1 and don’t add D3\" to their movement when making a Charge action. In addition, they subtract 1 from the dice roll when making an Initiative check. Gunked fighters are also more flammable and catch fire on a 2+, rather than a 4+, when hit by a weapon with the Blaze trait.\n
-    The Gunked condition lasts until the End phase or untilthe fighter catches fire after being hit by a weapon with the Blaze Trait"
+    "A fighter hit by a weapon with the Gunk Trait becomes subject to the Gunked condition. Gunked fighters reduce their Movement characteristic by 1 to a minimum of 1 and don’t add D3\" to their movement when making a Charge action. In addition, they subtract 1 from the dice roll when making an Initiative check. Gunked fighters are also more flammable and catch fire on a 2+, rather than a 4+, when hit by a weapon with the Blaze trait.\nThe Gunked condition lasts until the End phase or untilthe fighter catches fire after being hit by a weapon with the Blaze Trait"
   elsif a_question.match?(/^HEXAGRAMMATIC$/i)
     "The ammo used by this weapon has been specially treated to defeat psychic defences and severely harm Psykers. Hits from weapons with this Trait ignore saves provided by psychic powers. Additionally, weapons with this Trait will inflict double damage against Psykers."
   elsif a_question.match?(/^IMPALE$/i)
@@ -91,7 +89,7 @@ If the weapon also has the Impale special rule and hits more than one fighter, o
   elsif a_question.match?(/^MELEE$/i)
     "This weapon can be used during close combat attacks."
   elsif a_question.match?(/^MELTA$/i)
-    "If a Short range attack from a weapon with this Trait reduces a fighter to 0 wounds, no Injury dice are rolled – instead, any Injury dice that would be rolled cause an automatic Out of Action result."
+    "If a Short range attack from a weapon with this Trait reduces a fighter to 0 wounds, no Injury dice are rolled – instead, any Injury dice that would be rolled cause an automatic Out of Action result. If a weapon does not have a Short range, then the Melta trait affects all attacks made with this weapon."
   elsif a_question.match?(/^PAIRED$/i)
     "A fighter that is armed with Paired weapons counts as being armed with dual weapons with the Melee trait for the purposes of calculating the number of Attack dice they will roll. Additionally, when making a Charge (Double) action, their Attacks characteristic is doubled."
   elsif a_question.match?(/^PARRY$/i)
@@ -824,8 +822,10 @@ Order (Double) – Pick a friendly fighter within 6\". That fighter can immediat
     "(Pistols, Basic and Special weapons)\nThe weapon’s Short range accuracy bonus is improved by 1 (for example, if it is +1 it becomes +2; if it is – it becomes +1; if it is -1 it becomes – )"
   elsif a_question.match?(/^MONO(-| |)SIGHT$/i)
     "(Basic, Special and Heavy weapons)\nIf the fighter attacks with this weapon after making an Aim action, add 2 to the result of the hit roll instead of 1."
+  elsif a_question.match?(/^PSI(-| )AMPLIFIER$/i)
+    "(Melee weapons)\nIn order for a Psi-amplifier to be fitted to a weapon, a specialist must be found. To attempt to find one, Leaders and Champions may make a Psi Attune post-battle action. This is carried out in the same way as a Trade action, though its only benefit is if you roll a 15 or more you may fit the psi-amplifier to a weapon. Once fitted, the weapon gains the Force trait."
   elsif a_question.match?(/^SUSPENSOR$/i)
-    "(Heavy weapons)\nAn Unwieldy ranged weapon fitted with suspensors is far more manoeuvrable. Firing it becomes a Basic action rather than a Double action."
+    "(Heavy weapons)\nAn Unwieldy ranged weapon fitted with suspensors is far more manoeuvrable. Firing it becomes a Basic action rather than a Double action.\n\nAn Unweildy close combat weapon fitted with suspensors can be used single-handedly, allowing the fighter to use a second close combat weapon."
   elsif a_question.match?(/^TELESCOPIC SIGHT$/i)
     "(Pistols, Basic and Special weapons)\nIf a fighter attacks with this weapon after making an Aim action, the weapon’s Short range accuracy modifier is used even if the target is within the weapon’s Long range."
 
